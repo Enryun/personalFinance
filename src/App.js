@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Route} from "react-router-dom";
+
+import HomePage from './Pages/HomePage/HomePage';
+import CostTrackingPage from './Pages/CostTrackingPage/CostTrackPage';
+import Footer from './components/Footer/footer.component';
+import Navbar from './components/Navbar/Navbar';
+import Contact from './Pages/ContactPage/contact.component';
+import InterestPage from './Pages/InterestPage/InterestPage';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Route exact path='/' component={HomePage}  />
+      <Route exact path='/cost-tracking' component={CostTrackingPage}  />
+      <Route exact path='/contact' component={Contact} />
+      <Route exact path='/interest-cal' component={InterestPage} />
+      <Footer />
     </div>
   );
 }

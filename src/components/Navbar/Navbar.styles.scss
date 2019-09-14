@@ -1,0 +1,18 @@
+.navBar {
+    text-transform: uppercase;
+    padding: 10px;
+    border-style: none outset outset none;
+    font-weight: 700;
+
+    .navItem {
+        padding: 10px;
+        color: black;
+        font-size: 1.5rem;
+        font-family: Ubutu;
+        text-decoration: none;
+
+        &:hover {
+            color: lighten($color: black, $amount: 50)
+        }
+    }
+}
