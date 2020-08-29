@@ -9,6 +9,7 @@ import Navbar from './components/Navbar/Navbar';
 import Contact from './Pages/ContactPage/contact.component';
 import InterestPage from './Pages/InterestPage/InterestPage';
 import PolicySudoku from './Pages/PolicyPage/policy.jsx';
+import PolicyList from './Pages/PolicyList/PolicyList';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Route exact path='/cost-tracking' component={CostTrackingPage}  />
       <Route exact path='/contact' component={Contact} />
       <Route exact path='/interest-cal' component={InterestPage} />
+      <Route exact path='/policy' component={PolicyList} />
       <Route exact path='/policy/sudoku' component={PolicySudoku} />
       <Footer />
     </div>
