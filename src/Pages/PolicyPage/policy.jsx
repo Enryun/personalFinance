@@ -3,7 +3,7 @@ import './policy.scss';
 
 const PolicySudoku = () => {
   return (
-    <div>
+    <div className="policy">
       <strong>Privacy Policy</strong>{" "}
       <p>
         James Thang built the Sudoku Magic Square app as a Free app. This
