@@ -13,6 +13,12 @@ const Contact = () => {
             </div>
 
             <div className='intro'>
+                <h3>Mobile Development</h3>
+                <p>Building Native/ Cross Flatform Application</p>
+                <p>Bring your million dollar ideas to life!</p>
+            </div>
+
+            <div className='intro'>
                 <h2>Get In Touch !</h2>
                 <h3>How about having a cup of coffee?</h3>
                 <p>We can code while drinking coffee together.</p>
@@ -21,8 +27,8 @@ const Contact = () => {
 
             <div className="contact">
                 <h2>For Work: </h2>
-                <p>Email: baokieuha@gmail.com</p>
-                <p>phone: 0857713736</p>
+                <p>Email: jamesthang1996@gmail.com</p>
+                <p>phone: (+84)0857713736</p>
             </div>
         </div>
     )

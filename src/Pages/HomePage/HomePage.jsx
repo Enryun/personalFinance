@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 const HomePage = () => {
     return (
         <div>
-            Hello from HomePage
+            <Link className='navItem' to='/sudoku'>Sudoku</Link>
         </div>
     )
 }
