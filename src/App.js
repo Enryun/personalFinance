@@ -11,6 +11,7 @@ import PolicySudoku from './Pages/PolicyPage/policy.jsx';
 import PolicyList from './Pages/PolicyList/PolicyList';
 import Sudoku from './Pages/AppIntroduction/Sudoku/Sudoku';
 import FinanceAdvisor from './Pages/AppIntroduction/Finance/FinanceAdvisor';
+import PolicyFinance from './Pages/PolicyPage/finance_policy.jsx'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route exact path='/interest-cal' component={InterestPage} />
       <Route exact path='/policy' component={PolicyList} />
       <Route exact path='/policy/sudoku' component={PolicySudoku} />
+      <Route exact path='/policy/finance-advisor' component={PolicyFinance} />
       <Route exact path='/sudoku' component={Sudoku} />
       <Route exact path='/finance-advisor' component={FinanceAdvisor} />
       <Footer />
