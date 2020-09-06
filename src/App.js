@@ -10,6 +10,7 @@ import InterestPage from './Pages/InterestPage/InterestPage';
 import PolicySudoku from './Pages/PolicyPage/policy.jsx';
 import PolicyList from './Pages/PolicyList/PolicyList';
 import Sudoku from './Pages/AppIntroduction/Sudoku/Sudoku';
+import FinanceAdvisor from './Pages/AppIntroduction/Finance/FinanceAdvisor';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route exact path='/policy' component={PolicyList} />
       <Route exact path='/policy/sudoku' component={PolicySudoku} />
       <Route exact path='/sudoku' component={Sudoku} />
+      <Route exact path='/finance-advisor' component={FinanceAdvisor} />
       <Footer />
     </div>
   );
