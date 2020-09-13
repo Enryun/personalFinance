@@ -28,8 +28,10 @@ const FinanceAdvisor = () => {
             <h3 className="seperation">Finance Advisor</h3>
 
             <div className="end-container">
-                <img className="appstore_fi" alt="AppStore" src={appstore}/>
-                <img className="applogo" alt="logo" src={logo} />
+                <a href="https://apps.apple.com/us/app/id1530719536?fbclid=IwAR2I0YNm3eYD8i6E-y2pQWpGnGtfaMNTA5EjsqgM5REU3MRlyN-Lq29nKQY" target="_blank" rel="noopener noreferrer">
+                    <img className="appstore_fi" alt="AppStore" src={appstore}/>
+                    <img className="applogo" alt="logo" src={logo} />
+                </a>
             </div>
           
         </div>

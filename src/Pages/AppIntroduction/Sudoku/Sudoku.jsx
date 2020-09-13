@@ -27,7 +27,9 @@ const Sudoku = () => {
             <p>Variety Levels and Modes</p>
             <p>Learn the rules and enjoy the Game</p>
             {/* App Store Logo */}
-            <img className="appstore" alt="AppStore" src={appstore}/>
+            <a href="https://apps.apple.com/app/id1529449644?fbclid=IwAR2I0YNm3eYD8i6E-y2pQWpGnGtfaMNTA5EjsqgM5REU3MRlyN-Lq29nKQY" target="_blank" rel="noopener noreferrer">
+                <img className="appstore" alt="AppStore" src={appstore}/>
+            </a>
         </div>
     )
 }
