@@ -12,6 +12,7 @@ import PolicyList from './Pages/PolicyList/PolicyList';
 import Sudoku from './Pages/AppIntroduction/Sudoku/Sudoku';
 import FinanceAdvisor from './Pages/AppIntroduction/Finance/FinanceAdvisor';
 import PolicyFinance from './Pages/PolicyPage/finance_policy.jsx'
+import POS from './Pages/AppIntroduction/POS/Pos'
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Route exact path='/policy/finance-advisor' component={PolicyFinance} />
       <Route exact path='/sudoku' component={Sudoku} />
       <Route exact path='/finance-advisor' component={FinanceAdvisor} />
+      <Route exact path='/u-coffee' component={POS} />
       <Footer />
     </div>
   );
