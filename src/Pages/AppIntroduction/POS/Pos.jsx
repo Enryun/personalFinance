@@ -5,16 +5,21 @@ import screenshot3 from '../../../Image/POS3.webp';
 import screenshot4 from '../../../Image/POS4.webp';
 import './POS.scss'
 import appstore from '../../../Image/appStore.png';
+import {Link} from 'react-router-dom';
+
 
 
 const Pos = () => {
     return (
         <div>
-            <h1 className="big-title">Transform your Ipad</h1>
-            <img src={screenshot1} alt="" className="image_1" />
+            <div className="big-background">
+                <h1 className="big-title">Transform your Ipad</h1>
+                <img src={screenshot1} alt="" className="image_1" />
 
+            </div>
+            
             <div className="pos_block">
-                <h2 className="small-title">Easy to Use</h2>
+                <h2 className="small-title">Easy to Use and <Link className="link" to='/ucoffee-setup'>Set Up</Link></h2>
                 <div class="gradient-border" id="box">
                     <img src={screenshot3} alt="" className="other_image" />
 
@@ -39,6 +44,7 @@ const Pos = () => {
                 <a href="https://apps.apple.com/app/id1529449644?fbclid=IwAR2I0YNm3eYD8i6E-y2pQWpGnGtfaMNTA5EjsqgM5REU3MRlyN-Lq29nKQY" target="_blank" rel="noopener noreferrer">
                     <img className="appstore" alt="AppStore" src={appstore}/>
                 </a>
+                <h3>Already Download. Go to <Link to='/ucoffee-setup' className="link">Set Up</Link></h3>
             </div>
             
         </div>

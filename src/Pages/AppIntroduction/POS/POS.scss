@@ -6,6 +6,12 @@
 
 }
 
+.big-background {
+  background-color: #f5f4f4;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+}
+
 .pos_block {
     display: flex;
     margin: 7rem 10rem;
@@ -63,3 +69,20 @@
     text-align: center;
 }
   
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  color: forestgreen;
+  transform: scale(1.05);
+  transition-duration: 1s;
+}
+
+.link:active {
+  color: orange;
+}
+
+.link:visited {
+  color: orange;
+}
