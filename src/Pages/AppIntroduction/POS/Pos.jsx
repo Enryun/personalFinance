@@ -1,8 +1,8 @@
 import React from 'react'
 import screenshot1 from '../../../Image/POS1.png';
-import screenshot2 from '../../../Image/POS2.png';
-import screenshot3 from '../../../Image/POS3.png';
-import screenshot4 from '../../../Image/POS4.png';
+import screenshot2 from '../../../Image/POS2.webp';
+import screenshot3 from '../../../Image/POS3.webp';
+import screenshot4 from '../../../Image/POS4.webp';
 import './POS.scss'
 import appstore from '../../../Image/appStore.png';
 
