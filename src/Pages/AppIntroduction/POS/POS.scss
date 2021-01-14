@@ -84,5 +84,16 @@
 }
 
 .link:visited {
-  color: orange;
+  color: blueviolet;
+}
+
+h1.pos {
+  color: #F09B34;
+}
+
+.pos-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
