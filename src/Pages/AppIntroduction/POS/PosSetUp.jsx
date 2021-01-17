@@ -18,6 +18,8 @@ import screenshot15 from "../../../Image/POS19.webp"
 import screenshot16 from "../../../Image/POS20.webp"
 import screenshot17 from "../../../Image/POS21.webp"
 import screenshot18 from "../../../Image/POS22.webp"
+import {Link} from 'react-router-dom';
+
 
 
 
@@ -88,7 +90,7 @@ const PosSetUp = () => {
             <div className="no-note">
                 <img src={screenshot11} alt="" className="other_image" />
                 <img src={screenshot12} alt="" className="other_image" />
-            </div>
+            </div> 
             <h2 className="pos-small-title">7. Double Check money at the end of the Day</h2>
             <div className="no-note">
                 <img src={screenshot13} alt="" className="other_image" />
@@ -100,6 +102,8 @@ const PosSetUp = () => {
             </div>
             
             <h2 className="pos-small-title">9. Remotely Control from other Devices</h2>
+            <h4 className="pos-h4">Once you Sign up and upgrade to Premium, you can view History Record of your Business from other Devices</h4>
+            <h4 className="pos-h4">Go to AppStore and Download <Link className="link" to='/ucoffee-remote'>Coffee Record</Link></h4>
         </div>
 
 
