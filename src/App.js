@@ -15,6 +15,8 @@ import PolicyFinance from './Pages/PolicyPage/finance_policy.jsx'
 import POS from './Pages/AppIntroduction/POS/Pos'
 import PosSetUp from './Pages/AppIntroduction/POS/PosSetUp'
 import POS_remote from './Pages/AppIntroduction/POS/POS_remote'
+import CoffeeReport from './Pages/PolicyPage/coffee_report'
+import UCoffee from './Pages/PolicyPage/u_coffee'
 
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
       <Route exact path='/u-coffee' component={POS} />
       <Route exact path='/ucoffee-setup' component={PosSetUp} />
       <Route exact path='/ucoffee-remote' component={POS_remote} />
+      <Route exact path='/policy/coffee-report' component={CoffeeReport} />
+      <Route exact path='/policy/ucoffee' component={UCoffee} />
       <Footer />
     </div>
   );
