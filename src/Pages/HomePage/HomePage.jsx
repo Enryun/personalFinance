@@ -4,9 +4,15 @@ import {Link} from 'react-router-dom';
 const HomePage = () => {
     return (
         <div>
-            <Link className='navItem' to='/sudoku'>Sudoku</Link>
-            <Link className='navItem' to='/finance-advisor'>Finance Advisor</Link>
-            <Link className='navItem' to='/u-coffee'>UCoffee</Link>
+        <ul>
+            <li><Link className='navItem' to='/sudoku'>Sudoku</Link></li>
+            <li><Link className='navItem' to='/finance-advisor'>Finance Advisor</Link></li>
+            <li><Link className='navItem' to='/u-coffee'>UCoffee</Link></li>
+            <li><Link className='navItem' to='/ucoffee-remote'>Coffee Record</Link></li>
+        </ul>
+            
+            
+            
         </div>
     )
 }

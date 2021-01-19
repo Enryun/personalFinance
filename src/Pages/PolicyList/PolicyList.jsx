@@ -5,8 +5,10 @@ import {Link} from 'react-router-dom';
 const PolicyList = () => {
     return (
         <div>
-            <Link className='navItem' to='/policy/sudoku'>Sudoku</Link>
-            <Link className='navItem' to='/policy/finance-advisor'>Finance Advisor</Link>
+            <ul>
+                <li><Link className='navItem' to='/policy/sudoku'>Sudoku</Link></li>
+                <li><Link className='navItem' to='/policy/finance-advisor'>Finance Advisor</Link></li>
+            </ul>
         </div>
     )
 }

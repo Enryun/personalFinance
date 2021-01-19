@@ -21,8 +21,6 @@ import screenshot18 from "../../../Image/POS22.webp"
 import {Link} from 'react-router-dom';
 
 
-
-
 const PosSetUp = () => {
     return (
         <div>
