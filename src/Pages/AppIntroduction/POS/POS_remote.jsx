@@ -52,7 +52,7 @@ const POS_remote = () => {
 
             <div className="pos-foot">
                 <h3>Download on Appstore!</h3>
-                <a href="https://apps.apple.com/app/id1529449644?fbclid=IwAR2I0YNm3eYD8i6E-y2pQWpGnGtfaMNTA5EjsqgM5REU3MRlyN-Lq29nKQY" target="_blank" rel="noopener noreferrer">
+                <a href="https://apps.apple.com/us/app/coffee-record/id1549652430" target="_blank" rel="noopener noreferrer">
                     <img className="appstore" alt="AppStore" src={appstore}/>
                 </a>
             </div>

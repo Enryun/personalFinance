@@ -17,6 +17,7 @@ import PosSetUp from './Pages/AppIntroduction/POS/PosSetUp'
 import POS_remote from './Pages/AppIntroduction/POS/POS_remote'
 import CoffeeReport from './Pages/PolicyPage/coffee_report'
 import UCoffee from './Pages/PolicyPage/u_coffee'
+import CoffeeReportEULA from './Pages/PolicyPage/coffee_report_eula.jsx'
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
       <Route exact path='/ucoffee-remote' component={POS_remote} />
       <Route exact path='/policy/coffee-report' component={CoffeeReport} />
       <Route exact path='/policy/ucoffee' component={UCoffee} />
+      <Route exact path='/policy/ucoffee-eula' component={CoffeeReportEULA} />
       <Footer />
     </div>
   );

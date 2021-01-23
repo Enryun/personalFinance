@@ -10,6 +10,7 @@ const PolicyList = () => {
                 <li><Link className='navItem' to='/policy/finance-advisor'>Finance Advisor</Link></li>
                 <li><Link className='navItem' to='/policy/ucoffee'>UCoffee</Link></li>
                 <li><Link className='navItem' to='/policy/coffee-report'>Coffee Report</Link></li>
+                <li><Link className='navItem' to='/policy/ucoffee-eula'>Coffee Report Term and Conditions</Link></li>
             </ul>
         </div>
     )
