@@ -18,6 +18,8 @@ import POS_remote from './Pages/AppIntroduction/POS/POS_remote'
 import CoffeeReport from './Pages/PolicyPage/coffee_report'
 import UCoffee from './Pages/PolicyPage/u_coffee'
 import CoffeeReportEULA from './Pages/PolicyPage/coffee_report_eula.jsx'
+import PayDailyPolicy from './Pages/PolicyPage/cost_tracking.jsx'
+import PayDaily from './Pages/AppIntroduction/PayDaily/pay_daily.jsx';
 
 
 function App() {
@@ -39,6 +41,8 @@ function App() {
       <Route exact path='/policy/coffee-report' component={CoffeeReport} />
       <Route exact path='/policy/ucoffee' component={UCoffee} />
       <Route exact path='/policy/ucoffee-eula' component={CoffeeReportEULA} />
+      <Route exact path='/policy/pay-daily' component={PayDailyPolicy} />
+      <Route exact path='/pay-daily' component={PayDaily} />
       <Footer />
     </div>
   );

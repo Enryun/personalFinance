@@ -21,10 +21,8 @@ const Pos = () => {
                         <img className="applogo" alt="AppStore" src={logo}/>
                     </a>
                 </div>
-                
-                
+            
                 <img src={screenshot1} alt="" className="image_1" />
-
             </div>
             
             <div className="pos_block">
