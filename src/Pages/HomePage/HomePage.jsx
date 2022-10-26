@@ -10,6 +10,7 @@ const HomePage = () => {
                 <li><Link className='navItem' to='/finance-advisor'>Finance Advisor</Link></li>
                 <li><Link className='navItem' to='/u-coffee'>UCoffee</Link></li>
                 <li><Link className='navItem' to='/ucoffee-remote'>Coffee Record</Link></li>
+                <li><Link className='navItem' to='/dark-horse'>Dark Horse</Link></li>
             </ul>
         </div>
     )

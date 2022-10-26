@@ -20,7 +20,8 @@ import UCoffee from './Pages/PolicyPage/u_coffee'
 import CoffeeReportEULA from './Pages/PolicyPage/coffee_report_eula.jsx'
 import PayDailyPolicy from './Pages/PolicyPage/cost_tracking.jsx'
 import PayDaily from './Pages/AppIntroduction/PayDaily/pay_daily.jsx';
-
+import DarkHorse from './Pages/AppIntroduction/DarkHorse/darkhorse.jsx';
+import PolicyDarkHorse from './Pages/PolicyPage/dark_horse_policy.jsx';
 
 function App() {
   return (
@@ -43,6 +44,8 @@ function App() {
       <Route exact path='/policy/ucoffee-eula' component={CoffeeReportEULA} />
       <Route exact path='/policy/pay-daily' component={PayDailyPolicy} />
       <Route exact path='/pay-daily' component={PayDaily} />
+      <Route exact path='/policy/dark-horse' component={PolicyDarkHorse} />
+      <Route exact path='/dark-horse' component={DarkHorse} />
       <Footer />
     </div>
   );
