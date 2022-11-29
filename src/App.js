@@ -22,6 +22,8 @@ import PayDailyPolicy from './Pages/PolicyPage/cost_tracking.jsx'
 import PayDaily from './Pages/AppIntroduction/PayDaily/pay_daily.jsx';
 import DarkHorse from './Pages/AppIntroduction/DarkHorse/darkhorse.jsx';
 import PolicyDarkHorse from './Pages/PolicyPage/dark_horse_policy.jsx';
+import NeonCloud from './Pages/AppIntroduction/NeonCloud/neoncloud';
+import PolicyNeonCloud from './Pages/PolicyPage/neon_cloud.jsx';
 
 function App() {
   return (
@@ -46,6 +48,8 @@ function App() {
       <Route exact path='/pay-daily' component={PayDaily} />
       <Route exact path='/policy/dark-horse' component={PolicyDarkHorse} />
       <Route exact path='/dark-horse' component={DarkHorse} />
+      <Route exact path='/policy/neon-cloud' component={PolicyNeonCloud} />
+      <Route exact path='/neon-cloud' component={NeonCloud} />
       <Footer />
     </div>
   );

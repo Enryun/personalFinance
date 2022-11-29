@@ -13,7 +13,7 @@ const PolicyList = () => {
                 <li><Link className='navItem' to='/policy/ucoffee-eula'>Coffee Report Term and Conditions</Link></li>
                 <li><Link className='navItem' to='/policy/pay-daily'>Pay Daily Term and Conditions</Link></li>
                 <li><Link className='navItem' to='/policy/dark-horse'>Dark Horse Term and Conditions</Link></li>
-                
+                <li><Link className='navItem' to='/policy/neon-cloud'>Neon Cloud Term and Conditions</Link></li>
             </ul>
         </div>
     )

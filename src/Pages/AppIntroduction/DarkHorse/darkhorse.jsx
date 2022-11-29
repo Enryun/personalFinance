@@ -9,7 +9,7 @@ const DarkHorse = () => {
                 <h1>Learning has never been Easier</h1>
                 <div className="pos-container">
                     <h1 className="pos">Dark Horse</h1>
-                    <a href="https://apps.apple.com/us/app/id1530719536?fbclid=IwAR2I0YNm3eYD8i6E-y2pQWpGnGtfaMNTA5EjsqgM5REU3MRlyN-Lq29nKQY" target="_blank" rel="noopener noreferrer">
+                    <a href="https://apps.apple.com/us/app/darkhorse-flashcard-maker/id1621688582" target="_blank" rel="noopener noreferrer">
                         <img className="applogo" alt="AppStore" src={screenshot1}/>
                     </a>
                 </div>
