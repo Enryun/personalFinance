@@ -24,6 +24,8 @@ import DarkHorse from './Pages/AppIntroduction/DarkHorse/darkhorse.jsx';
 import PolicyDarkHorse from './Pages/PolicyPage/dark_horse_policy.jsx';
 import NeonCloud from './Pages/AppIntroduction/NeonCloud/neoncloud';
 import PolicyNeonCloud from './Pages/PolicyPage/neon_cloud.jsx';
+import GalaxyGallery from './Pages/AppIntroduction/GalaxyGallery/GalaxyGallery';
+import GalaxyGalleryPolicy from './Pages/PolicyPage/galaxy_gallery';
 
 function App() {
   return (
@@ -50,6 +52,8 @@ function App() {
       <Route exact path='/dark-horse' component={DarkHorse} />
       <Route exact path='/policy/neon-cloud' component={PolicyNeonCloud} />
       <Route exact path='/neon-cloud' component={NeonCloud} />
+      <Route exact path='/galaxy-gallery' component={GalaxyGallery} />
+      <Route exact path='/policy/galaxy-gallery' component={GalaxyGalleryPolicy} />
       <Footer />
     </div>
   );
