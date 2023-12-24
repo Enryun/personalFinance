@@ -13,6 +13,7 @@ const HomePage = () => {
                 <li><Link className='navItem' to='/dark-horse'>Dark Horse</Link></li>
                 <li><Link className='navItem' to='/neon-cloud'>Neon Cloud</Link></li>
                 <li><Link className='navItem' to='/galaxy-gallery'>Galaxy Gallery</Link></li>
+                <li><Link className='navItem' to='/random-rover'>Random Rover</Link></li>
             </ul>
         </div>
     )

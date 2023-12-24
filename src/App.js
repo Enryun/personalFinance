@@ -26,6 +26,8 @@ import NeonCloud from './Pages/AppIntroduction/NeonCloud/neoncloud';
 import PolicyNeonCloud from './Pages/PolicyPage/neon_cloud.jsx';
 import GalaxyGallery from './Pages/AppIntroduction/GalaxyGallery/GalaxyGallery';
 import GalaxyGalleryPolicy from './Pages/PolicyPage/galaxy_gallery';
+import RandomRover from './Pages/AppIntroduction/RandomRover/RandomRover.jsx';
+import RandomRoverPolicy from './Pages/PolicyPage/random_rover';
 
 function App() {
   return (
@@ -54,6 +56,8 @@ function App() {
       <Route exact path='/neon-cloud' component={NeonCloud} />
       <Route exact path='/galaxy-gallery' component={GalaxyGallery} />
       <Route exact path='/policy/galaxy-gallery' component={GalaxyGalleryPolicy} />
+      <Route exact path='/random-rover' component={RandomRover} />
+      <Route exact path='/policy/random-rover' component={RandomRoverPolicy} />
       <Footer />
     </div>
   );
