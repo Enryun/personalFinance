@@ -28,6 +28,8 @@ import GalaxyGallery from './Pages/AppIntroduction/GalaxyGallery/GalaxyGallery';
 import GalaxyGalleryPolicy from './Pages/PolicyPage/galaxy_gallery';
 import RandomRover from './Pages/AppIntroduction/RandomRover/RandomRover.jsx';
 import RandomRoverPolicy from './Pages/PolicyPage/random_rover';
+import SudokuZen from './Pages/AppIntroduction/SudokuZen/SudokuZen.jsx';
+import PolicySudokuZen from './Pages/PolicyPage/suduku_zen_policy.jsx';
 
 function App() {
   return (
@@ -58,6 +60,8 @@ function App() {
       <Route exact path='/policy/galaxy-gallery' component={GalaxyGalleryPolicy} />
       <Route exact path='/random-rover' component={RandomRover} />
       <Route exact path='/policy/random-rover' component={RandomRoverPolicy} />
+      <Route exact path='/sudoku-zen' component={SudokuZen} />
+      <Route exact path='/policy/sudoku-zen' component={PolicySudokuZen} />
       <Footer />
     </div>
   );
