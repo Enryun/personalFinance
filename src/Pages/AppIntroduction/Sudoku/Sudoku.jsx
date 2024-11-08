@@ -1,16 +1,16 @@
 import React from 'react';
 import './Sudoku.scss';
 import appstore from '../../../Image/appStore.png';
-import logo from '../../../Image/logo.png';
-import screenshot1 from '../../../Image/1.png';
-import screenshot2 from '../../../Image/2.png';
-import screenshot3 from '../../../Image/3.png';
-import screenshot4 from '../../../Image/4.png';
-import screenshot5 from '../../../Image/5.png';
+import logo from '../../../Image/Sudoku.png';
+import screenshot1 from '../../../Image/SudokuZen1.png';
+import screenshot2 from '../../../Image/SudokuZen2.png';
+import screenshot3 from '../../../Image/SudokuZen3.png';
+import screenshot4 from '../../../Image/SudokuZen4.png';
+import screenshot5 from '../../../Image/SudokuZen5.png';
 
 const Sudoku = () => {
     return (
-        <div className="sudoku">
+        <div className="sudokuzen">
             <h3 className="sudoku_title">Sudoku Magic Square</h3>
             {/* App Logo */}
             {/* Screen Shot using Flex box */}
