@@ -30,6 +30,7 @@ import RandomRover from './Pages/AppIntroduction/RandomRover/RandomRover.jsx';
 import RandomRoverPolicy from './Pages/PolicyPage/random_rover';
 import SudokuZen from './Pages/AppIntroduction/SudokuZen/SudokuZen.jsx';
 import PolicySudokuZen from './Pages/PolicyPage/suduku_zen_policy.jsx';
+import WordSearch from './Pages/AppIntroduction/WordSearch/WordSearch.jsx';
 import PolicyWordSearch from './Pages/PolicyPage/wordsearch.jsx';
 
 
@@ -64,6 +65,7 @@ function App() {
       <Route exact path='/policy/random-rover' component={RandomRoverPolicy} />
       <Route exact path='/sudoku-zen' component={SudokuZen} />
       <Route exact path='/policy/sudoku-zen' component={PolicySudokuZen} />
+      <Route exact path='/wordsearch' component={WordSearch} />
       <Route exact path='/policy/wordsearch' component={PolicyWordSearch} />
       <Footer />
     </div>
