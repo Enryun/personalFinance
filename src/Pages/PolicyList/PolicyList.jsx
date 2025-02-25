@@ -17,6 +17,7 @@ const PolicyList = () => {
                 <li><Link className='navItem' to='/policy/galaxy-gallery'>Galaxy Gallery AR Term and Conditions</Link></li>
                 <li><Link className='navItem' to='/policy/random-rover'>Random Rover Term and Conditions</Link></li>
                 <li><Link className='navItem' to='/policy/sudoku-zen'>Sudoku Zen Term and Conditions</Link></li>
+                <li><Link className='navItem' to='/policy/wordsearch'>Word Search and Conditions</Link></li>
             </ul>
         </div>
     )
