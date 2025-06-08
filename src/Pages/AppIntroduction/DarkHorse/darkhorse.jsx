@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import screenshot1 from '../../../Image/DarkHorse.png';
 import screenshot2 from '../../../Image/DarkHorse2.png';
 
@@ -15,6 +16,13 @@ const DarkHorse = () => {
                 </div>
             
                 <img src={screenshot2} alt="" className="image_1" />
+
+                {/* Policy Link */}
+                <div className="policy-link-container">
+                    <Link to="/policy/dark-horse" className="policy-link">
+                        Privacy Policy & Terms of Service
+                    </Link>
+                </div>
             </div>
         </div>
     )

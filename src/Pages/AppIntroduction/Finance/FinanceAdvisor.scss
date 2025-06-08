@@ -25,3 +25,51 @@ h3 {
     margin-top: 5rem;
 }
 
+.policy-link-container {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.policy-link {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.policy-link:hover {
+  color: #374151;
+  background-color: #f3f4f6;
+  border-color: #d1d5db;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.policy-link:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .policy-link-container {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .policy-link {
+    font-size: 0.8rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+

@@ -55,6 +55,13 @@ const POS_remote = () => {
                 <a href="https://apps.apple.com/us/app/coffee-record/id1549652430" target="_blank" rel="noopener noreferrer">
                     <img className="appstore" alt="AppStore" src={appstore}/>
                 </a>
+
+                {/* Policy Link */}
+                <div className="policy-link-container">
+                    <Link to="/policy/ucoffee-eula" className="policy-link">
+                        Privacy Policy & Terms of Service
+                    </Link>
+                </div>
             </div>
            
         </div>

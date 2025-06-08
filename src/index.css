@@ -5,9 +5,613 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to bottom, #f9fafb, #ffffff);
+  line-height: 1.6;
+  color: #1f2937;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Modern CSS Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Homepage Styles */
+.homepage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-name {
+  color: #111827;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hero-text {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.hero-text em {
+  color: #374151;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.hero-text strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+.hero-highlight {
+  color: #374151;
+  font-weight: 600;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .projects-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.project-link {
+  display: block;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.project-link:hover {
+  background-color: #f9fafb;
+  border-color: #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.project-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.project-link:hover .project-icon {
+  transform: scale(1.05);
+}
+
+.project-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  transition: color 0.2s ease;
+}
+
+.project-link:hover .project-title {
+  color: #2563eb;
+}
+
+.project-story {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.3;
+  margin: 0.2rem 0 0 0;
+  padding: 0;
+}
+
+.project-link:hover .project-story {
+  color: #4b5563;
+}
+
+.project-arrow {
+  margin-left: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  color: #3b82f6;
+  flex-shrink: 0;
+}
+
+.project-link:hover .project-arrow {
+  opacity: 1;
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem;
+  background: linear-gradient(to right, #dbeafe, #e0e7ff);
+  border-radius: 16px;
+}
+
+.cta-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.cta-text {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-footer {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+/* Responsive Design */
+/* Books Section */
+.books-section {
+  background: white;
+  padding: 4rem 1.5rem;
+  margin-top: 4rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.books-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.books-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.books-subtitle {
+  font-size: 1.25rem;
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.book-card {
+  display: flex;
+  gap: 2rem;
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.book-cover {
+  flex-shrink: 0;
+  width: 120px;
+  height: 160px;
+}
+
+.book-cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover .book-cover-image {
+  transform: scale(1.02);
+}
+
+.book-cover-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.book-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.book-description {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.book-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+}
+
+.book-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.books-cta {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to right, #dbeafe, #e0e7ff);
+  border-radius: 16px;
+}
+
+.books-cta-text {
+  color: #374151;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Contact Section */
+.contact-section {
+  background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+  padding: 4rem 1.5rem;
+  margin-top: 4rem;
+}
+
+.contact-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1.2;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.skill-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+}
+
+.skill-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.skill-description {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.contact-cta {
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.contact-cta-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.contact-cta-text {
+  color: #6b7280;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-method {
+  background: #f9fafb;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  color: #374151;
+  font-size: 1rem;
+  border: 1px solid #e5e7eb;
+}
+
+.contact-method strong {
+  color: #1f2937;
+}
+
+.linkedin-link {
+  color: #0077b5;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+  color: #005885;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-text {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+  
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+  
+  .main-content {
+    padding: 0 1rem 2rem;
+  }
+  
+  .project-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .project-content {
+    gap: 0.75rem;
+  }
+  
+  .project-title {
+    font-size: 1.125rem;
+  }
+  
+  .project-story {
+    font-size: 0.9rem;
+  }
+
+  .contact-section {
+    padding: 3rem 1rem;
+    margin-top: 2rem;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .skill-card {
+    padding: 1.5rem;
+  }
+
+  .contact-cta {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-cta-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-cta-text {
+    font-size: 1rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-method {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .books-section {
+    padding: 3rem 1rem;
+    margin-top: 2rem;
+  }
+
+  .books-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .books-subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .book-card {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .book-cover {
+    width: 100px;
+    height: 140px;
+    align-self: center;
+  }
+
+  .book-title {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .book-description {
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  .book-link {
+    align-self: center;
+    font-size: 0.9rem;
+  }
+
+  .books-cta {
+    padding: 1.5rem;
+  }
+
+  .books-cta-text {
+    font-size: 1rem;
+  }
 }
