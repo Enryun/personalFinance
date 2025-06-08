@@ -138,6 +138,56 @@ const HomePage = () => {
                     </p>
                 </div>
             </main>
+
+            {/* Contact Section */}
+            <section className="contact-section">
+                <div className="contact-content">
+                    <h2 className="contact-title">Let's Build Something Amazing Together</h2>
+                    
+                    <div className="skills-grid">
+                        <div className="skill-card">
+                            <h3 className="skill-title">iOS Development</h3>
+                            <p className="skill-description">
+                                Expert in UIKit and SwiftUI with 8 published apps across Finance, AR, Gaming, EdTech, and POS systems.
+                                From concept to App Store - I bring ideas to life.
+                            </p>
+                        </div>
+
+                        <div className="skill-card">
+                            <h3 className="skill-title">Problem Solving</h3>
+                            <p className="skill-description">
+                                Self-taught developer who thrives on challenges. I turn complex problems into elegant solutions 
+                                that impact thousands of users.
+                            </p>
+                        </div>
+
+                        <div className="skill-card">
+                            <h3 className="skill-title">Full-Stack Vision</h3>
+                            <p className="skill-description">
+                                Beyond iOS - I understand the complete ecosystem from backend integration to user experience, 
+                                ensuring seamless end-to-end solutions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="contact-cta">
+                        <h3 className="contact-cta-title">Ready to Start Your Next Project?</h3>
+                        <p className="contact-cta-text">
+                            Whether you have a million-dollar idea or need to solve a specific challenge, 
+                            let's discuss how we can bring your vision to reality.
+                        </p>
+                        
+                        <div className="contact-info">
+                            <div className="contact-method">
+                                <strong>Email:</strong> jamesthang1996@gmail.com
+                            </div>
+                            <div className="contact-method">
+                                <strong>Phone:</strong> (+84) 085 771 3736
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
