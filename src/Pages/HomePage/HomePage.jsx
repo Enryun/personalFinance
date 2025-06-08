@@ -71,16 +71,14 @@ const HomePage = () => {
             <header className="hero-section">
                 <div className="fade-in-up">
                     <h1 className="hero-title">
-                        Hi, I'm Dương Đình Bảo Thăng
+                        Hi, I'm <span className="hero-name">Dương Đình Bảo Thăng</span>
                     </h1>
                     <div>
                         <p className="hero-text">
-                            My journey from Finance & Economics to iOS development proves that <em>passion drives mastery.</em> 
-                            Through self-education and dedication, I became a professional iOS developer with expertise in <strong>UIKit and SwiftUI</strong>.
+                            Expert <strong>iOS developer</strong> specializing in <strong>UIKit and SwiftUI</strong>, with 8 published apps across Finance, AR, Gaming, EdTech, and POS systems. 
                         </p>
                         <p className="hero-text hero-highlight">
-                            I've created 8 apps across Finance, AR, Gaming, EdTech, and POS systems—impacting thousands of users. 
-                            As a SwiftUI book author, I'm passionate about pushing the boundaries of iOS development.
+                            My expertise is proven through my app portfolio below and as a published SwiftUI book author impacting thousands of developers worldwide.
                         </p>
                     </div>
                 </div>
