@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../../Image/financeLogo.png';
 import './FinanceAdvisor.scss';
 import appstore from '../../../Image/appStore.png';
@@ -33,7 +34,13 @@ const FinanceAdvisor = () => {
                     <img className="applogo" alt="logo" src={logo} />
                 </a>
             </div>
-          
+
+            {/* Policy Link */}
+            <div className="policy-link-container">
+                <Link to="/policy/finance-advisor" className="policy-link">
+                    Privacy Policy & Terms of Service
+                </Link>
+            </div>
         </div>
     )
 }

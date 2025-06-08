@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import screenshot1 from '../../../Image/PayDaily.png';
 import screenshot2 from '../../../Image/PayDaily2.png';
+import './pay_daily.scss';
 
 const PayDaily = () => {
     return (
@@ -15,6 +17,13 @@ const PayDaily = () => {
                 </div>
             
                 <img src={screenshot2} alt="" className="image_1" />
+                
+                {/* Policy Link */}
+                <div className="policy-link-container">
+                    <Link to="/policy/pay-daily" className="policy-link">
+                        Privacy Policy & Terms of Service
+                    </Link>
+                </div>
             </div>
         </div>
     )

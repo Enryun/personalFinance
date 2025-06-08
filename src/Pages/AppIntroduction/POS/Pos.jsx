@@ -52,6 +52,13 @@ const Pos = () => {
                     <img className="appstore" alt="AppStore" src={appstore}/>
                 </a>
                 <h3>Already Downloaded. Go to <Link to='/ucoffee-setup' className="link">Set Up</Link></h3>
+
+                {/* Policy Link */}
+                <div className="policy-link-container">
+                    <Link to="/policy/ucoffee" className="policy-link">
+                        Privacy Policy & Terms of Service
+                    </Link>
+                </div>
             </div>
             
         </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import screenshot1 from '../../../Image/Neon.png';
 import screenshot2 from '../../../Image/Neon2.png';
 
@@ -15,6 +16,13 @@ const NeonCloud = () => {
                 </div>
             
                 <img src={screenshot2} alt="" className="image_2" />
+
+                {/* Policy Link */}
+                <div className="policy-link-container">
+                    <Link to="/policy/neon-cloud" className="policy-link">
+                        Privacy Policy & Terms of Service
+                    </Link>
+                </div>
             </div>
         </div>
     )

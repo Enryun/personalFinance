@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import screenshot1 from '../../../Image/RandomRover1.png';
 import screenshot2 from '../../../Image/RandomRover2.png';
 import screenshot3 from '../../../Image/RandomRover3.png';
@@ -28,6 +29,13 @@ const RandomRover = () => {
         <a href="https://apps.apple.com/app/id6446942450?fbclid=IwAR2I0YNm3eYD8i6E-y2pQWpGnGtfaMNTA5EjsqgM5REU3MRlyN-Lq29nKQY" target="_blank" rel="noopener noreferrer">
             <img className="appstore" alt="AppStore" src={appstore}/>
         </a>
+
+        {/* Policy Link */}
+        <div className="policy-link-container">
+            <Link to="/policy/random-rover" className="policy-link">
+                Privacy Policy & Terms of Service
+            </Link>
+        </div>
     </div>
     )
 }
