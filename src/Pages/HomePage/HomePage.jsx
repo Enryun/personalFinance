@@ -184,6 +184,12 @@ const HomePage = () => {
                             <div className="contact-method">
                                 <strong>Phone:</strong> (+84) 085 771 3736
                             </div>
+                            <div className="contact-method">
+                                <strong>LinkedIn:</strong> 
+                                <a href="https://www.linkedin.com/in/jamesthang/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                                    linkedin.com/in/jamesthang
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
