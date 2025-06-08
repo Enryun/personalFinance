@@ -139,6 +139,75 @@ const HomePage = () => {
                 </div>
             </main>
 
+            {/* Books Section */}
+            <section className="books-section">
+                <div className="books-content">
+                    <h2 className="books-title">Published Author</h2>
+                    <p className="books-subtitle">
+                        Sharing knowledge through comprehensive guides that help thousands of developers worldwide
+                    </p>
+                    
+                    <div className="books-grid">
+                        <div className="book-card">
+                            <div className="book-cover">
+                                <img 
+                                    src={require('../../Image/SwiftUI.jpg')} 
+                                    alt="Ultimate SwiftUI Handbook for iOS Developers book cover"
+                                    className="book-cover-image"
+                                />
+                            </div>
+                            <div className="book-info">
+                                <h3 className="book-title">Ultimate SwiftUI Handbook for iOS Developers</h3>
+                                <p className="book-description">
+                                    A comprehensive guide to mastering SwiftUI development. From basic concepts to advanced techniques, 
+                                    this handbook provides everything needed to build modern iOS applications.
+                                </p>
+                                <a 
+                                    href="https://www.amazon.com/Ultimate-SwiftUI-Handbook-iOS-Developers-ebook/dp/B0CKBVY7V6/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="book-link"
+                                >
+                                    View on Amazon →
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="book-card">
+                            <div className="book-cover">
+                                <img 
+                                    src={require('../../Image/Firebase.JPG')} 
+                                    alt="Ultimate Firebase Android Applications High-Performance book cover"
+                                    className="book-cover-image"
+                                />
+                            </div>
+                            <div className="book-info">
+                                <h3 className="book-title">Ultimate Firebase Android Applications High-Performance</h3>
+                                <p className="book-description">
+                                    Master Firebase for Android development with this in-depth guide covering real-time databases, 
+                                    authentication, cloud functions, and performance optimization techniques.
+                                </p>
+                                <a 
+                                    href="https://www.amazon.com/Ultimate-Firebase-Android-Applications-High-Performance-ebook/dp/B0DLG5K3ZB?ref_=ast_author_dp" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="book-link"
+                                >
+                                    View on Amazon →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="books-cta">
+                        <p className="books-cta-text">
+                            These books represent my commitment to sharing knowledge and helping fellow developers 
+                            excel in mobile development. Join thousands of readers who have advanced their skills.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
             {/* Contact Section */}
             <section className="contact-section">
                 <div className="contact-content">
