@@ -71,17 +71,16 @@ const HomePage = () => {
             <header className="hero-section">
                 <div className="fade-in-up">
                     <h1 className="hero-title">
-                        Hey, I'm an iOS Developer
+                        Hi, I'm Dương Đình Bảo Thăng
                     </h1>
                     <div>
                         <p className="hero-text">
-                            My journey started with a simple idea: <em>what if apps could make everyday life just a little bit better?</em>
-                        </p>
-                        <p className="hero-text">
-                            From tracking daily expenses to solving complex puzzles, each project taught me something new about crafting experiences that users actually love.
+                            My journey from Finance & Economics to iOS development proves that <em>passion drives mastery.</em> 
+                            Through self-education and dedication, I became a professional iOS developer with expertise in <strong>UIKit and SwiftUI</strong>.
                         </p>
                         <p className="hero-text hero-highlight">
-                            Here's the story of my development journey, one app at a time.
+                            I've created 8 apps across Finance, AR, Gaming, EdTech, and POS systems—impacting thousands of users. 
+                            As a SwiftUI book author, I'm passionate about pushing the boundaries of iOS development.
                         </p>
                     </div>
                 </div>
@@ -91,7 +90,7 @@ const HomePage = () => {
             <main className="main-content">
                 <div>
                     <h2 className="section-title">
-                        My Development Journey
+                        My Development Portfolio
                     </h2>
 
                     {/* Projects Timeline */}
@@ -131,13 +130,14 @@ const HomePage = () => {
                 {/* Call to Action */}
                 <div className="cta-section">
                     <h3 className="cta-title">
-                        Ready to explore?
+                        Explore My Work
                     </h3>
                     <p className="cta-text">
-                        Each project represents a chapter in my learning journey. Click on any project above to see the story unfold.
+                        Each app represents a chapter in my journey from Finance to iOS development. 
+                        Click any project to see how passion transformed into expertise.
                     </p>
                     <div className="cta-footer">
-                        Built with curiosity, powered by Swift & React
+                        Built with passion • Powered by UIKit & SwiftUI
                     </div>
                 </div>
             </main>
