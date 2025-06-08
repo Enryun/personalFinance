@@ -136,9 +136,6 @@ const HomePage = () => {
                         Each app represents a chapter in my journey from Finance to iOS development. 
                         Click any project to see how passion transformed into expertise.
                     </p>
-                    <div className="cta-footer">
-                        Built with passion • Powered by UIKit & SwiftUI
-                    </div>
                 </div>
             </main>
         </div>

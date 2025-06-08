@@ -1,11 +1,66 @@
 .footer {
-    text-align: center;
-    font-family: sans-serif;
-    color: grey;
-    padding: 20px;
-    font-size: 12px;
-    bottom: 0;
-    width: 100%;
+  margin-top: auto;
+  background: linear-gradient(to right, #f8fafc, #f1f5f9);
+  border-top: 1px solid #e2e8f0;
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-text {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.footer-copyright {
+  color: #9ca3af;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 1rem 1rem;
+  }
+  
+  .footer-text {
+    font-size: 0.8rem;
+  }
+  
+  .footer-copyright {
+    font-size: 0.7rem;
+  }
+}
+
+/* Ensure footer sticks to bottom for short content */
+html, body, #root {
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Make the main content area grow to push footer down */
+.App > :not(.footer) {
+  flex: 1;
+}
+
+
 
 

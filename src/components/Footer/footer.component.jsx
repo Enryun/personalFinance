@@ -3,10 +3,17 @@ import './footer.styles.scss';
 
 const Footer = () => {
     return (
-        <div className='footer'>
-            <div> &copy; James Thang 2025</div>
-        </div>
-    )
-}
+        <footer className='footer'>
+            <div className='footer-content'>
+                <div className='footer-text'>
+                    Built with passion • Powered by UIKit & SwiftUI
+                </div>
+                <div className='footer-copyright'>
+                    © 2025 Dương Đình Bảo Thăng. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    );
+};
 
 export default Footer;
