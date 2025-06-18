@@ -5,6 +5,11 @@ import screenshot2 from '../../../Image/TidyMac2.png';
 import './tidy_mac.scss';
 
 const TidyMac = () => {
+    const handleDirectDownload = () => {
+        // Replace with your actual download URL
+        window.location.href = 'https://your-domain.com/downloads/TidyMac.dmg';
+    };
+
     return (
         <div className="tidy-mac-page">
             {/* Top Navigation Bar */}
@@ -17,9 +22,9 @@ const TidyMac = () => {
                         </Link>
                     </div>
                     <div className="nav-right">
-                        <a href="https://apps.apple.com/us/app/tidy-mac/id1234567890" target="_blank" rel="noopener noreferrer" className="nav-button">
-                            Download
-                        </a>
+                        <button onClick={handleDirectDownload} className="nav-button">
+                            Try it Now
+                        </button>
                     </div>
                 </div>
             </nav>
@@ -60,10 +65,10 @@ const TidyMac = () => {
             {/* CTA Section */}
             <div className="cta-section">
                 <h2>Ready to Optimize Your Mac?</h2>
-                <p>Download Tidy Mac from the Mac App Store and start enjoying a cleaner, faster system today.</p>
-                <a href="https://apps.apple.com/us/app/tidy-mac/id1234567890" target="_blank" rel="noopener noreferrer" className="download-button">
-                    Download on the Mac App Store
-                </a>
+                <p>Download Tidy Mac and start enjoying a cleaner, faster system today.</p>
+                <button onClick={handleDirectDownload} className="download-button">
+                    Try it Now
+                </button>
             </div>
             
             {/* Footer */}

@@ -50,16 +50,47 @@
 
             .nav-right {
                 .nav-button {
-                    background: #2d3748;
+                    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
                     color: white;
                     padding: 0.75rem 1.5rem;
                     border-radius: 8px;
-                    text-decoration: none;
+                    border: none;
                     font-weight: 600;
-                    transition: background-color 0.3s ease;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    font-size: 1rem;
+                    position: relative;
+                    overflow: hidden;
+                    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 2px 4px -1px rgba(37, 99, 235, 0.1);
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -100%;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(
+                            120deg,
+                            transparent,
+                            rgba(255, 255, 255, 0.3),
+                            transparent
+                        );
+                        transition: 0.5s;
+                    }
 
                     &:hover {
-                        background: #4a5568;
+                        transform: translateY(-2px);
+                        box-shadow: 0 6px 8px -1px rgba(37, 99, 235, 0.25), 0 4px 6px -1px rgba(37, 99, 235, 0.15);
+
+                        &::before {
+                            left: 100%;
+                        }
+                    }
+
+                    &:active {
+                        transform: translateY(0);
+                        box-shadow: 0 2px 4px -1px rgba(37, 99, 235, 0.1);
                     }
                 }
             }
@@ -162,16 +193,48 @@
 
         .download-button {
             display: inline-block;
-            background: #2d3748;
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
             color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
+            padding: 1.25rem 3rem;
+            border-radius: 12px;
+            border: none;
+            font-size: 1.25rem;
             font-weight: 600;
-            transition: background-color 0.3s ease;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 15px -3px rgba(37, 99, 235, 0.2), 0 4px 6px -2px rgba(37, 99, 235, 0.1);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    120deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.4),
+                    transparent
+                );
+                transition: 0.5s;
+            }
 
             &:hover {
-                background: #4a5568;
+                transform: translateY(-3px);
+                box-shadow: 0 12px 20px -5px rgba(37, 99, 235, 0.25), 0 6px 8px -2px rgba(37, 99, 235, 0.15);
+
+                &::before {
+                    left: 100%;
+                }
+            }
+
+            &:active {
+                transform: translateY(-1px);
+                box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.1);
             }
         }
     }
@@ -221,6 +284,13 @@
                         }
                     }
                 }
+
+                .nav-right {
+                    .nav-button {
+                        padding: 0.5rem 1rem;
+                        font-size: 0.875rem;
+                    }
+                }
             }
         }
 
@@ -251,6 +321,11 @@
         .cta-section {
             h2 {
                 font-size: 2rem;
+            }
+
+            .download-button {
+                padding: 1rem 2rem;
+                font-size: 1.125rem;
             }
         }
     }
