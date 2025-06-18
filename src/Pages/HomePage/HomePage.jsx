@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 const HomePage = () => {
     const projects = [
         { 
+            title: 'Tidy Mac', 
+            route: '/tidy-mac', 
+            story: 'A clean, efficient Mac app for system maintenance',
+            icon: require('../../Image/TidyMac.png')
+        },
+        { 
             title: 'Pay Daily', 
             route: '/pay-daily', 
             story: 'Where it all began - tracking daily expenses',

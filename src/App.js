@@ -32,6 +32,8 @@ import SudokuZen from './Pages/AppIntroduction/SudokuZen/SudokuZen.jsx';
 import PolicySudokuZen from './Pages/PolicyPage/suduku_zen_policy.jsx';
 import WordSearch from './Pages/AppIntroduction/WordSearch/WordSearch.jsx';
 import PolicyWordSearch from './Pages/PolicyPage/wordsearch.jsx';
+import TidyMac from './Pages/AppIntroduction/TidyMac/tidy_mac.jsx';
+import PolicyTidyMac from './Pages/PolicyPage/tidy_mac.jsx';
 
 
 function App() {
@@ -67,6 +69,8 @@ function App() {
       <Route exact path='/policy/sudoku-zen' component={PolicySudokuZen} />
       <Route exact path='/wordsearch' component={WordSearch} />
       <Route exact path='/policy/wordsearch' component={PolicyWordSearch} />
+      <Route exact path='/tidy-mac' component={TidyMac} />
+      <Route exact path='/policy/tidy-mac' component={PolicyTidyMac} />
       <Footer />
     </div>
   );
