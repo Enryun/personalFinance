@@ -6,25 +6,74 @@ import './tidy_mac.scss';
 
 const TidyMac = () => {
     return (
-        <div>
-            <div className="big-background">
-                <h1>Keep Your Mac Clean with</h1>
-                <div className="pos-container">
-                    <h1 className="tidy-mac">Tidy Mac</h1>
-                    <a href="https://apps.apple.com/us/app/tidy-mac/id1234567890" target="_blank" rel="noopener noreferrer">
-                        <img className="applogo" alt="Mac App Store" src={screenshot1}/>
-                    </a>
+        <div className="tidy-mac-page">
+            {/* Top Navigation Bar */}
+            <nav className="top-nav">
+                <div className="nav-content">
+                    <div className="nav-left">
+                        <Link to="/" className="nav-logo">
+                            <img src={screenshot1} alt="Tidy Mac" className="nav-icon" />
+                            <span>Tidy Mac</span>
+                        </Link>
+                    </div>
+                    <div className="nav-right">
+                        <a href="https://apps.apple.com/us/app/tidy-mac/id1234567890" target="_blank" rel="noopener noreferrer" className="nav-button">
+                            Download
+                        </a>
+                    </div>
                 </div>
+            </nav>
+
+            {/* Hero Section with Centered Image */}
+            <div className="hero-section">
+                <div className="hero-content">
+                    <h1>Keep Your Mac Clean</h1>
+                    <p className="hero-subtitle">A powerful yet simple Mac utility to keep your system running smoothly</p>
+                    <div className="hero-image">
+                        <img src={screenshot2} alt="Tidy Mac Screenshot" />
+                    </div>
+                </div>
+            </div>
+
+            {/* Features Section */}
+            <div className="features-section">
+                <div className="feature-grid">
+                    <div className="feature-card">
+                        <h3>System Cleanup</h3>
+                        <p>Remove unnecessary files, caches, and logs to free up valuable disk space</p>
+                    </div>
+                    <div className="feature-card">
+                        <h3>Performance Boost</h3>
+                        <p>Optimize your Mac's performance by cleaning system junk and temporary files</p>
+                    </div>
+                    <div className="feature-card">
+                        <h3>Smart Analysis</h3>
+                        <p>Intelligent scanning to identify and safely remove redundant files</p>
+                    </div>
+                    <div className="feature-card">
+                        <h3>User-Friendly</h3>
+                        <p>Simple, intuitive interface designed for both beginners and power users</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* CTA Section */}
+            <div className="cta-section">
+                <h2>Ready to Optimize Your Mac?</h2>
+                <p>Download Tidy Mac from the Mac App Store and start enjoying a cleaner, faster system today.</p>
+                <a href="https://apps.apple.com/us/app/tidy-mac/id1234567890" target="_blank" rel="noopener noreferrer" className="download-button">
+                    Download on the Mac App Store
+                </a>
+            </div>
             
-                <img src={screenshot2} alt="Tidy Mac Screenshot" className="image_1" />
-                
-                {/* Policy Link */}
-                <div className="policy-link-container">
+            {/* Footer */}
+            <footer className="footer">
+                <div className="footer-content">
                     <Link to="/policy/tidy-mac" className="policy-link">
                         Privacy Policy & Terms of Service
                     </Link>
                 </div>
-            </div>
+            </footer>
         </div>
     )
 }
