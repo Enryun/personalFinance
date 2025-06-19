@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import screenshot1 from '../../../Image/TidyMac.png';
-import screenshot2 from '../../../Image/TidyMac2.png';
+import screenshot2 from '../../../Image/TidyMac1.png';
 import './tidy_mac.scss';
 
 const TidyMac = () => {
