@@ -6,8 +6,7 @@ import './tidy_mac.scss';
 
 const TidyMac = () => {
     const handleDirectDownload = () => {
-        // Replace with your actual download URL
-        window.location.href = 'https://your-domain.com/downloads/TidyMac.dmg';
+        window.open('/TidyMac.dmg', '_blank');
     };
 
     return (
