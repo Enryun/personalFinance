@@ -242,23 +242,25 @@
     // Footer
     .footer {
         padding: 2rem;
-        background: white;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-top: none;
+        margin-top: auto;
 
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
 
-            .policy-link {
-                color: #4a5568;
+            .tidy-mac-policy-link {
+                color: #2563eb;
                 text-decoration: none;
                 font-size: 0.875rem;
-                transition: color 0.2s ease;
+                transition: none;
+                background: none !important;
 
                 &:hover {
-                    color: #2d3748;
-                    text-decoration: underline;
+                    color: #2563eb;
+                    text-decoration: none;
+                    background: none !important;
                 }
             }
         }

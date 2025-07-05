@@ -90,7 +90,7 @@ const TidyMac = () => {
             {/* Footer */}
             <footer className="footer">
                 <div className="footer-content">
-                    <Link to="/policy/tidy-mac" className="policy-link">
+                    <Link to="/policy/tidy-mac" className="tidy-mac-policy-link">
                         Privacy Policy & Terms of Service
                     </Link>
                 </div>
