@@ -6,7 +6,24 @@ import './tidy_mac.scss';
 
 const TidyMac = () => {
     const handleDirectDownload = () => {
-        window.open('/TidyMac.dmg', '_blank');
+        // Try GitHub Releases first, fallback to raw file if no releases exist
+        const githubReleasesUrl = 'https://github.com/Enryun/TidyMac/releases/latest/download/TidyMac.dmg';
+        const fallbackUrl = 'https://github.com/Enryun/TidyMac/raw/main/TidyMac.dmg';
+        
+        // Try the releases URL first, if it fails, use the fallback
+        fetch(githubReleasesUrl, { method: 'HEAD' })
+            .then(response => {
+                if (response.ok) {
+                    window.open(githubReleasesUrl, '_blank');
+                } else {
+                    // If releases URL returns 404, use the raw file
+                    window.open(fallbackUrl, '_blank');
+                }
+            })
+            .catch(() => {
+                // If there's any error, use the fallback
+                window.open(fallbackUrl, '_blank');
+            });
     };
 
     return (
