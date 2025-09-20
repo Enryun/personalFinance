@@ -34,6 +34,8 @@ import WordSearch from './Pages/AppIntroduction/WordSearch/WordSearch.jsx';
 import PolicyWordSearch from './Pages/PolicyPage/wordsearch.jsx';
 import TidyMac from './Pages/AppIntroduction/TidyMac/tidy_mac.jsx';
 import PolicyTidyMac from './Pages/PolicyPage/tidy_mac.jsx';
+import BattleShipPirateWar from './Pages/AppIntroduction/BattleShipPirateWar/battle_ship_pirate_war.jsx';
+import PolicyBattleShipPirateWar from './Pages/PolicyPage/battle_ship_pirate_war.jsx';
 
 
 function App() {
@@ -71,6 +73,8 @@ function App() {
       <Route exact path='/policy/wordsearch' component={PolicyWordSearch} />
       <Route exact path='/tidy-mac' component={TidyMac} />
       <Route exact path='/policy/tidy-mac' component={PolicyTidyMac} />
+      <Route exact path='/battle-ship-pirate-war' component={BattleShipPirateWar} />
+      <Route exact path='/policy/battle-ship-pirate-war' component={PolicyBattleShipPirateWar} />
       <Footer />
     </div>
   );

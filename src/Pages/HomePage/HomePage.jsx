@@ -68,6 +68,12 @@ const HomePage = () => {
             route: '/wordsearch', 
             story: 'Simple games, complex implementations',
             icon: require('../../Image/WordSearch.png')
+        },
+        { 
+            title: 'Battle Ship: Pirate War', 
+            route: '/battle-ship-pirate-war', 
+            story: 'Strategic naval warfare with epic pirate battles',
+            icon: require('../../Image/PirateWar1.png')
         }
     ];
 
