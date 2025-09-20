@@ -9,8 +9,8 @@ import './battle_ship_pirate_war.scss';
 
 const BattleShipPirateWar = () => {
     const handleAppStoreDownload = () => {
-        // Placeholder for App Store download link
-        window.open('https://apps.apple.com/app/battle-ship-pirate-war/id123456789', '_blank');
+        // App Store download link with correct ID
+        window.open('https://apps.apple.com/app/id6738505861', '_blank');
     };
 
 
