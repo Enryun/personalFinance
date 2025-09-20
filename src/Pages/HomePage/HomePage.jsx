@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 const HomePage = () => {
     const projects = [
         { 
+            title: 'Battle Ship: Pirate War', 
+            route: '/battle-ship-pirate-war', 
+            story: 'Strategic naval warfare with epic pirate battles',
+            icon: require('../../Image/PirateWar1.png')
+        },
+        { 
             title: 'Tidy Mac', 
             route: '/tidy-mac', 
             story: 'A clean, efficient Mac app for system maintenance',
