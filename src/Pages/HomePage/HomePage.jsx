@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import courseImage from '../../Image/SwiftUI_Udemy.png';
 
 const HomePage = () => {
     const projects = [
@@ -148,6 +149,59 @@ const HomePage = () => {
                     </p>
                 </div>
             </main>
+
+            {/* Course Section */}
+            <section className="course-section">
+                <div className="course-content">
+                    <h2 className="course-title">SwiftUI Course Instructor</h2>
+                    <p className="course-subtitle">
+                        Teaching the next generation of iOS developers through comprehensive, hands-on learning experiences
+                    </p>
+                    
+                    <div className="course-showcase">
+                        <div className="course-card">
+                            <div className="course-image">
+                                <img src={courseImage} alt="SwiftUI Essentials Course" />
+                            </div>
+                            <div className="course-info">
+                                <h3 className="course-name">SwiftUI Essentials: Kickstart Your iOS Development Journey</h3>
+                                <p className="course-description">
+                                    Master SwiftUI fundamentals designed specifically for beginners. Learn to build beautiful, 
+                                    responsive iOS apps with Apple's modern UI framework through practical, hands-on projects.
+                                </p>
+                                <div className="course-features">
+                                    <div className="feature-item">
+                                        <span className="feature-icon">🎯</span>
+                                        <span>Beginner-Friendly</span>
+                                    </div>
+                                    <div className="feature-item">
+                                        <span className="feature-icon">📱</span>
+                                        <span>Hands-On Projects</span>
+                                    </div>
+                                    <div className="feature-item">
+                                        <span className="feature-icon">⚡</span>
+                                        <span>Modern SwiftUI</span>
+                                    </div>
+                                    <div className="feature-item">
+                                        <span className="feature-icon">🏆</span>
+                                        <span>Industry Best Practices</span>
+                                    </div>
+                                </div>
+                                <div className="course-cta">
+                                    <a 
+                                        href="https://www.udemy.com/course/swiftui-essentials-kickstart-your-ios-development-journey" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="course-button"
+                                    >
+                                        View Course on Udemy
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* Books Section */}
             <section className="books-section">
