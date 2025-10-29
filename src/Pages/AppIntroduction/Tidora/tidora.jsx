@@ -74,9 +74,14 @@ const Tidora = () => {
             {/* Footer */}
             <footer className="footer">
                 <div className="footer-content">
-                    <Link to="/policy/tidora" className="tidora-policy-link">
-                        Privacy Policy & Terms of Service
-                    </Link>
+                    <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                        <Link to="/policy/tidora" className="tidora-policy-link">
+                            Privacy Policy
+                        </Link>
+                        <Link to="/policy/tidora-eula" className="tidora-policy-link">
+                            Terms of Use (EULA)
+                        </Link>
+                    </div>
                 </div>
             </footer>
         </div>
