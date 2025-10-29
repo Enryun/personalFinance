@@ -11,10 +11,10 @@ const HomePage = () => {
             icon: require('../../Image/PirateWar1.png')
         },
         { 
-            title: 'Tidy Mac', 
-            route: '/tidy-mac', 
+            title: 'Tidora', 
+            route: '/tidora', 
             story: 'A clean, efficient Mac app for system maintenance',
-            icon: require('../../Image/TidyMac.png')
+            icon: require('../../Image/Tidora.png')
         },
         { 
             title: 'Pay Daily', 

@@ -34,6 +34,9 @@ import WordSearch from './Pages/AppIntroduction/WordSearch/WordSearch.jsx';
 import PolicyWordSearch from './Pages/PolicyPage/wordsearch.jsx';
 import TidyMac from './Pages/AppIntroduction/TidyMac/tidy_mac.jsx';
 import PolicyTidyMac from './Pages/PolicyPage/tidy_mac.jsx';
+import Tidora from './Pages/AppIntroduction/Tidora/tidora.jsx';
+import PolicyTidora from './Pages/PolicyPage/tidora.jsx';
+import TidoraEULA from './Pages/PolicyPage/tidora_eula.jsx';
 import BattleShipPirateWar from './Pages/AppIntroduction/BattleShipPirateWar/battle_ship_pirate_war.jsx';
 import PolicyBattleShipPirateWar from './Pages/PolicyPage/battle_ship_pirate_war.jsx';
 
@@ -73,6 +76,9 @@ function App() {
       <Route exact path='/policy/wordsearch' component={PolicyWordSearch} />
       <Route exact path='/tidy-mac' component={TidyMac} />
       <Route exact path='/policy/tidy-mac' component={PolicyTidyMac} />
+      <Route exact path='/tidora' component={Tidora} />
+      <Route exact path='/policy/tidora' component={PolicyTidora} />
+      <Route exact path='/policy/tidora-eula' component={TidoraEULA} />
       <Route exact path='/battle-ship-pirate-war' component={BattleShipPirateWar} />
       <Route exact path='/policy/battle-ship-pirate-war' component={PolicyBattleShipPirateWar} />
       <Footer />
