@@ -21,8 +21,8 @@ const BattleShipPirateWar = () => {
                 <div className="nav-content">
                     <div className="nav-left">
                         <Link to="/" className="nav-logo">
-                            <img src={appIcon} alt="Battle Ship: Pirate War" className="nav-icon" />
-                            <span>Battle Ship: Pirate War</span>
+                            <img src={appIcon} alt="Battleship Odyssey" className="nav-icon" />
+                            <span>Battleship Odyssey</span>
                         </Link>
                     </div>
                     <div className="nav-right">

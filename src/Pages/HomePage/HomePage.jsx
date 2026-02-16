@@ -5,7 +5,7 @@ import courseImage from '../../Image/SwiftUI_Udemy.png';
 const HomePage = () => {
     const projects = [
         { 
-            title: 'Battle Ship: Pirate War', 
+            title: 'Battleship Odyssey', 
             route: '/battle-ship-pirate-war', 
             story: 'Strategic naval warfare with epic pirate battles',
             icon: require('../../Image/PirateWar1.png')

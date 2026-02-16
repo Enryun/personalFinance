@@ -4,7 +4,7 @@ const PolicyBattleShipPirateWar = () => {
     return (
         <div className="policy">
             <strong>Privacy Policy</strong> <p>
-                James Thang built the Battle Ship: Pirate War app as
+                James Thang built the Battleship Odyssey app as
                 a Free app. This SERVICE is provided by
                 James Thang at no cost and is intended for use as
                 is.
@@ -21,7 +21,7 @@ const PolicyBattleShipPirateWar = () => {
             </p> <p>
                 The terms used in this Privacy Policy have the same meanings
                 as in our Terms and Conditions, which is accessible at
-                Battle Ship: Pirate War unless otherwise defined in this Privacy Policy.
+                Battleship Odyssey unless otherwise defined in this Privacy Policy.
             </p> <p><strong>Information Collection and Use</strong></p> <p>
                 For a better experience, while using our Service, I
                 may require you to provide us with certain personally
