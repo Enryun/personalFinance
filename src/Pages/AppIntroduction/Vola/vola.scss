@@ -1,0 +1,299 @@
+.vola-landing {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #fafbfc;
+}
+
+.vola-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #e5e7eb;
+    backdrop-filter: blur(8px);
+}
+
+.vola-nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.875rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vola-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #111827;
+    font-weight: 700;
+    font-size: 1.25rem;
+
+    .vola-logo-img {
+        width: 28px;
+        height: 28px;
+        border-radius: 6px;
+        display: block;
+        object-fit: contain;
+    }
+}
+
+.vola-cta {
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    transition: opacity 0.2s, transform 0.15s;
+
+    &:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+    }
+    &:active {
+        transform: translateY(0);
+    }
+    &:focus-visible {
+        outline: 2px solid #33A6BF;
+        outline-offset: 2px;
+    }
+}
+
+.vola-cta--nav {
+    padding: 0.5rem 1rem;
+    font-size: 0.9375rem;
+    color: #fff;
+    background: linear-gradient(135deg, #33A6BF 0%, #4FB8CF 100%);
+    border-radius: 8px;
+}
+
+.vola-cta--primary {
+    padding: 0.875rem 1.75rem;
+    font-size: 1.0625rem;
+    color: #fff;
+    background: linear-gradient(135deg, #33A6BF 0%, #4FB8CF 100%);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.vola-hero {
+    padding: 3rem 1.5rem 3.5rem;
+    text-align: center;
+}
+
+.vola-hero-inner {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.vola-hero-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.2;
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.02em;
+}
+
+.vola-hero-lead {
+    font-size: 1.125rem;
+    color: #4b5563;
+    line-height: 1.55;
+    margin: 0 0 1.5rem;
+}
+
+.vola-hero .vola-cta--primary {
+    margin-bottom: 0;
+}
+
+.vola-benefits {
+    padding: 4rem 1.5rem;
+    background: #fff;
+}
+
+.vola-benefits-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.vola-highlights-container {
+    display: grid;
+    gap: 4rem;
+}
+
+.vola-highlight-row {
+    display: grid;
+    grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+    gap: 4.5rem;
+    align-items: flex-start;
+}
+
+.vola-highlight-visual {
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #f9fafb;
+    box-shadow: 0 12px 28px -16px rgba(0, 0, 0, 0.2), 0 4px 10px -8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
+}
+
+.vola-highlight-content {
+    text-align: left;
+}
+
+.vola-highlight-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 1.5rem;
+}
+
+.vola-benefit-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.vola-benefit-card {
+    padding: 1.5rem;
+    border-radius: 14px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.2);
+        border-color: #d1d5db;
+    }
+}
+
+.vola-benefit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.vola-benefit-icon {
+    font-size: 1.75rem;
+    line-height: 1;
+}
+
+.vola-benefit-badge {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #33A6BF;
+    background: rgba(51, 166, 191, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    border: 1px solid rgba(51, 166, 191, 0.2);
+}
+
+.vola-benefit-name {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 0.625rem;
+}
+
+.vola-benefit-detail {
+    font-size: 1.125rem;
+    color: #374151;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.vola-final-cta {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background: #ecfeff;
+    border-top: 1px solid #cffafe;
+}
+
+.vola-final-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 0.5rem;
+}
+
+.vola-final-text {
+    font-size: 1rem;
+    color: #4b5563;
+    margin: 0 0 1.25rem;
+}
+
+.vola-footer {
+    margin-top: auto;
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    background: #fff;
+}
+
+.vola-footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.vola-footer-link {
+    font-size: 0.875rem;
+    color: #33A6BF;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 768px) {
+    .vola-hero-title {
+        font-size: 1.875rem;
+    }
+
+    .vola-hero-lead {
+        font-size: 1rem;
+    }
+
+    .vola-highlight-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .vola-highlight-visual {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .vola-benefit-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .vola-benefits-inner {
+        gap: 1.5rem;
+    }
+
+    .vola-highlights-container {
+        gap: 2.5rem;
+    }
+
+    .vola-highlight-visual {
+        max-width: 100%;
+    }
+}

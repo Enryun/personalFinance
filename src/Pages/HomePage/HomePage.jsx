@@ -17,6 +17,12 @@ const HomePage = () => {
             icon: require('../../Image/Tidora.png')
         },
         { 
+            title: 'Vola', 
+            route: '/vola', 
+            story: 'Your experience, elevated — simple and intuitive',
+            icon: require('../../Image/Vola.png')
+        },
+        { 
             title: 'Pay Daily', 
             route: '/pay-daily', 
             story: 'Where it all began - tracking daily expenses',

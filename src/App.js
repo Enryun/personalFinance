@@ -39,6 +39,9 @@ import PolicyTidora from './Pages/PolicyPage/tidora.jsx';
 import TidoraEULA from './Pages/PolicyPage/tidora_eula.jsx';
 import BattleShipPirateWar from './Pages/AppIntroduction/BattleShipPirateWar/battle_ship_pirate_war.jsx';
 import PolicyBattleShipPirateWar from './Pages/PolicyPage/battle_ship_pirate_war.jsx';
+import Vola from './Pages/AppIntroduction/Vola/vola.jsx';
+import PolicyVola from './Pages/PolicyPage/vola.jsx';
+import VolaEULA from './Pages/PolicyPage/vola_eula.jsx';
 
 
 function App() {
@@ -81,6 +84,9 @@ function App() {
       <Route exact path='/policy/tidora-eula' component={TidoraEULA} />
       <Route exact path='/battle-ship-pirate-war' component={BattleShipPirateWar} />
       <Route exact path='/policy/battle-ship-pirate-war' component={PolicyBattleShipPirateWar} />
+      <Route exact path='/vola' component={Vola} />
+      <Route exact path='/policy/vola' component={PolicyVola} />
+      <Route exact path='/policy/vola-eula' component={VolaEULA} />
       <Footer />
     </div>
   );
