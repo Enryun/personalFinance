@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import volaIcon from '../../../Image/Vola.png';
-import vola1 from '../../../Image/Vola1.png';
 import vola2 from '../../../Image/Vola2.png';
 import vola3 from '../../../Image/Vola3.png';
-import vola4 from '../../../Image/Vola4.png';
 import vola5 from '../../../Image/Vola5.png';
-import vola6 from '../../../Image/Vola6.png';
 import './vola.scss';
 
 const Vola = () => {
