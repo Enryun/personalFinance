@@ -8,12 +8,11 @@ import scene4 from '../../../Image/Folio4.png';
 import scene5 from '../../../Image/Folio5.png';
 import './folio.scss';
 
-const APP_STORE_SEARCH_URL =
-  'https://apps.apple.com/us/search?term=Folio%20Markdown%20Library&entity=macSoftware';
+const APP_STORE_URL = 'https://apps.apple.com/app/id6765871325';
 
 const Folio = () => {
   const handleDownloadClick = () => {
-    window.open(APP_STORE_SEARCH_URL, '_blank', 'noopener,noreferrer');
+    window.open(APP_STORE_URL, '_blank', 'noopener,noreferrer');
   };
 
   return (
