@@ -5,8 +5,11 @@ const ScrollToTop = () => {
     const { pathname } = useLocation();
 
     useEffect(() => {
-        // Scroll to top when pathname changes
-        window.scrollTo(0, 0);
+        try {
+            window.scrollTo(0, 0);
+        } catch (error) {
+            // JSDOM doesn't implement window.scrollTo; ignore in tests.
+        }
     }, [pathname]);
 
     return null;
