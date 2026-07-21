@@ -44,6 +44,8 @@ import PolicyBattleShipPirateWar from './Pages/PolicyPage/battle_ship_pirate_war
 import Vola from './Pages/AppIntroduction/Vola/vola.jsx';
 import PolicyVola from './Pages/PolicyPage/vola.jsx';
 import VolaEULA from './Pages/PolicyPage/vola_eula.jsx';
+import PocketBloom from './Pages/AppIntroduction/PocketBloom/pocket_bloom.jsx';
+import PolicyPocketBloom from './Pages/PolicyPage/pocket_bloom.jsx';
 
 
 function App() {
@@ -91,6 +93,8 @@ function App() {
       <Route exact path='/vola' component={Vola} />
       <Route exact path='/policy/vola' component={PolicyVola} />
       <Route exact path='/policy/vola-eula' component={VolaEULA} />
+      <Route exact path='/pocket-bloom' component={PocketBloom} />
+      <Route exact path='/policy/pocket-bloom' component={PolicyPocketBloom} />
       <Footer />
     </div>
   );
