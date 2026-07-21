@@ -5,6 +5,12 @@ import courseImage from '../../Image/SwiftUI_Udemy.png';
 const HomePage = () => {
     const projects = [
         { 
+            title: 'Pocket Bloom', 
+            route: '/pocket-bloom', 
+            story: 'A cozy garden puzzle where every bloom connects',
+            icon: require('../../Image/PocketBloom.png')
+        },
+        { 
             title: 'Battleship Odyssey', 
             route: '/battle-ship-pirate-war', 
             story: 'Strategic naval warfare with epic pirate battles',

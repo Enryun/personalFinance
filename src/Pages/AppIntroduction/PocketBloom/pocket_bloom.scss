@@ -1,0 +1,374 @@
+.pocket-bloom-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%);
+  color: #2e4a2e;
+  font-family: 'Arial', sans-serif;
+
+  .top-nav {
+    background: rgba(46, 74, 46, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+
+      .nav-left {
+        .nav-logo {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          text-decoration: none;
+          color: #ffffff;
+          font-size: 1.5rem;
+          font-weight: bold;
+
+          .nav-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .nav-right {
+        .nav-button {
+          background: linear-gradient(45deg, #66bb6a, #43a047);
+          color: white;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border-radius: 25px;
+          font-size: 1rem;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(67, 160, 71, 0.4);
+          }
+        }
+      }
+    }
+  }
+
+  .hero-section {
+    padding: 4rem 2rem;
+    text-align: center;
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(45deg, #2e7d32, #66bb6a, #a5d6a7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 3rem;
+        color: #4a6741;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .game-mode-section {
+    padding: 4rem 2rem;
+
+    &.featured-mode {
+      border-top: 3px solid #ffd54f;
+      border-bottom: 3px solid #ffd54f;
+    }
+
+    .mode-container {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: #2e7d32;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .mode-content-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        .mode-content {
+          flex: 2;
+          padding: 1rem 0;
+
+          .mode-description {
+            font-size: 1.1rem;
+            color: #4a6741;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+          }
+
+          .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+
+            .feature-card {
+              background: rgba(255, 255, 255, 0.6);
+              border-radius: 15px;
+              padding: 1.5rem;
+              text-align: center;
+              backdrop-filter: blur(10px);
+              border: 1px solid rgba(46, 125, 50, 0.2);
+              transition: all 0.3s ease;
+
+              &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(46, 125, 50, 0.15);
+              }
+
+              .feature-icon {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 1rem;
+                font-size: 2rem;
+              }
+
+              h4 {
+                font-size: 1.1rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+                color: #2e4a2e;
+              }
+
+              p {
+                font-size: 0.9rem;
+                color: #4a6741;
+                margin: 0;
+              }
+
+              &.puzzle {
+                border-color: rgba(46, 125, 50, 0.4);
+
+                .feature-icon {
+                  background: linear-gradient(135deg, #66bb6a, #43a047);
+                }
+              }
+
+              &.strategy {
+                border-color: rgba(255, 193, 7, 0.4);
+
+                .feature-icon {
+                  background: linear-gradient(135deg, #ffd54f, #ffb300);
+                }
+              }
+
+              &.garden {
+                border-color: rgba(233, 30, 99, 0.4);
+
+                .feature-icon {
+                  background: linear-gradient(135deg, #f48fb1, #ec407a);
+                }
+              }
+
+              &.progress {
+                border-color: rgba(33, 150, 243, 0.4);
+
+                .feature-icon {
+                  background: linear-gradient(135deg, #64b5f6, #1e88e5);
+                }
+              }
+            }
+          }
+        }
+
+        .mode-image {
+          flex: 1;
+          max-width: 400px;
+          position: relative;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(46, 125, 50, 0.2);
+
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+
+            &:hover {
+              transform: scale(1.02);
+            }
+          }
+
+          .featured-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(45deg, #ffd54f, #ffb300);
+            color: #2e4a2e;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 10;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
+  }
+
+  .download-section {
+    padding: 4rem 2rem;
+    text-align: center;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #2e7d32;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 3rem;
+      color: #4a6741;
+    }
+
+    .download-buttons {
+      display: flex;
+      justify-content: center;
+
+      .download-button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 25px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        min-width: 200px;
+
+        &.app-store {
+          background: linear-gradient(45deg, #000000, #333333);
+          color: white;
+
+          &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+          }
+        }
+
+        .button-icon {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .footer {
+    padding: 2rem;
+    text-align: center;
+
+    .footer-content {
+      .privacy-policy-link {
+        color: #2e7d32;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #ffd54f;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .pocket-bloom-page {
+    .hero-section {
+      .hero-content {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .game-mode-section {
+      .mode-container {
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .mode-content-wrapper {
+          flex-direction: column;
+          gap: 2rem;
+
+          .mode-content {
+            order: 1;
+            text-align: center;
+
+            .feature-grid {
+              grid-template-columns: 1fr;
+              gap: 1rem;
+
+              .feature-card {
+                padding: 1rem;
+
+                .feature-icon {
+                  width: 50px;
+                  height: 50px;
+                  font-size: 1.5rem;
+                }
+              }
+            }
+          }
+
+          .mode-image {
+            order: 2;
+            max-width: 300px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    .download-section {
+      .download-buttons {
+        .download-button {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    }
+  }
+}
