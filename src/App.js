@@ -46,6 +46,8 @@ import PolicyVola from './Pages/PolicyPage/vola.jsx';
 import VolaEULA from './Pages/PolicyPage/vola_eula.jsx';
 import PocketBloom from './Pages/AppIntroduction/PocketBloom/pocket_bloom.jsx';
 import PolicyPocketBloom from './Pages/PolicyPage/pocket_bloom.jsx';
+import HorologyStudio from './Pages/AppIntroduction/HorologyStudio/horology.jsx';
+import PolicyHorologyStudio from './Pages/PolicyPage/horology_studio.jsx';
 
 
 function App() {
@@ -95,6 +97,8 @@ function App() {
       <Route exact path='/policy/vola-eula' component={VolaEULA} />
       <Route exact path='/pocket-bloom' component={PocketBloom} />
       <Route exact path='/policy/pocket-bloom' component={PolicyPocketBloom} />
+      <Route exact path='/horology-studio' component={HorologyStudio} />
+      <Route exact path='/policy/horology-studio' component={PolicyHorologyStudio} />
       <Footer />
     </div>
   );

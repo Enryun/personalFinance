@@ -1,0 +1,114 @@
+.horology-page {
+  --night: #080a12;
+  --ink: #f8f3e5;
+  --muted: #a9a59b;
+  --gold: #d1a13a;
+  min-height: 100vh;
+  color: var(--ink);
+  background: var(--night);
+  overflow: hidden;
+
+  .horology-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 1.1rem 2rem;
+    background: rgba(8, 10, 18, .82);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(248, 243, 229, .1);
+
+    .horology-brand {
+      display: inline-flex;
+      gap: .7rem;
+      align-items: center;
+      color: var(--ink);
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: .01em;
+
+      img { width: 32px; height: 32px; border-radius: 9px; }
+    }
+
+    button, .primary-button {
+      color: #16120a;
+      background: var(--gold);
+      border: 0;
+      border-radius: 999px;
+      padding: .72rem 1.15rem;
+      font-size: .9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s ease, background .2s ease;
+
+      &:hover { transform: translateY(-1px); background: #e1b64e; }
+    }
+  }
+
+  .primary-button {
+    color: #16120a;
+    background: var(--gold);
+    border: 0;
+    border-radius: 999px;
+    padding: .95rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .2s ease, background .2s ease;
+
+    &:hover { transform: translateY(-1px); background: #e1b64e; }
+  }
+
+  .horology-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(380px, 1.1fr);
+    align-items: center;
+    gap: 3rem;
+    max-width: 1240px;
+    min-height: 720px;
+    margin: 0 auto;
+    padding: 4rem 2rem 5rem;
+
+    .horology-hero-copy { position: relative; z-index: 1; max-width: 570px; }
+    .eyebrow, .scene-number { color: var(--gold); font-size: .78rem; font-weight: 800; letter-spacing: .22em; }
+    h1 { margin: 1.3rem 0 1.35rem; text-align: left; font-size: clamp(3.7rem, 7vw, 6.9rem); line-height: .92; letter-spacing: -.075em; font-weight: 700; }
+    .hero-lede { max-width: 500px; margin: 0; color: var(--muted); font-size: clamp(1.1rem, 1.8vw, 1.35rem); line-height: 1.6; }
+    .hero-actions { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin-top: 2rem; }
+    .text-link { color: var(--ink); text-decoration: none; font-weight: 650; border-bottom: 1px solid rgba(248,243,229,.45); padding-bottom: .2rem; }
+    .hero-note { margin-top: 1.4rem; color: #77756e; font-size: .84rem; }
+
+    .hero-art { position: relative; display: flex; justify-content: center; min-height: 630px; align-items: center; }
+    .hero-art img { position: relative; z-index: 1; width: min(100%, 500px); max-height: 700px; object-fit: contain; filter: drop-shadow(0 34px 45px rgba(0,0,0,.5)); }
+    .hero-glow { position: absolute; width: 540px; height: 540px; border-radius: 50%; background: radial-gradient(circle, rgba(209,161,58,.2), rgba(23,73,108,.08) 45%, transparent 70%); filter: blur(12px); }
+  }
+
+  .horology-content { max-width: 1240px; margin: 0 auto; padding: 0 2rem; }
+  .horology-scene { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 7vw, 8rem); align-items: center; padding: 6rem 0; border-top: 1px solid rgba(248,243,229,.1); }
+  .horology-scene.reverse { grid-template-columns: 1.2fr .8fr; .scene-copy { order: 2; } .scene-image { order: 1; } }
+  .scene-copy { max-width: 390px; }
+  .scene-copy h2 { margin: 1.2rem 0 1rem; text-align: left; color: var(--ink); font-size: clamp(2.25rem, 4vw, 4rem); line-height: .98; letter-spacing: -.06em; }
+  .scene-copy > p:last-child { color: var(--muted); font-size: 1.1rem; line-height: 1.65; }
+  .scene-image { margin: 0; text-align: center; }
+  .scene-image img { width: min(100%, 500px); max-height: 850px; object-fit: contain; border-radius: 28px; filter: drop-shadow(0 28px 35px rgba(0,0,0,.38)); }
+  .horology-closing { padding: 8rem 1rem 9rem; text-align: center; border-top: 1px solid rgba(248,243,229,.1); }
+  .horology-closing img { width: 76px; height: 76px; border-radius: 22px; margin-bottom: 1.8rem; box-shadow: 0 20px 38px rgba(0,0,0,.35); }
+  .horology-closing h2 { margin: 1rem 0 2rem; color: var(--ink); font-size: clamp(2.8rem, 6vw, 5.8rem); line-height: .94; letter-spacing: -.07em; }
+  .horology-footer { display: flex; justify-content: space-between; max-width: 1240px; margin: 0 auto; padding: 1.6rem 2rem 2.2rem; color: #77756e; font-size: .84rem; border-top: 1px solid rgba(248,243,229,.1); }
+  .horology-footer a { color: var(--muted); text-decoration: none; &:hover { color: var(--ink); } }
+
+  @media (max-width: 760px) {
+    .horology-nav { padding: .9rem 1rem; .horology-brand span { font-size: .93rem; } button { padding: .6rem .8rem; font-size: .78rem; } }
+    .horology-hero { display: block; min-height: auto; padding: 4.5rem 1.2rem 3rem; .hero-art { min-height: 520px; margin-top: 1rem; } .hero-art img { width: min(100%, 390px); } .hero-glow { width: 380px; height: 380px; } }
+    .horology-content { padding: 0 1.2rem; }
+    .horology-scene, .horology-scene.reverse { display: flex; flex-direction: column; gap: 2rem; padding: 4.5rem 0; .scene-copy, .scene-copy { order: 1; max-width: 100%; } .scene-image, .scene-image { order: 2; width: 100%; } }
+    .scene-image img { width: min(100%, 390px); }
+    .horology-closing { padding: 6rem 0; }
+    .horology-footer { padding: 1.4rem 1.2rem 2rem; }
+  }
+}
