@@ -4,6 +4,12 @@ import courseImage from '../../Image/SwiftUI_Udemy.png';
 
 const HomePage = () => {
     const projects = [
+        {
+            title: 'Horology Studio',
+            route: '/horology-studio',
+            story: 'Interactive mechanical watches made personal',
+            icon: require('../../Image/Horology.png')
+        },
         { 
             title: 'Pocket Bloom', 
             route: '/pocket-bloom', 
