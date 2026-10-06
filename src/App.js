@@ -48,6 +48,8 @@ import PocketBloom from './Pages/AppIntroduction/PocketBloom/pocket_bloom.jsx';
 import PolicyPocketBloom from './Pages/PolicyPage/pocket_bloom.jsx';
 import HorologyStudio from './Pages/AppIntroduction/HorologyStudio/horology.jsx';
 import PolicyHorologyStudio from './Pages/PolicyPage/horology_studio.jsx';
+import OAnQuan from './Pages/AppIntroduction/OAnQuan/o_an_quan';
+import PolicyOAnQuan from './Pages/PolicyPage/o_an_quan';
 
 
 function App() {
@@ -99,6 +101,8 @@ function App() {
       <Route exact path='/policy/pocket-bloom' component={PolicyPocketBloom} />
       <Route exact path='/horology-studio' component={HorologyStudio} />
       <Route exact path='/policy/horology-studio' component={PolicyHorologyStudio} />
+      <Route exact path='/o-an-quan' component={OAnQuan} />
+      <Route exact path='/policy/o-an-quan' component={PolicyOAnQuan} />
       <Footer />
     </div>
   );

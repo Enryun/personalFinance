@@ -6,6 +6,7 @@ const PolicyList = () => {
     return (
         <div>
             <ul>
+                <li><Link className='navItem' to='/policy/o-an-quan'>Ô Ăn Quan — Privacy Policy / Chính sách quyền riêng tư</Link></li>
                 <li><Link className='navItem' to='/policy/sudoku'>Sudoku</Link></li>
                 <li><Link className='navItem' to='/policy/finance-advisor'>Finance Advisor</Link></li>
                 <li><Link className='navItem' to='/policy/ucoffee'>UCoffee</Link></li>

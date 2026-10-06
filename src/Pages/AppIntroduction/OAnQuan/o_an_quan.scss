@@ -1,0 +1,90 @@
+.oq-page, .oq-policy-page {
+  --oq-paper: #f4efdd;
+  --oq-ink: #34271d;
+  --oq-green: #285b4c;
+  --oq-muted: #5c6251;
+  --oq-border: #d5cfb8;
+  color: var(--oq-ink);
+  background: var(--oq-paper);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.65;
+  h1, h2 { color: var(--oq-ink); font-family: Georgia, 'Times New Roman', serif; text-align: left; text-transform: none; letter-spacing: -.035em; line-height: 1.2; }
+  p { margin: 0; }
+  a { color: var(--oq-green); text-underline-offset: 5px; }
+  a:focus-visible { outline: 3px solid var(--oq-green); outline-offset: 5px; }
+  .oq-container { width: min(100% - 64px, 1120px); margin: 0 auto; }
+  .oq-eyebrow { color: var(--oq-green); font-size: .76rem; font-weight: 700; letter-spacing: .16em; }
+  .oq-button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 12px 23px; border: 1px solid var(--oq-green); border-radius: 999px; background: var(--oq-green); color: #fffdf5; text-decoration: none; font-size: .95rem; font-weight: 650; transition: background .2s ease; }
+  .oq-button:hover { background: #1e463b; }
+  .oq-nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; max-width: 1240px; margin: auto; padding: 18px 32px; border-bottom: 1px solid var(--oq-border); }
+  .oq-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 700; font-size: 1.1rem; white-space: nowrap; }
+  .oq-brand img { border-radius: 12px; }
+  .oq-language { display: flex; gap: 4px; flex-wrap: wrap; }
+  .oq-language a { min-height: 44px; display: flex; align-items: center; padding: 8px 12px; border-radius: 999px; text-decoration: none; font-size: .85rem; }
+  .oq-language a[aria-current='true'] { background: #e0e6d6; font-weight: 700; }
+  .oq-language a:hover { text-decoration: underline; }
+  .oq-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; padding: 26px 0; border-top: 1px solid var(--oq-border); color: var(--oq-muted); font-size: .9rem; }
+  .oq-footer a { display: inline-flex; align-items: center; min-height: 44px; }
+  .oq-footer span { align-self: center; }
+  @media (max-width: 700px) {
+    .oq-container { width: calc(100% - 40px); }
+    .oq-nav { padding: 12px 20px; gap: 12px; flex-wrap: wrap; }
+    .oq-nav-download { display: none; }
+    .oq-brand { font-size: 1rem; gap: 8px; }
+    .oq-language a { padding: 8px; }
+    .oq-footer { justify-content: flex-start; }
+  }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; } }
+}
+
+.oq-page {
+  .oq-skip { position: absolute; left: 20px; top: -100px; z-index: 20; background: var(--oq-paper); padding: 12px; }
+  .oq-skip:focus { top: 12px; }
+  .oq-hero { display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 60px; padding-top: 65px; padding-bottom: 65px; }
+  .oq-app-name { margin-top: 22px; color: var(--oq-green); font-size: 1rem; }
+  h1 { font-size: clamp(2.8rem, 5.3vw, 4.6rem); margin: 18px 0 26px; text-wrap: balance; }
+  .oq-lede { font-size: 1.15rem; color: var(--oq-muted); max-width: 510px; }
+  .oq-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin: 30px 0 18px; }
+  .oq-actions > a:not(.oq-button) { display: inline-flex; align-items: center; min-height: 44px; gap: 10px; }
+  .oq-note { color: var(--oq-muted); font-size: .85rem; max-width: 470px; }
+  .oq-shot { margin: 0; text-align: center; }
+  .oq-shot img { display: block; width: min(100%, 360px); height: auto; margin: 0 auto; border-radius: 14px; }
+  .oq-shot figcaption { color: var(--oq-muted); font-size: .75rem; margin-top: 14px; }
+  .oq-modes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; padding-top: 32px; padding-bottom: 38px; border-top: 1px solid var(--oq-border); border-bottom: 1px solid var(--oq-border); }
+  .oq-modes h2 { font-size: 1.55rem; margin: 14px 0; }
+  .oq-modes p { color: var(--oq-muted); font-size: .98rem; }
+  .oq-scene { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding: 80px 0; border-bottom: 1px solid var(--oq-border); scroll-margin-top: 20px; }
+  .oq-scene-copy { max-width: 460px; }
+  .oq-scene h2 { font-size: clamp(2.3rem, 4vw, 3.6rem); margin: 18px 0 24px; text-wrap: balance; }
+  .oq-scene-copy > p:last-child { color: var(--oq-muted); font-size: 1.1rem; }
+  .oq-reverse .oq-scene-copy { order: 2; }
+  .oq-reverse .oq-shot { order: 1; }
+  .oq-learn { background: #e5e8d8; padding: 40px; margin-top: 60px; border-radius: 20px; }
+  .oq-learn h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin: 0 0 18px; }
+  .oq-learn p { color: var(--oq-muted); max-width: 780px; }
+  .oq-closing { padding: 90px 0; text-align: center; }
+  .oq-closing img { border-radius: 24px; }
+  .oq-closing h2 { text-align: center; font-size: clamp(2.2rem, 4vw, 3.5rem); margin: 24px 0 16px; }
+  .oq-closing p { color: var(--oq-muted); margin-bottom: 26px; }
+  @media (max-width: 700px) {
+    .oq-hero { grid-template-columns: 1fr; gap: 40px; padding-top: 44px; padding-bottom: 44px; }
+    .oq-hero-copy { max-width: 540px; }
+    .oq-shot img { max-width: 320px; }
+    .oq-modes { grid-template-columns: 1fr; gap: 28px; }
+    .oq-scene { grid-template-columns: 1fr; gap: 32px; padding: 50px 0; }
+    .oq-reverse .oq-scene-copy, .oq-reverse .oq-shot { order: initial; }
+    .oq-learn { padding: 28px 24px; margin-top: 40px; }
+    .oq-closing { padding: 64px 0; }
+  }
+}
+
+.oq-policy-page {
+  .oq-policy { max-width: 800px; padding-top: 50px; padding-bottom: 64px; overflow-wrap: anywhere; }
+  h1 { font-size: clamp(2.3rem, 5vw, 3.3rem); margin: 18px 0 20px; }
+  .oq-policy-date { color: var(--oq-muted); margin-bottom: 28px; }
+  .oq-policy section { margin-top: 32px; }
+  .oq-policy h2 { font-family: inherit; letter-spacing: 0; font-size: 1.25rem; margin: 0 0 12px; }
+  .oq-policy p + p { margin-top: 14px; }
+  .oq-policy ul { padding-left: 24px; margin-top: 16px; }
+  .oq-policy li { margin-bottom: 10px; }
+}

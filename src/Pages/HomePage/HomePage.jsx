@@ -5,6 +5,12 @@ import courseImage from '../../Image/SwiftUI_Udemy.png';
 const HomePage = () => {
     const projects = [
         {
+            title: 'Ô Ăn Quan: Trò chơi dân gian',
+            route: '/o-an-quan',
+            story: 'Rediscover a Vietnamese childhood game, one thoughtful move at a time',
+            icon: require('../../Image/Oanquan.png')
+        },
+        {
             title: 'Horology Studio',
             route: '/horology-studio',
             story: 'Interactive mechanical watches made personal',
