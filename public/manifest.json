@@ -1,26 +1,16 @@
 {
   "short_name": "James Thang",
-  "name": "James Thang - Expert iOS Developer & SwiftUI Specialist",
+  "name": "James Thang | iOS & React Native Developer",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }	    
+      "src": "favicon.png",
+      "sizes": "50x50",
+      "type": "image/png"
+    }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff",
-  "description": "Expert iOS Developer specializing in SwiftUI and UIKit. Published author and problem solver with 8 successful apps."
+  "theme_color": "#f4f1e9",
+  "background_color": "#f4f1e9",
+  "description": "Independent iOS, macOS, and React Native developer. Technical author and SwiftUI instructor."
 }

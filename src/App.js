@@ -50,12 +50,14 @@ import HorologyStudio from './Pages/AppIntroduction/HorologyStudio/horology.jsx'
 import PolicyHorologyStudio from './Pages/PolicyPage/horology_studio.jsx';
 import OAnQuan from './Pages/AppIntroduction/OAnQuan/o_an_quan';
 import PolicyOAnQuan from './Pages/PolicyPage/o_an_quan';
+import SiteMetadata from './components/SiteMetadata';
 
 
 function App() {
   return (
     <div className="App">
       <ScrollToTop />
+      <SiteMetadata />
       <Route exact path='/' component={HomePage}  />
       <Route exact path='/cost-tracking' component={CostTrackingPage}  />
       <Route exact path='/contact' component={Contact} />

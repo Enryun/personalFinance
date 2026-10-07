@@ -1,5 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Homepage and SEO
+
+The homepage presents James Thang's mobile development work, React Native skills, coding-agent experience, books, and course. Portfolio entries live in `src/Pages/HomePage/projects.js`; the displayed project count follows that list. Shared search metadata and profile structured data live in `src/siteMetadata.js`.
+
+`npm run build` compiles the app and runs `scripts/prerender-home.cjs`. The script renders the actual homepage and footer into `build/index.html`, resolves production image filenames, adds the homepage canonical and ProfilePage/Person JSON-LD, and generates `build/sitemap.xml`. The browser hydrates this HTML. The build fails if the homepage metadata, project links, or image references are incomplete.
+
+Deploy the complete `build/` directory. `build/spa.html` is the separate app shell for deep links; `public/_redirects` sends unmatched paths there while the existing root index is served normally. Hosts that do not support this redirects file must configure the same fallback to `/spa.html`, not `/index.html`, to avoid serving homepage content and its canonical on app URLs. The development server continues to use its normal React fallback.
+
+After deployment, submit `https://www.jamesthang.com/sitemap.xml` in Google Search Console and inspect the homepage URL. App landing pages still render on the client; prerendering those pages with app-specific metadata is the next SEO improvement. Search rankings and rich-result display depend on search engines and are not guaranteed by markup.
+
 ## Available Scripts
 
 In the project directory, you can run:

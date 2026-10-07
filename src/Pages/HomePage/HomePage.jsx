@@ -1,364 +1,80 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import courseImage from '../../Image/SwiftUI_Udemy.png';
+import swiftBook from '../../Image/SwiftUI.jpg';
+import firebaseBook from '../../Image/Firebase.JPG';
+import { projects } from './projects';
+import horologyShot from '../../Image/Horology1.png';
+import folioShot from '../../Image/Folio1.png';
+import oAnQuanShot from '../../Image/Oanquan1.png';
+import volaShot from '../../Image/Vola2.png';
+import tidoraShot from '../../Image/TidyMac1.png';
+import './HomePage.scss';
 
-const HomePage = () => {
-    const projects = [
-        {
-            title: 'Ô Ăn Quan: Trò chơi dân gian',
-            route: '/o-an-quan',
-            story: 'Rediscover a Vietnamese childhood game, one thoughtful move at a time',
-            icon: require('../../Image/Oanquan.png')
-        },
-        {
-            title: 'Horology Studio',
-            route: '/horology-studio',
-            story: 'Interactive mechanical watches made personal',
-            icon: require('../../Image/Horology.png')
-        },
-        { 
-            title: 'Pocket Bloom', 
-            route: '/pocket-bloom', 
-            story: 'A cozy garden puzzle where every bloom connects',
-            icon: require('../../Image/PocketBloom.png')
-        },
-        { 
-            title: 'Battleship Odyssey', 
-            route: '/battle-ship-pirate-war', 
-            story: 'Strategic naval warfare with epic pirate battles',
-            icon: require('../../Image/PirateWar1.png')
-        },
-        { 
-            title: 'Tidora', 
-            route: '/tidora', 
-            story: 'A clean, efficient Mac app for system maintenance',
-            icon: require('../../Image/Tidora.png')
-        },
-        { 
-            title: 'Folio', 
-            route: '/folio', 
-            story: 'Fast Markdown reading, organized locally, found instantly',
-            icon: require('../../Image/Folio.png')
-        },
-        { 
-            title: 'Vola', 
-            route: '/vola', 
-            story: 'Your experience, elevated — simple and intuitive',
-            icon: require('../../Image/Vola.png')
-        },
-        { 
-            title: 'Pay Daily', 
-            route: '/pay-daily', 
-            story: 'Where it all began - tracking daily expenses',
-            icon: require('../../Image/PayDaily.png')
-        },
-        { 
-            title: 'Sudoku', 
-            route: '/sudoku', 
-            story: 'Learning algorithms through classic puzzles',
-            icon: require('../../Image/Sudoku.png')
-        },
-        { 
-            title: 'Finance Advisor', 
-            route: '/finance-advisor', 
-            story: 'Building tools that matter for financial wellness',
-            icon: require('../../Image/financeLogo.png')
-        },
-        { 
-            title: 'UCoffee', 
-            route: '/u-coffee', 
-            story: 'Creating experiences around daily rituals',
-            icon: require('../../Image/POS_Logo.png')
-        },
-        { 
-            title: 'Coffee Record', 
-            route: '/ucoffee-remote', 
-            story: 'Remote solutions born from real needs',
-            icon: require('../../Image/POS_remote_logo.webp')
-        },
-        { 
-            title: 'Dark Horse', 
-            route: '/dark-horse', 
-            story: 'Exploring dark themes and modern aesthetics',
-            icon: require('../../Image/DarkHorse.png')
-        },
-        { 
-            title: 'Neon Cloud', 
-            route: '/neon-cloud', 
-            story: 'When cloud storage meets vibrant design',
-            icon: require('../../Image/Neon.png')
-        },
-        { 
-            title: 'Galaxy Gallery', 
-            route: '/galaxy-gallery', 
-            story: 'Pushing boundaries with immersive galleries',
-            icon: require('../../Image/Gallaxy.png')
-        },
-        { 
-            title: 'Random Rover', 
-            route: '/random-rover', 
-            story: 'Adventures in exploration and discovery',
-            icon: require('../../Image/RandomRover.png')
-        },
-        { 
-            title: 'Word Search', 
-            route: '/wordsearch', 
-            story: 'Simple games, complex implementations',
-            icon: require('../../Image/WordSearch.png')
-        }
-    ];
-
-    return (
-        <div className="homepage">
-            {/* Hero Section - Personal Introduction */}
-            <header className="hero-section">
-                <div className="fade-in-up">
-                    <h1 className="hero-title">
-                        Hi, I'm <span className="hero-name">Dương Đình Bảo Thăng</span>
-                    </h1>
-                    <div>
-                        <p className="hero-text">
-                            Expert <strong>iOS developer</strong> specializing in <strong>UIKit and SwiftUI</strong>, with 8 published apps across Finance, AR, Gaming, EdTech, and POS systems. 
-                        </p>
-                        <p className="hero-text hero-highlight">
-                            My expertise is proven through my app portfolio below and as a published SwiftUI book author impacting thousands of developers worldwide.
-                        </p>
-                    </div>
-                </div>
-            </header>
-
-            {/* Journey Section */}
-            <main className="main-content">
-                <div>
-                    <h2 className="section-title">
-                        My Development Portfolio
-                    </h2>
-
-                    {/* Projects Timeline */}
-                    <div className="projects-list">
-                        {projects.map((project, index) => (
-                            <div key={project.route} className="fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                                <Link 
-                                    to={project.route}
-                                    className="project-link"
-                                >
-                                    <div className="project-content">
-                                        <img 
-                                            src={project.icon} 
-                                            alt={`${project.title} app icon`}
-                                            className="project-icon"
-                                        />
-                                        <div className="project-info">
-                                            <h3 className="project-title">
-                                                {project.title}
-                                            </h3>
-                                            <p className="project-story">
-                                                {project.story}
-                                            </p>
-                                        </div>
-                                        <div className="project-arrow">
-                                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Call to Action */}
-                <div className="cta-section">
-                    <h3 className="cta-title">
-                        Explore My Work
-                    </h3>
-                    <p className="cta-text">
-                        Each app represents a chapter in my journey from Finance to iOS development. 
-                        Click any project to see how passion transformed into expertise.
-                    </p>
-                </div>
-            </main>
-
-            {/* Course Section */}
-            <section className="course-section">
-                <div className="course-content">
-                    <h2 className="course-title">SwiftUI Course Instructor</h2>
-                    <p className="course-subtitle">
-                        Teaching the next generation of iOS developers through comprehensive, hands-on learning experiences
-                    </p>
-                    
-                    <div className="course-showcase">
-                        <div className="course-card">
-                            <div className="course-image">
-                                <img src={courseImage} alt="SwiftUI Essentials Course" />
-                            </div>
-                            <div className="course-info">
-                                <h3 className="course-name">SwiftUI Essentials: Kickstart Your iOS Development Journey</h3>
-                                <p className="course-description">
-                                    Master SwiftUI fundamentals designed specifically for beginners. Learn to build beautiful, 
-                                    responsive iOS apps with Apple's modern UI framework through practical, hands-on projects.
-                                </p>
-                                <div className="course-features">
-                                    <div className="feature-item">
-                                        <span className="feature-icon">🎯</span>
-                                        <span>Beginner-Friendly</span>
-                                    </div>
-                                    <div className="feature-item">
-                                        <span className="feature-icon">📱</span>
-                                        <span>Hands-On Projects</span>
-                                    </div>
-                                    <div className="feature-item">
-                                        <span className="feature-icon">⚡</span>
-                                        <span>Modern SwiftUI</span>
-                                    </div>
-                                    <div className="feature-item">
-                                        <span className="feature-icon">🏆</span>
-                                        <span>Industry Best Practices</span>
-                                    </div>
-                                </div>
-                                <div className="course-cta">
-                                    <a 
-                                        href="https://www.udemy.com/course/swiftui-essentials-kickstart-your-ios-development-journey" 
-                                        target="_blank" 
-                                        rel="noopener noreferrer"
-                                        className="course-button"
-                                    >
-                                        View Course on Udemy
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Books Section */}
-            <section className="books-section">
-                <div className="books-content">
-                    <h2 className="books-title">Published Author</h2>
-                    <p className="books-subtitle">
-                        Sharing knowledge through comprehensive guides that help thousands of developers worldwide
-                    </p>
-                    
-                    <div className="books-grid">
-                        <div className="book-card">
-                            <div className="book-cover">
-                                <img 
-                                    src={require('../../Image/SwiftUI.jpg')} 
-                                    alt="Ultimate SwiftUI Handbook for iOS Developers book cover"
-                                    className="book-cover-image"
-                                />
-                            </div>
-                            <div className="book-info">
-                                <h3 className="book-title">Ultimate SwiftUI Handbook for iOS Developers</h3>
-                                <p className="book-description">
-                                    A comprehensive guide to mastering SwiftUI development. From basic concepts to advanced techniques, 
-                                    this handbook provides everything needed to build modern iOS applications.
-                                </p>
-                                <a 
-                                    href="https://www.amazon.com/Ultimate-SwiftUI-Handbook-iOS-Developers-ebook/dp/B0CKBVY7V6/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="book-link"
-                                >
-                                    View on Amazon →
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="book-card">
-                            <div className="book-cover">
-                                <img 
-                                    src={require('../../Image/Firebase.JPG')} 
-                                    alt="Ultimate Firebase Android Applications High-Performance book cover"
-                                    className="book-cover-image"
-                                />
-                            </div>
-                            <div className="book-info">
-                                <h3 className="book-title">Ultimate Firebase Android Applications High-Performance</h3>
-                                <p className="book-description">
-                                    Master Firebase for Android development with this in-depth guide covering real-time databases, 
-                                    authentication, cloud functions, and performance optimization techniques.
-                                </p>
-                                <a 
-                                    href="https://www.amazon.com/Ultimate-Firebase-Android-Applications-High-Performance-ebook/dp/B0DLG5K3ZB?ref_=ast_author_dp" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="book-link"
-                                >
-                                    View on Amazon →
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="books-cta">
-                        <p className="books-cta-text">
-                            These books represent my commitment to sharing knowledge and helping fellow developers 
-                            excel in mobile development. Join thousands of readers who have advanced their skills.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            {/* Contact Section */}
-            <section className="contact-section">
-                <div className="contact-content">
-                    <h2 className="contact-title">Let's Build Something Amazing Together</h2>
-                    
-                    <div className="skills-grid">
-                        <div className="skill-card">
-                            <h3 className="skill-title">iOS Development</h3>
-                            <p className="skill-description">
-                                Expert in UIKit and SwiftUI with 8 published apps across Finance, AR, Gaming, EdTech, and POS systems.
-                                From concept to App Store - I bring ideas to life.
-                            </p>
-                        </div>
-
-                        <div className="skill-card">
-                            <h3 className="skill-title">Problem Solving</h3>
-                            <p className="skill-description">
-                                Self-taught developer who thrives on challenges. I turn complex problems into elegant solutions 
-                                that impact thousands of users.
-                            </p>
-                        </div>
-
-                        <div className="skill-card">
-                            <h3 className="skill-title">Full-Stack Vision</h3>
-                            <p className="skill-description">
-                                Beyond iOS - I understand the complete ecosystem from backend integration to user experience, 
-                                ensuring seamless end-to-end solutions.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="contact-cta">
-                        <h3 className="contact-cta-title">Ready to Start Your Next Project?</h3>
-                        <p className="contact-cta-text">
-                            Whether you have a million-dollar idea or need to solve a specific challenge, 
-                            let's discuss how we can bring your vision to reality.
-                        </p>
-                        
-                        <div className="contact-info">
-                            <div className="contact-method">
-                                <strong>Email:</strong> jamesthang1996@gmail.com
-                            </div>
-                            <div className="contact-method">
-                                <strong>Phone:</strong> (+84) 085 771 3736
-                            </div>
-                            <div className="contact-method">
-                                <strong>LinkedIn:</strong> 
-                                <a href="https://www.linkedin.com/in/jamesthang/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
-                                    linkedin.com/in/jamesthang
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    );
-};
-
-export default HomePage;
+const featured = [
+  { route: '/vola', title: 'Vola — AI Note Taker', category: '01 / FEATURED · iOS · AI productivity', detail: 'Stay in the conversation. Vola brings live transcription, AI summaries, and questions about your notes together, with translation and editing while you record.', image: volaShot, alt: 'Vola AI note taker with live transcription, AI summary, and questions about recorded notes', theme: 'vola' },
+  { route: '/tidora', title: 'Tidora — Mac Cleaner', category: '02 / macOS · Cleaning & maintenance', detail: 'Make room for what matters. Tidora scans for unnecessary files, caches, and logs, helping you reclaim disk space and keep everyday Mac maintenance straightforward.', image: tidoraShot, alt: 'Tidora Mac cleaning utility showing a scan of application caches and system logs', theme: 'tidora' },
+  { route: '/horology-studio', category: '03 / iOS · Interactive experiences', detail: 'A mechanical timepiece made personal. Watch customization, widgets, and system alarms, built around the pleasure of the details.', image: horologyShot, alt: 'Horology Studio interactive watch on an iPhone', theme: 'watch' },
+  { route: '/folio', category: '04 / macOS · Developer tools', detail: 'A quieter place for Markdown. Local files, thoughtful organization, and fast search in a focused Mac reading experience.', image: folioShot, alt: 'Folio Markdown reader with source and rendered content on a Mac', theme: 'folio' },
+  { route: '/o-an-quan', category: '05 / iOS · Games', detail: 'A childhood game, carried forward. Online matches, replays, and collectible boards bring a Vietnamese tradition to iPhone.', image: oAnQuanShot, alt: 'Ô Ăn Quan game modes and traditional board on iPhone', theme: 'quan', status: 'Preparing for App Store submission' },
+];
+const capabilities = [
+  { number: '01', title: 'Native iOS & macOS', text: 'Swift, SwiftUI, and UIKit for apps that feel at home on Apple platforms. From interface design and system integrations to purchases and App Store preparation.', tags: ['Swift', 'SwiftUI', 'UIKit'] },
+  { number: '02', title: 'Cross-platform mobile', text: 'React Native development for projects that need a shared mobile foundation, with attention to platform behavior, usable interfaces, and maintainable code.', tags: ['React Native', 'Mobile UI', 'Platform integration'] },
+  { number: '03', title: 'Agent-assisted engineering', text: 'Experience working with Codex, Claude Code, and Cursor across development tasks. I pair these tools with hands-on implementation, code review, and testing.', tags: ['Codex', 'Claude Code', 'Cursor'] },
+];
+const books = [
+  { title: 'Ultimate SwiftUI Handbook for iOS Developers', image: swiftBook, text: 'A practical guide to building iOS interfaces with SwiftUI, from core concepts to more advanced techniques.', url: 'https://www.amazon.com/dp/B0CKBVY7V6' },
+  { title: 'Ultimate Firebase for Android Applications', image: firebaseBook, text: 'A guide to Firebase services for Android applications, including authentication, databases, and backend integration.', url: 'https://www.amazon.com/dp/B0DLG5K3ZB' },
+];
+function Arrow({ diagonal = false }) {
+  return <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d={diagonal ? 'M6 18 18 6M6 6h12v12' : 'M4 12h16m-6-6 6 6-6 6'} /></svg>;
+}
+export default function HomePage() {
+  return (
+    <div className="professional-home" id="home-top">
+      <a className="home-skip" href="#home-main">Skip to content</a>
+      <header className="home-nav home-container">
+        <a className="home-wordmark" href="#home-top" aria-label="James Thang home">James Thang<span>Developer &amp; maker</span></a>
+        <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#expertise">Expertise</a><a href="#writing">Writing &amp; teaching</a><Link to="/contact" className="home-nav-contact">Let’s talk <Arrow diagonal /></Link></nav>
+      </header>
+      <main id="home-main">
+        <section className="home-hero home-container" aria-labelledby="home-heading">
+          <div className="home-hero-copy">
+            <p className="home-eyebrow">INDEPENDENT DEVELOPER · AUTHOR · INSTRUCTOR</p>
+            <h1 id="home-heading">Thoughtful apps.<br /><em>Built to matter.</em></h1>
+            <p className="home-introduction">I’m <strong>James Thang</strong> <span className="home-native-name">(Dương Đình Bảo Thăng)</span>, an iOS and React Native developer building practical tools, thoughtful games, and polished experiences for iPhone and Mac.</p>
+            <p className="home-hero-detail">I bring hands-on product development, SwiftUI and UIKit expertise, and experience with coding agents to help turn an idea into an app ready to ship.</p>
+            <div className="home-actions"><Link className="home-button" to="/contact">Work with me <Arrow diagonal /></Link><a className="home-text-link" href="#work">Explore my work <Arrow /></a></div>
+          </div>
+          <div className="home-hero-art" aria-label="A glimpse of my iOS apps">
+            <span className="home-art-label">A LITTLE CRAFT. A LOT OF CARE.</span>
+            <figure className="home-art-phone home-art-vola"><img src={volaShot} alt="Vola AI note taker with live transcription and Ask AI" width="1284" height="2778" /></figure>
+            <figure className="home-art-phone home-art-quan"><img src={oAnQuanShot} alt="Ô Ăn Quan traditional Vietnamese game" width="1206" height="2622" /></figure>
+          </div>
+        </section>
+        <div className="home-evidence home-container" aria-label="Portfolio highlights"><p><strong>{projects.length}</strong> independent app projects</p><p><strong>02</strong> published technical books</p><p><strong>01</strong> SwiftUI course</p><p className="home-evidence-note">From an idea to something you can use.</p></div>
+        <section id="work" className="home-section home-container" aria-labelledby="work-heading">
+          <div className="home-section-heading"><div><p className="home-eyebrow">SELECTED WORK</p><h2 id="work-heading">A few things I’ve <em>made.</em></h2></div><p>Independent projects across productivity, utilities, games, finance, and business tools.</p></div>
+          <div className="home-featured-grid">{featured.map(item => {
+            const project = projects.find(entry => entry.route === item.route);
+            return <Link to={item.route} className={`home-featured-card home-featured-${item.theme}`} key={item.route}><figure className="home-project-stage"><img src={item.image} alt={item.alt} loading="lazy" /></figure><div className="home-featured-copy"><p className="home-category">{item.category}</p><div className="home-featured-title"><img src={project.icon} alt="" width="40" height="40" /><h3>{item.title || project.title}</h3></div><p>{item.detail}</p><span className="home-project-link">Take a closer look <Arrow diagonal /></span>{item.status && <span className="home-project-status">{item.status}</span>}</div></Link>;
+          })}</div>
+          <div className="home-portfolio-heading"><h3>Explore the full portfolio</h3><span>{projects.length} projects · iOS &amp; macOS</span></div>
+          <div className="home-portfolio-grid">{projects.map(project => <Link to={project.route} className="home-project" key={project.route}><img src={project.icon} alt="" width="48" height="48" loading="lazy" /><div><h4>{project.title}</h4><p>{project.story}</p></div><Arrow diagonal /></Link>)}</div>
+        </section>
+        <section id="expertise" className="home-expertise" aria-labelledby="expertise-heading"><div className="home-container home-section">
+          <div className="home-section-heading"><div><p className="home-eyebrow">HOW I CAN HELP</p><h2 id="expertise-heading">Good ideas deserve<br /><em>good engineering.</em></h2></div><p>For founders and teams building a new app, improving an existing product, or extending to another platform.</p></div>
+          <div className="home-capabilities">{capabilities.map(item => <article key={item.number}><span className="home-capability-number">{item.number}</span><h3>{item.title}</h3><p>{item.text}</p><ul aria-label={`${item.title} skills`}>{item.tags.map(tag => <li key={tag}>{tag}</li>)}</ul></article>)}</div>
+          <div className="home-approach"><h3>From the first screen to the release.</h3><p>I connect interface work with the details that make an app useful: data flows, backend integrations, platform features, monetization, and release preparation. My independent apps are a place to put that thinking into practice.</p></div>
+        </div></section>
+        <section id="writing" className="home-section home-container" aria-labelledby="writing-heading">
+          <div className="home-section-heading"><div><p className="home-eyebrow">WRITING &amp; TEACHING</p><h2 id="writing-heading">What I learn,<br /><em>I share.</em></h2></div><p>Technical books and a hands-on course that turn mobile development concepts into practical learning.</p></div>
+          <div className="home-books">{books.map(book => <article className="home-book" key={book.title}><img src={book.image} alt={`${book.title} book cover`} loading="lazy" /><div><p className="home-category">PUBLISHED BOOK</p><h3>{book.title}</h3><p>{book.text}</p><a className="home-text-link" href={book.url} target="_blank" rel="noopener noreferrer">View on Amazon <Arrow diagonal /></a></div></article>)}</div>
+          <article className="home-course"><img src={courseImage} alt="SwiftUI Essentials course on Udemy" loading="lazy" /><div><p className="home-category">UDEMY COURSE</p><h3>SwiftUI Essentials: Kickstart Your iOS Development Journey</h3><p>A beginner-friendly introduction to SwiftUI through practical projects and the foundations of building iOS interfaces.</p><a className="home-text-link" href="https://www.udemy.com/course/swiftui-essentials-kickstart-your-ios-development-journey" target="_blank" rel="noopener noreferrer">Explore the course <Arrow diagonal /></a></div></article>
+        </section>
+        <section id="contact" className="home-contact home-container" aria-labelledby="contact-heading"><div><p className="home-eyebrow">LET’S WORK TOGETHER</p><h2 id="contact-heading">Something on your mind?<br /><em>Let’s make it happen.</em></h2><p>Tell me about your product, the platform, and the challenge you’re working through. I’m interested in useful software and the people making it.</p><Link className="home-button" to="/contact">Start a conversation <Arrow diagonal /></Link></div><div className="home-contact-links"><Link to="/contact"><span>GET IN TOUCH</span>Visit my contact page <Arrow diagonal /></Link><a href="https://www.linkedin.com/in/jamesthang/" target="_blank" rel="noopener noreferrer"><span>LINKEDIN</span>Connect with James Thang <Arrow diagonal /></a></div></section>
+      </main>
+    </div>
+  );
+}

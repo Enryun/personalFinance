@@ -1,3 +1,11 @@
+.footer.editorial-footer {
+  background: #f4f1e9;
+  border-color: #cbcfc2;
+  padding: 30px 20px;
+  .footer-text { color: #62685f; font-size: .8rem; font-weight: 400; }
+  .footer-copyright { color: #62685f; font-size: .75rem; }
+}
+
 .footer {
   margin-top: auto;
   background: linear-gradient(to right, #f8fafc, #f1f5f9);
@@ -60,7 +68,6 @@ html, body, #root {
 .App > :not(.footer) {
   flex: 1;
 }
-
 
 
 
