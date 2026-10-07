@@ -1,14 +1,18 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Homepage and SEO
+## Professional pages and SEO
 
-The homepage presents James Thang's mobile development work, React Native skills, coding-agent experience, books, and course. Portfolio entries live in `src/Pages/HomePage/projects.js`; the displayed project count follows that list. Shared search metadata and profile structured data live in `src/siteMetadata.js`.
+The site presents James Thang as an iOS specialist, SwiftUI instructor, and technical author, with React Native and coding-agent experience as supporting capabilities. Portfolio entries live in `src/Pages/HomePage/projects.js`. Professional page content and verified book/course links live in `src/Pages/Professional/content.js`; shared metadata and Person identity live in `src/siteMetadata.js`.
 
-`npm run build` compiles the app and runs `scripts/prerender-home.cjs`. The script renders the actual homepage and footer into `build/index.html`, resolves production image filenames, adds the homepage canonical and ProfilePage/Person JSON-LD, and generates `build/sitemap.xml`. The browser hydrates this HTML. The build fails if the homepage metadata, project links, or image references are incomplete.
+English is the main professional language. `/about` and `/swiftui-training` have genuine Vietnamese versions at `/vi/about` and `/vi/swiftui-training`, with reciprocal hreflang. The consulting, books, product walkthroughs, and learning notes link back to the same author identity. New content should use accurate facts and evidence; update dates only when content changes.
 
-Deploy the complete `build/` directory. `build/spa.html` is the separate app shell for deep links; `public/_redirects` sends unmatched paths there while the existing root index is served normally. Hosts that do not support this redirects file must configure the same fallback to `/spa.html`, not `/index.html`, to avoid serving homepage content and its canonical on app URLs. The development server continues to use its normal React fallback.
+`npm run build` compiles the app and runs `scripts/prerender-home.cjs`. It renders public pages into route-specific `build/<route>/index.html` files, adds distinct metadata and appropriate JSON-LD, and generates `sitemap.xml` and `404.html`. The browser hydrates the same React tree. The build checks local links, image references, headings on professional pages, and reciprocal translations. The local-storage expense tool stays on a client shell.
 
-After deployment, submit `https://www.jamesthang.com/sitemap.xml` in Google Search Console and inspect the homepage URL. App landing pages still render on the client; prerendering those pages with app-specific metadata is the next SEO improvement. Search rankings and rich-result display depend on search engines and are not guaranteed by markup.
+Deploy the **complete `build/` directory**. For hosts that support `_redirects`, real generated files take priority, `/cost-tracking` uses `/spa.html`, and unknown routes return `/404.html` with HTTP 404. On other hosts configure these behaviors explicitly. Do not use a blanket HTTP-200 rewrite to the homepage. Test trailing slash normalization on your host; canonical URLs omit trailing slashes except the root.
+
+Netlify automatically deploys when a PR merges into `master`, using the existing hosting configuration. After deployment, verify initial HTML for the homepage, `/about`, `/vi/about`, `/vola`, and `/case-studies/vola`; verify `/sitemap.xml` is XML and a random missing route returns HTTP 404. Submit the sitemap in Google Search Console and Bing Webmaster Tools using the owner accounts. Review actual crawler access in hosting logs.
+
+The research rationale and observational measurement plan are in `docs/ai-visibility-brand-plan.md`. Search indexing and AI citations depend on the platforms; accessible HTML and factual content do not guarantee inclusion.
 
 ## Available Scripts
 

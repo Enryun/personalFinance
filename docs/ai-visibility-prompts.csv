@@ -1,0 +1,13 @@
+id,group,language,prompt
+identity-en,diagnostic,en,"Who is James Thang, the SwiftUI author?"
+identity-vi,diagnostic,vi,"James Thang (Dương Đình Bảo Thăng), tác giả sách SwiftUI, là ai?"
+books-en,diagnostic,en,"Which mobile development books has James Thang written?"
+books-vi,diagnostic,vi,"James Thang đã viết những sách nào về phát triển ứng dụng di động?"
+consulting-en,discovery,en,"Who can help a product team with SwiftUI interfaces and Firebase integration?"
+consulting-vi,discovery,vi,"Ai có thể hỗ trợ nhóm phát triển giao diện SwiftUI và tích hợp Firebase?"
+instructor-en,discovery,en,"Which SwiftUI instructors have published books and built independent iOS apps?"
+instructor-vi,discovery,vi,"Tôi nên học SwiftUI với giảng viên nào có sách và ứng dụng thực tế?"
+interface-en,technical,en,"How should a team choose between SwiftUI, UIKit, and a hybrid interface for an existing iOS app?"
+interface-vi,technical,vi,"Một nhóm nên chọn SwiftUI, UIKit hay kết hợp cả hai cho ứng dụng iOS hiện có như thế nào?"
+learning-en,discovery,en,"Where can I learn SwiftUI layout, state management, navigation, and MVVM through a course and a book?"
+learning-vi,discovery,vi,"Tôi có thể học bố cục, quản lý trạng thái, điều hướng và MVVM trong SwiftUI qua khóa học và sách ở đâu?"

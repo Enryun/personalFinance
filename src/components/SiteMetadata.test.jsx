@@ -35,7 +35,7 @@ it('updates canonicals and profile data when navigating between home and app pag
   act(() => { ReactDOM.render(<Router history={history}><App /></Router>, container); });
   expect(document.title).toBe(HOME_TITLE);
   expect(document.querySelector('link[rel="canonical"]').href).toBe(`${SITE_URL}/`);
-  expect(JSON.parse(document.getElementById('profile-schema').textContent).mainEntity.alternateName).toBe('James Thang');
+  expect(JSON.parse(document.getElementById('profile-schema').textContent).mainEntity.name).toBe('James Thang');
 
   act(() => history.push('/folio'));
   expect(document.title).toBe('Folio | James Thang');
@@ -70,4 +70,40 @@ it('hydrates prerendered homepage content without replacing or mismatching it', 
   } finally {
     errors.mockRestore();
   }
+});
+
+
+it('keeps multilingual identity and metadata consistent during navigation', () => {
+  const history = createMemoryHistory({ initialEntries: ['/about'] });
+  act(() => { ReactDOM.render(<Router history={history}><App /></Router>, container); });
+  expect(document.title).toContain('iOS specialist');
+  expect(document.querySelector('link[hreflang="vi"]').href).toBe(`${SITE_URL}/vi/about`);
+  const schema = JSON.parse(document.getElementById('page-schema').textContent);
+  expect(schema['@graph'][0]['@id']).toBe(`${SITE_URL}/#person`);
+  act(() => history.push('/vi/about'));
+  expect(document.documentElement.lang).toBe('vi');
+  expect(document.querySelector('link[hreflang="en"]').href).toBe(`${SITE_URL}/about`);
+  act(() => history.push('/books'));
+  expect(document.documentElement.lang).toBe('en');
+  expect(document.querySelector('link[hreflang]')).toBeNull();
+  expect(container.textContent).toContain('Ultimate Firebase for iOS and Android Applications');
+  expect(JSON.parse(document.getElementById('page-schema').textContent)['@graph'].filter(item => item['@type'] === 'Book')).toHaveLength(2);
+  act(() => history.push('/missing-page'));
+  expect(container.querySelector('.profile-not-found')).not.toBeNull();
+  expect(document.querySelector('meta[name="robots"]').content).toBe('noindex');
+  expect(document.getElementById('page-schema')).toBeNull();
+  act(() => history.push('/contact'));
+  expect(document.querySelector('meta[name="robots"]')).toBeNull();
+});
+
+it.each(['/about/', '/vi/swiftui-training', '/books', '/case-studies/vola', '/articles/swiftui-or-uikit'])('hydrates %s without mismatches', route => {
+  const history = createMemoryHistory({ initialEntries: [route] });
+  container.innerHTML = renderToString(<Router history={history}><App /></Router>);
+  const heading = container.querySelector('h1');
+  const errors = jest.spyOn(console, 'error').mockImplementation(() => {});
+  try {
+    act(() => { ReactDOM.hydrate(<Router history={history}><App /></Router>, container); });
+    expect(container.querySelector('h1')).toBe(heading);
+    expect(errors).not.toHaveBeenCalled();
+  } finally { errors.mockRestore(); }
 });

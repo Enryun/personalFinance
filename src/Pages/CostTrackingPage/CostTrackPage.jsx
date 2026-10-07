@@ -5,7 +5,7 @@ import Alert from "../../components/Alert/Alert";
 import uuid from "uuid/v4";
 import "./CostTrackPage.styles.scss";
 
-const initialExpense = localStorage.getItem('expenses') ? JSON.parse(localStorage.getItem('expenses')) :  []
+const initialExpense = typeof localStorage !== 'undefined' && localStorage.getItem('expenses') ? JSON.parse(localStorage.getItem('expenses')) : [];
 
 class CostTrackPage extends React.Component {
 

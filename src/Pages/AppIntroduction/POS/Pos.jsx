@@ -27,13 +27,13 @@ const Pos = () => {
             
             <div className="pos_block">
                 <h2>Easy to Use and <Link className="link" to='/ucoffee-setup'>Set Up</Link></h2>
-                <div class="gradient-border" id="box">
+                <div className="gradient-border" id="box">
                     <img src={screenshot3} alt="" className="other_image" />
 
                 </div>
             </div>
             <div className="pos_block">
-                <div class="gradient-border" id="box">
+                <div className="gradient-border" id="box">
                     <img src={screenshot2} alt="" className="other_image" />
                 </div>
                 
@@ -41,7 +41,7 @@ const Pos = () => {
             </div>
             <div className="pos_block">
                 <h2 className="small-title">Compatible with POS Printer and Cash Drawer</h2>
-                <div class="gradient-border" id="box">
+                <div className="gradient-border" id="box">
                     <img src={screenshot4} alt="" className="other_image" />
                 </div>   
             </div>

@@ -161,3 +161,6 @@
   @media (max-width: 380px) { .home-art-phone { height: 345px; } .home-hero-art { height: 450px; } .home-book { grid-template-columns: 80px 1fr; gap: 18px; } .home-book > img { width: 80px; height: 115px; } }
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } .home-button:hover, .home-featured-card:hover .home-project-stage img { transform: none; } }
 }
+
+.professional-home .home-case-links, .professional-home .home-resource-links { font-size: 15px; line-height: 1.9; margin: 28px 0; color: #4b554e; }
+.professional-home .home-case-links a, .professional-home .home-resource-links a { color: #315347; text-underline-offset: 4px; }

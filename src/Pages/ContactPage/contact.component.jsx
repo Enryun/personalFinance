@@ -26,8 +26,9 @@ const Contact = () => {
                     <div className="contact-introduction">
                         <p className="contact-eyebrow">WORK WITH ME</p>
                         <h1 id="contact-heading">Good work starts<br />with a <em>hello.</em></h1>
-                        <p className="contact-lede">Have a mobile product in mind, an app to improve, or a team that could use another pair of hands? I’d like to hear about it.</p>
-                        <p className="contact-summary">I’m James Thang (Dương Đình Bảo Thăng), an independent developer working with SwiftUI, UIKit, and React Native. I bring product development experience across iOS and macOS, alongside workflows with Codex, Claude Code, and Cursor.</p>
+                        <p className="contact-lede">Have a mobile product in mind, an app to improve, or a team that could use another pair of hands, or SwiftUI topics you want to learn? I’d like to hear about it.</p>
+                        <p className="contact-summary">I’m James Thang (Dương Đình Bảo Thăng), an iOS specialist, SwiftUI instructor, and technical author working with SwiftUI, UIKit, and React Native. I bring product development experience across iOS and macOS, alongside workflows with Codex, Claude Code, and Cursor.</p>
+                        <p className="contact-summary"><Link to="/ios-consulting">iOS consulting</Link> · <Link to="/swiftui-training">SwiftUI learning</Link> · <Link to="/about">About James</Link></p>
                     </div>
                     <aside className="contact-details" aria-labelledby="contact-details-heading">
                         <h2 id="contact-details-heading">Start a conversation.</h2>
