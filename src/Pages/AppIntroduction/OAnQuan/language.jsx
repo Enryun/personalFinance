@@ -1,30 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-export function useOAnQuanLanguage(title, description) {
+export function useOAnQuanLanguage() {
   const location = useLocation();
   const language = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'vi';
-  useEffect(() => {
-    const oldTitle = document.title;
-    const oldLanguage = document.documentElement.lang;
-    let meta = document.querySelector('meta[name="description"]');
-    const created = !meta;
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.name = 'description';
-      document.head.appendChild(meta);
-    }
-    const oldDescription = meta.content;
-    document.title = title;
-    document.documentElement.lang = language;
-    meta.content = description;
-    return () => {
-      document.title = oldTitle;
-      document.documentElement.lang = oldLanguage;
-      if (created) meta.remove();
-      else meta.content = oldDescription;
-    };
-  }, [language, title, description]);
   return { language, suffix: language === 'en' ? '?lang=en' : '' };
 }
 

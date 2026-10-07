@@ -6,11 +6,13 @@ import * as serviceWorker from './serviceWorker';
 
 import {BrowserRouter as Router} from "react-router-dom";
 
-ReactDOM.render(
+const root = document.getElementById('root');
+const render = root.hasChildNodes() ? ReactDOM.hydrate : ReactDOM.render;
+render(
     <Router>
         <App />
     </Router>
-, document.getElementById('root'));
+, root);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

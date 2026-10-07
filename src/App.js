@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Route} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 import HomePage from './Pages/HomePage/HomePage';
 import CostTrackingPage from './Pages/CostTrackingPage/CostTrackPage';
 import Footer from './components/Footer/footer.component';
@@ -50,12 +50,18 @@ import HorologyStudio from './Pages/AppIntroduction/HorologyStudio/horology.jsx'
 import PolicyHorologyStudio from './Pages/PolicyPage/horology_studio.jsx';
 import OAnQuan from './Pages/AppIntroduction/OAnQuan/o_an_quan';
 import PolicyOAnQuan from './Pages/PolicyPage/o_an_quan';
+import SiteMetadata from './components/SiteMetadata';
+import ProfessionalPage, { NotFound } from './Pages/Professional/ProfessionalPage';
+import { professionalPages } from './Pages/Professional/content';
 
 
 function App() {
   return (
     <div className="App">
       <ScrollToTop />
+      <SiteMetadata />
+      <Switch>
+      {Object.keys(professionalPages).map(path => <Route exact path={path} component={ProfessionalPage} key={path} />)}
       <Route exact path='/' component={HomePage}  />
       <Route exact path='/cost-tracking' component={CostTrackingPage}  />
       <Route exact path='/contact' component={Contact} />
@@ -103,6 +109,8 @@ function App() {
       <Route exact path='/policy/horology-studio' component={PolicyHorologyStudio} />
       <Route exact path='/o-an-quan' component={OAnQuan} />
       <Route exact path='/policy/o-an-quan' component={PolicyOAnQuan} />
+      <Route component={NotFound} />
+      </Switch>
       <Footer />
     </div>
   );
