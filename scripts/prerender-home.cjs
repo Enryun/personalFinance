@@ -33,7 +33,7 @@ for (const extension of ['.png', '.jpg', '.JPG', '.webp', '.svg']) require.exten
 };
 const App = require('../src/App.js').default;
 const { professionalPages } = require('../src/Pages/Professional/content.js');
-const { projects } = require('../src/Pages/HomePage/projects.js');
+const { homeProjects: projects } = require('../src/Pages/HomePage/projects.js');
 const { SITE_URL, HOME_TITLE, getMetadata } = require('../src/siteMetadata.js');
 const shell = fs.readFileSync(path.join(build, 'index.html'), 'utf8');
 if (!shell.includes('<div id="root"></div>')) throw new Error('Expected an empty React root in the build template.');
