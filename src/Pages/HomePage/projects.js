@@ -20,6 +20,7 @@ export const projects = [
         { 
             title: 'Battleship Odyssey', 
             route: '/battle-ship-pirate-war', 
+            showOnHome: false,
             story: 'Strategic naval warfare with epic pirate battles',
             icon: require('../../Image/PirateWar1.png')
         },
@@ -56,18 +57,21 @@ export const projects = [
         { 
             title: 'Finance Advisor', 
             route: '/finance-advisor', 
+            showOnHome: false,
             story: 'Financial calculators for planning and comparison',
             icon: require('../../Image/financeLogo.png')
         },
         { 
             title: 'UCoffee', 
             route: '/u-coffee', 
+            showOnHome: false,
             story: 'Point-of-sale tools for coffee shop operations',
             icon: require('../../Image/POS_Logo.png')
         },
         { 
             title: 'Coffee Record', 
             route: '/ucoffee-remote', 
+            showOnHome: false,
             story: 'Coffee shop reporting and remote business monitoring',
             icon: require('../../Image/POS_remote_logo.webp')
         },
@@ -80,6 +84,7 @@ export const projects = [
         { 
             title: 'Neon Cloud', 
             route: '/neon-cloud', 
+            showOnHome: false,
             story: 'When cloud storage meets vibrant design',
             icon: require('../../Image/Neon.png')
         },
@@ -92,12 +97,14 @@ export const projects = [
         { 
             title: 'Random Rover', 
             route: '/random-rover', 
+            showOnHome: false,
             story: 'Adventures in exploration and discovery',
             icon: require('../../Image/RandomRover.png')
         },
         {
             title: 'Sudoku Zen',
             route: '/sudoku-zen',
+            showOnHome: false,
             story: 'A calm take on the classic number puzzle',
             icon: require('../../Image/Sudoku.png')
         },
@@ -108,3 +115,6 @@ export const projects = [
             icon: require('../../Image/WordSearch.png')
         }
 ];
+
+// Keep the complete catalog for existing app pages and metadata.
+export const homeProjects = projects.filter(project => project.showOnHome !== false);

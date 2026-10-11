@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import courseImage from '../../Image/SwiftUI_Udemy.png';
 import swiftBook from '../../Image/SwiftUI.jpg';
 import firebaseBook from '../../Image/Firebase.JPG';
-import { projects } from './projects';
+import { homeProjects as projects } from './projects';
 import horologyShot from '../../Image/Horology1.png';
 import folioShot from '../../Image/Folio1.png';
 import oAnQuanShot from '../../Image/Oanquan1.png';
