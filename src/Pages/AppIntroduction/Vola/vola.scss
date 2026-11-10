@@ -34,8 +34,8 @@
 .vola-privacy h3 { font-size: 1.6rem; }
 .vola-features { padding-top: 96px; }
 .vola-features > h2 { max-width: 620px; margin-bottom: 64px; }
-.vola-feature { display: grid; grid-template-columns: 1fr 1fr; gap: 96px; align-items: center; margin-bottom: 96px; }
-.vola-feature-image { width: 100%; max-width: 320px; justify-self: center; }
+.vola-feature { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-bottom: 64px; }
+.vola-feature-image { width: 100%; max-width: 280px; justify-self: center; order: -1; }
 .vola-feature-reverse .vola-feature-image { order: 2; }
 .vola-import { background: #e9f1ef; padding: 72px 0; }
 .vola-section-intro { max-width: 740px; margin: 0 auto 40px; }
@@ -58,14 +58,18 @@
     .vola-container { width: calc(100% - 40px); }
     .vola-nav-inner { min-height: 80px; }
     .vola-nav-actions .vola-cta { display: none; }
-    .vola-hero { grid-template-columns: 1fr; gap: 40px; padding-top: 48px; padding-bottom: 48px; }
+    .vola-hero { grid-template-columns: 1fr; gap: 24px; padding-top: 32px; padding-bottom: 48px; }
+    .vola-landing .vola-hero h1 { margin-bottom: 16px; }
+    .vola-landing .vola-hero .vola-eyebrow { margin-bottom: 16px; }
+    .vola-landing .vola-hero .vola-lead { font-size: 1.125rem; margin-bottom: 20px; }
+    .vola-hero-meta { margin-top: 12px; }
+    .vola-landing .vola-hero-meta .vola-small { margin-top: 4px; line-height: 1.45; }
     .vola-hero-image { max-width: 300px; }
     .vola-two-col, .vola-feature { grid-template-columns: 1fr; gap: 32px; }
     .vola-privacy { padding: 48px 0; }
     .vola-features { padding-top: 56px; }
     .vola-feature { margin-bottom: 56px; }
-    .vola-feature-reverse .vola-feature-image { order: 0; }
-    .vola-feature-image { max-width: 300px; }
+    .vola-feature-image, .vola-feature-reverse .vola-feature-image { order: 0; max-width: 260px; }
     .vola-steps { grid-template-columns: 1fr; gap: 16px; }
     .vola-audience-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
     .vola-section { padding-top: 56px; }

@@ -5,7 +5,7 @@ export const volaContent = {
     description: 'Vola transcribes live speech on your iPhone or iPad. Organize recordings, search notes, and use optional cloud AI for summaries and questions. Free download.',
     eyebrow: 'VOICE NOTES · iPHONE & iPAD',
     heading: 'On-device speech to text. Notes you can use.',
-    intro: 'Vola is a voice note app for iPhone and iPad with on-device live speech-to-text. Capture a conversation, organize the transcript, and use optional AI to revisit what matters.',
+    intro: 'Vola is an iPhone and iPad voice note app. Transcribe live speech on-device, with optional cloud AI summaries and questions.',
     download: 'Download on the App Store',
     price: 'Free download with limited usage. Paid subscriptions unlock additional features and allowances.',
     compatibility: 'Requires iOS 26 or iPadOS 26 or later.',
