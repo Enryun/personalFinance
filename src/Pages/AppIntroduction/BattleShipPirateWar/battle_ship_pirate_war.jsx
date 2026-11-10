@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import appIcon from '../../../Image/PirateWar1.png';
-import screenshot1 from '../../../Image/PirateWar2.png';
-import screenshot2 from '../../../Image/PirateWar3.png';
-import screenshot3 from '../../../Image/PirateWar4.png';
-import screenshot4 from '../../../Image/PirateWar5.png';
+import appIcon from '../../../Image/PirateWar1.webp';
+import screenshot1 from '../../../Image/PirateWar2.webp';
+import screenshot2 from '../../../Image/PirateWar3.webp';
+import screenshot3 from '../../../Image/PirateWar4.webp';
+import screenshot4 from '../../../Image/PirateWar5.webp';
 import './battle_ship_pirate_war.scss';
 
 const BattleShipPirateWar = () => {
@@ -21,7 +21,7 @@ const BattleShipPirateWar = () => {
                 <div className="nav-content">
                     <div className="nav-left">
                         <Link to="/" className="nav-logo">
-                            <img src={appIcon} alt="Battleship Odyssey" className="nav-icon" />
+                            <img decoding="async" src={appIcon} alt="Battleship Odyssey" className="nav-icon" />
                             <span>Battleship Odyssey</span>
                         </Link>
                     </div>
@@ -81,7 +81,7 @@ const BattleShipPirateWar = () => {
                             </div>
                         </div>
                         <div className="mode-image">
-                            <img src={screenshot3} alt="Multiplayer Online" />
+                            <img decoding="async" src={screenshot3} alt="Multiplayer Online" />
                         </div>
                     </div>
                 </div>
@@ -126,7 +126,7 @@ const BattleShipPirateWar = () => {
                             </div>
                         </div>
                         <div className="mode-image">
-                            <img src={screenshot2} alt="Single Player vs AI" />
+                            <img decoding="async" src={screenshot2} alt="Single Player vs AI" />
                             <div className="featured-badge">FEATURED</div>
                         </div>
                     </div>
@@ -172,7 +172,7 @@ const BattleShipPirateWar = () => {
                             </div>
                         </div>
                         <div className="mode-image">
-                            <img src={screenshot4} alt="Achievements Collection" />
+                            <img decoding="async" src={screenshot4} alt="Achievements Collection" />
                         </div>
                     </div>
                 </div>
@@ -217,7 +217,7 @@ const BattleShipPirateWar = () => {
                             </div>
                         </div>
                         <div className="mode-image">
-                            <img src={screenshot1} alt="Practice Training Mode" />
+                            <img decoding="async" src={screenshot1} alt="Practice Training Mode" />
                         </div>
                     </div>
                 </div>

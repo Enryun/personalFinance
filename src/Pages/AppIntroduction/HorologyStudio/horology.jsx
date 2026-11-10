@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import appIcon from '../../../Image/Horology.png';
-import heroShot from '../../../Image/Horology1.png';
-import collectionShot from '../../../Image/Horology2.png';
-import customizationShot from '../../../Image/Horology3.png';
-import widgetShot from '../../../Image/Horology4.png';
-import worldTimeShot from '../../../Image/Horology5.png';
-import movementShot from '../../../Image/Horology6.png';
-import alarmShot from '../../../Image/Horology7.png';
+import appIcon from '../../../Image/Horology.webp';
+import heroShot from '../../../Image/Horology1.webp';
+import collectionShot from '../../../Image/Horology2.webp';
+import customizationShot from '../../../Image/Horology3.webp';
+import widgetShot from '../../../Image/Horology4.webp';
+import worldTimeShot from '../../../Image/Horology5.webp';
+import movementShot from '../../../Image/Horology6.webp';
+import alarmShot from '../../../Image/Horology7.webp';
 import './horology.scss';
 
 const APP_STORE_URL = 'https://apps.apple.com/app/id6808155373';
@@ -64,7 +64,7 @@ const HorologyStudio = () => {
     <div className="horology-page">
       <nav className="horology-nav" aria-label="Horology Studio navigation">
         <Link to="/" className="horology-brand" aria-label="Back to James Thang home">
-          <img src={appIcon} alt="" />
+          <img decoding="async" src={appIcon} alt="" />
           <span>Horology Studio</span>
         </Link>
         <button type="button" onClick={handleDownload}>Download on the App Store</button>
@@ -83,7 +83,7 @@ const HorologyStudio = () => {
         </div>
         <div className="hero-art" aria-hidden="true">
           <div className="hero-glow" />
-          <img src={heroShot} alt="" />
+          <img decoding="async" src={heroShot} alt="" />
         </div>
       </header>
 
@@ -96,13 +96,13 @@ const HorologyStudio = () => {
               <p>{scene.text}</p>
             </div>
             <figure className="scene-image">
-              <img src={scene.image} alt={scene.alt} loading="lazy" />
+              <img decoding="async" src={scene.image} alt={scene.alt} loading="lazy" />
             </figure>
           </section>
         ))}
 
         <section className="horology-closing">
-          <img src={appIcon} alt="Horology Studio app icon" />
+          <img decoding="async" src={appIcon} alt="Horology Studio app icon" />
           <p className="eyebrow">A QUIETER WAY TO LOOK AT TIME</p>
           <h2>Keep a timepiece<br />that feels like yours.</h2>
           <button type="button" className="primary-button" onClick={handleDownload}>Download on the App Store</button>

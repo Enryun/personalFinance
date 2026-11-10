@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import screenshot1 from '../../../Image/DarkHorse.png';
-import screenshot2 from '../../../Image/DarkHorse2.png';
+import screenshot1 from '../../../Image/DarkHorse.webp';
+import screenshot2 from '../../../Image/DarkHorse2.webp';
 
 const DarkHorse = () => {
     return (
@@ -11,11 +11,11 @@ const DarkHorse = () => {
                 <div className="pos-container">
                     <h1 className="pos">Dark Horse</h1>
                     <a href="https://apps.apple.com/us/app/darkhorse-flashcard-maker/id1621688582" target="_blank" rel="noopener noreferrer">
-                        <img className="applogo" alt="AppStore" src={screenshot1}/>
+                        <img decoding="async" className="applogo" alt="AppStore" src={screenshot1}/>
                     </a>
                 </div>
             
-                <img src={screenshot2} alt="" className="image_1" />
+                <img decoding="async" src={screenshot2} alt="" className="image_1" />
 
                 {/* Policy Link */}
                 <div className="policy-link-container">

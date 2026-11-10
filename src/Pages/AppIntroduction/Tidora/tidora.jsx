@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import tidoraIcon from '../../../Image/Tidora.png';
-import screenshot2 from '../../../Image/TidyMac1.png';
+import tidoraIcon from '../../../Image/Tidora.webp';
+import screenshot2 from '../../../Image/TidyMac1.webp';
 import './tidora.scss';
 
 const Tidora = () => {
@@ -17,7 +17,7 @@ const Tidora = () => {
                 <div className="nav-content">
                     <div className="nav-left">
                         <Link to="/" className="nav-logo">
-                            <img src={tidoraIcon} alt="Tidora" className="nav-icon" />
+                            <img decoding="async" src={tidoraIcon} alt="Tidora" className="nav-icon" />
                             <span>Tidora</span>
                         </Link>
                     </div>
@@ -35,7 +35,7 @@ const Tidora = () => {
                     <h1>Keep Your Mac Clean</h1>
                     <p className="hero-subtitle">A powerful yet simple Mac utility to keep your system running smoothly</p>
                     <div className="hero-image">
-                        <img src={screenshot2} alt="Tidora Screenshot" />
+                        <img decoding="async" src={screenshot2} alt="Tidora Screenshot" />
                     </div>
                 </div>
             </div>

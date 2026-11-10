@@ -17,7 +17,7 @@ export default function Vola() {
     return <div className="vola-landing">
         <a className="vola-skip" href="#vola-main">{lang === 'vi' ? 'Đến nội dung chính' : 'Skip to content'}</a>
         <header className="vola-nav"><nav className="vola-container vola-nav-inner" aria-label={lang === 'vi' ? 'Điều hướng Vola' : 'Vola navigation'}>
-            <Link className="vola-logo" to={lang === 'vi' ? '/vi/vola/' : '/vola/'}><img src="/vola/icon.png" width="36" height="36" alt="" />Vola</Link>
+            <Link className="vola-logo" to={lang === 'vi' ? '/vi/vola/' : '/vola/'}><img decoding="async" src="/vola/icon.webp" width="36" height="36" alt="" />Vola</Link>
             <div className="vola-nav-actions"><Link className="vola-language" to={lang === 'vi' ? '/vola/' : '/vi/vola/'} lang={lang === 'vi' ? 'en' : 'vi'} hrefLang={lang === 'vi' ? 'en' : 'vi'}>{lang === 'vi' ? 'English' : 'Tiếng Việt'}</Link>{download('navigation')}</div>
         </nav></header>
         <main id="vola-main">
