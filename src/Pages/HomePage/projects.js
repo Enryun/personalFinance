@@ -2,7 +2,7 @@ export const projects = [
         {
             title: 'Ô Ăn Quan: Trò chơi dân gian',
             route: '/o-an-quan',
-            story: 'Rediscover a Vietnamese childhood game, one thoughtful move at a time',
+            story: 'Ô ăn quan trên iPhone và iPad: Một vòng quê nhà, chơi offline và rủ bạn cùng chơi',
             icon: require('../../Image/Oanquan.webp')
         },
         {

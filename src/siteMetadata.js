@@ -1,3 +1,4 @@
+import { OANQUAN_STORE, getOAnQuanLanguage, getOAnQuanPath, isOAnQuanPath } from './Pages/AppIntroduction/OAnQuan/locales';
 import { FOLIO_STORE, FOLIO_TITLE, FOLIO_DESCRIPTION } from './Pages/AppIntroduction/Folio/content';
 import { volaLocales, getVolaLocale } from './Pages/AppIntroduction/Vola/locales';
 import { volaContent, VOLA_STORE } from './Pages/AppIntroduction/Vola/content';
@@ -40,6 +41,31 @@ export function getMetadata(pathname, search = '') {
         author: { '@id': person['@id'] }, downloadUrl: VOLA_STORE, sameAs: [VOLA_STORE],
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', url: VOLA_STORE,
           description: copy.price }
+      }] }
+    };
+  }
+  if (isOAnQuanPath(pathname)) {
+    const language = getOAnQuanLanguage(pathname, search);
+    const policy = pathname.includes('/policy/');
+    const content = policy ? policyCopy[language] : gameCopy[language];
+    const url = `${SITE_URL}${getOAnQuanPath(language, policy)}`;
+    const image = `${SITE_URL}/o-an-quan/${language}/social-card.png`;
+    const alternates = ['vi', 'en'].map(lang => ({ lang, href: `${SITE_URL}${getOAnQuanPath(lang, policy)}` }));
+    alternates.push({ lang: 'x-default', href: `${SITE_URL}${getOAnQuanPath('vi', policy)}` });
+    return {
+      title: policy ? `Ô Ăn Quan — ${content.title}` : content.title,
+      description: policy ? content.intro : content.description, url, language, direction: 'ltr', image,
+      imageAlt: language === 'vi' ? 'Ô Ăn Quan cho iPhone và iPad — Một vòng quê nhà' : 'Ô Ăn Quan for iPhone and iPad — A Journey Through the Village',
+      alternates,
+      schema: policy ? null : { '@context': 'https://schema.org', '@graph': [person, {
+        '@type': ['VideoGame', 'SoftwareApplication'], '@id': `${SITE_URL}/o-an-quan/#game`,
+        name: language === 'vi' ? 'Ô Ăn Quan: Trò chơi dân gian' : 'O An Quan: vietnamese mancala',
+        url, description: content.description, inLanguage: ['vi', 'en'], image,
+        operatingSystem: 'iOS 17 or later, iPadOS 17 or later', applicationCategory: 'GameApplication',
+        genre: ['Board game', 'Strategy'], author: { '@id': person['@id'] },
+        downloadUrl: OANQUAN_STORE, sameAs: [OANQUAN_STORE],
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'VND', url: OANQUAN_STORE,
+          description: content.note }
       }] }
     };
   }

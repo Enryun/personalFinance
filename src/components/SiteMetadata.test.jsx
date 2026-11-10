@@ -49,7 +49,7 @@ it('updates canonicals and profile data when navigating between home and app pag
   expect(document.documentElement.lang).toBe('vi');
   act(() => history.push('/o-an-quan?lang=en'));
   expect(document.documentElement.lang).toBe('en');
-  expect(document.querySelector('link[rel="canonical"]').href).toBe(`${SITE_URL}/o-an-quan?lang=en`);
+  expect(document.querySelector('link[rel="canonical"]').href).toBe(`${SITE_URL}/en/o-an-quan/`);
   expect(document.title).toContain('Vietnamese Folk Game');
 
   act(() => history.push('/'));
@@ -195,4 +195,33 @@ it('serves Folio in English with its own store destination, social image, and ap
   expect(container.querySelectorAll('footer')).toHaveLength(1);
   expect(container.textContent).not.toContain('Full Privacy');
   expect(container.textContent).toContain('usage analytics');
+});
+
+it.each([
+  ['/o-an-quan?lang=en&utm_source=test#cach-choi', '/en/o-an-quan/'],
+  ['/policy/o-an-quan?lang=en&utm_source=test#privacy', '/en/policy/o-an-quan/'],
+])('preserves legacy English links and attribution from %s', (initial, destination) => {
+  const history = createMemoryHistory({ initialEntries: [initial] });
+  act(() => { ReactDOM.render(<Router history={history}><App /></Router>, container); });
+  expect(history.location.pathname).toBe(destination);
+  expect(history.location.search).toBe('?utm_source=test');
+  expect(history.location.hash).not.toBe('');
+  expect(document.documentElement.lang).toBe('en');
+  expect(document.querySelector('link[rel="canonical"]').href).toBe(SITE_URL + destination);
+  expect(container.querySelectorAll('footer')).toHaveLength(1);
+  act(() => { Simulate.click(container.querySelector('.oq-language a[hreflang="vi"]'), { button: 0 }); });
+  expect(document.documentElement.lang).toBe('vi');
+  expect(history.location.pathname).toBe(destination.replace('/en/', '/'));
+});
+
+it.each(['/o-an-quan/', '/en/o-an-quan/'])('hydrates the prerendered game page at %s without replacing its content', path => {
+  const history = createMemoryHistory({ initialEntries: [path] });
+  container.innerHTML = renderToString(<Router history={history}><App /></Router>);
+  const heading = container.querySelector('h1');
+  const errors = jest.spyOn(console, 'error').mockImplementation(() => {});
+  try {
+    act(() => { ReactDOM.hydrate(<Router history={history}><App /></Router>, container); });
+    expect(container.querySelector('h1')).toBe(heading);
+    expect(errors).not.toHaveBeenCalled();
+  } finally { errors.mockRestore(); }
 });

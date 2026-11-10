@@ -109,7 +109,9 @@ function App() {
       <Route exact path='/horology-studio' component={HorologyStudio} />
       <Route exact path='/policy/horology-studio' component={PolicyHorologyStudio} />
       <Route exact path='/o-an-quan' component={OAnQuan} />
+      <Route exact path='/en/o-an-quan' component={OAnQuan} />
       <Route exact path='/policy/o-an-quan' component={PolicyOAnQuan} />
+      <Route exact path='/en/policy/o-an-quan' component={PolicyOAnQuan} />
       <Route component={NotFound} />
       </Switch>
       <Footer />
