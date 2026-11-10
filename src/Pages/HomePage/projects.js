@@ -32,8 +32,8 @@ export const projects = [
         },
         { 
             title: 'Folio', 
-            route: '/folio', 
-            story: 'Fast Markdown reading, organized locally, found instantly',
+            route: '/folio/',
+            story: 'Markdown editing, connected notes, and on-device writing assistance for iPhone and Mac',
             icon: require('../../Image/Folio.webp')
         },
         { 

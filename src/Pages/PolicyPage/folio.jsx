@@ -6,13 +6,13 @@ const PolicyFolio = () => {
     <div className="policy">
       <strong>Privacy Policy</strong>
       <p>
-        James Thang built <strong>Folio: Markdown Library</strong> for macOS as a local-first Markdown reader. This
+        James Thang built <strong>Folio: Markdown Library</strong> for iPhone and Mac as a local-first Markdown editor and organizer. This
         SERVICE is provided as-is.
       </p>
 
       <p>
         Folio is designed to help you build a <strong>local Markdown library</strong>, organize it with folders/tags,
-        and find documents quickly—while keeping your content on your Mac.
+        and find documents quickly—while keeping your content on your device.
       </p>
 
       <p>
@@ -43,8 +43,16 @@ const PolicyFolio = () => {
         <strong>Information Collection and Use</strong>
       </p>
       <p>
-        Folio does not ask you to provide personal information for core functionality. Any content you read, organize,
-        search, or import is intended to remain on your Mac.
+        Folio does not ask you to provide personal information for core functionality. Your document library is stored locally on your device. The on-device Writing Assistant processes document text using a local model. Model downloads and Git imports require network connections to their respective providers.
+      </p>
+
+      <p><strong>Usage Analytics and Diagnostics</strong></p>
+      <p>
+        The Mac version of Folio uses Mixpanel for usage analytics, including app launches, screen views, import outcomes,
+        search query lengths and result counts, and sharing or export events. Analytics can include app
+        and operating system versions, file extensions, import host names, timings, and error details.
+        This policy does not claim that Folio has no network activity or collects no data.
+        The App Store privacy disclosure also lists usage and diagnostic data not linked to your identity.
       </p>
 
       <p>
@@ -61,7 +69,7 @@ const PolicyFolio = () => {
       <p>
         This Privacy Policy may be updated from time to time. Any changes will be posted on this page.
       </p>
-      <p>This policy is effective as of {new Date().toLocaleDateString()}.</p>
+      <p>Last updated: November 11, 2026.</p>
 
       <p>
         <strong>Contact Us</strong>
