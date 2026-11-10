@@ -1,7 +1,7 @@
 .vola-landing {
     --vola-ink: #163035; --vola-muted: #456166; --vola-accent: #00758a; --vola-canvas: #f3f9f7; --vola-line: #cfdfdb;
     color: var(--vola-ink); background: var(--vola-canvas); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.65;
-    h1, h2, h3 { color: var(--vola-ink); text-align: left; text-transform: none; letter-spacing: -.035em; line-height: 1.12; margin: 0 0 24px; }
+    h1, h2, h3 { color: var(--vola-ink); text-align: left; text-transform: none; letter-spacing: -.035em; line-height: 1.12; margin: 0 0 24px; padding: 0; }
     h1 { font-size: clamp(2.75rem, 5.6vw, 4.8rem); }
     h2 { font-size: clamp(2rem, 3.5vw, 3.2rem); }
     h3 { font-size: clamp(1.5rem, 2.7vw, 2.5rem); }
@@ -45,8 +45,10 @@
 .vola-tablet { max-width: 700px; margin: auto; }
 .vola-section { padding-top: 88px; padding-bottom: 16px; }
 .vola-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; list-style: none; padding: 0; margin: 40px 0 0; }
-.vola-step-number { display: block; color: var(--vola-accent); font-weight: 650; border-top: 1px solid var(--vola-line); padding: 20px 0; }
-.vola-steps h3, .vola-audience-grid h3 { font-size: 1.4rem; letter-spacing: -.02em; }
+.vola-step-number { display: block; color: var(--vola-accent); font-weight: 650; border-top: 1px solid var(--vola-line); padding: 16px 0; }
+.vola-steps > li, .vola-audience-grid > article { min-width: 0; text-align: left; }
+.vola-landing .vola-steps h3, .vola-landing .vola-audience-grid h3 { font-size: 1.4rem; letter-spacing: -.02em; line-height: 1.3; min-height: 2.6em; padding: 0; margin: 0 0 12px; }
+.vola-landing .vola-steps p, .vola-landing .vola-audience-grid p { margin: 0; color: var(--vola-muted); }
 .vola-audience-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 40px; }
 .vola-faq { max-width: 800px; padding-bottom: 88px; }
 .vola-faq details { border-bottom: 1px solid var(--vola-line); }
@@ -73,13 +75,14 @@
     .vola-features { padding-top: 56px; }
     .vola-feature { margin-bottom: 56px; }
     .vola-feature-image, .vola-feature-reverse .vola-feature-image { order: 0; max-width: 260px; }
-    .vola-steps { grid-template-columns: 1fr; gap: 16px; }
+    .vola-steps { grid-template-columns: 1fr; gap: 24px; }
+    .vola-landing .vola-steps h3 { min-height: 0; }
     .vola-audience-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
     .vola-section { padding-top: 56px; }
     .vola-faq { padding-bottom: 56px; }
     .vola-final { padding: 56px 0; }
 }
-@media (max-width: 420px) { .vola-audience-grid { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .vola-audience-grid { grid-template-columns: 1fr; } .vola-landing .vola-audience-grid h3 { min-height: 0; } }
 @media (prefers-reduced-motion: reduce) { .vola-landing * { transition: none !important; } }
 
 .vola-language-picker { position: relative; }
