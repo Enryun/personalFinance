@@ -369,12 +369,12 @@
 // Device-only views: keep App Store headlines outside each crop frame.
 .folio-page {
   .folio-compatibility { margin: .25rem 0 0; color: #475569; font-size: .875rem; line-height: 1.6; }
-  .folio-hero-preview { display: grid; grid-template-columns: minmax(0,1fr) 22%; gap: 1.5rem; align-items: end; width: 100%; max-width: 1060px; margin: 2.5rem auto 0; }
+  .folio-hero-preview { display: grid; grid-template-columns: minmax(0,1fr) 22%; gap: 1.25rem; align-items: end; width: 100%; max-width: 1240px; margin: 2.5rem auto 0; }
   .folio-hero-preview, .scene .scene-media {
     box-sizing: border-box; background: #2c2b2c; padding: clamp(12px, 2.5vw, 28px);
     border-radius: 20px; border: 1px solid rgba(15,23,42,.08); overflow: hidden;
   }
-  .folio-hero-preview figcaption { grid-column: 1 / -1; font-size: .875rem; color: #d1d5db; text-align: center; }
+  .folio-hero-preview { padding: clamp(8px, 1.25vw, 16px); }
   .scene > * { min-width: 0; }
   .scene .scene-media { width: 100%; }
   .scene .folio-paired-media { display: grid; grid-template-columns: minmax(0,1fr) 22%; align-items: end; gap: 1.25rem; width: 100%; }
@@ -403,8 +403,28 @@
 @media (max-width: 600px) {
   .folio-page .folio-hero-preview { gap: .625rem; margin-top: 1.75rem; }
   .folio-page .scene .folio-paired-media { gap: .625rem; }
-  .folio-page .folio-hero-preview figcaption { font-size: .8125rem; }
   .folio-page .folio-mac-window { border-radius: 5px; }
 }
 
 .folio-page .scene .scene-text .folio-model-requirements { font-size: .875rem; color: #475569; line-height: 1.6; }
+
+// Give the opening product preview more room than the feature-row pairs.
+.folio-page .folio-hero-preview {
+  position: relative; display: block; width: calc(100% + 2rem);
+  max-width: 1440px; margin-left: auto; margin-right: auto;
+  padding: clamp(16px, 2vw, 28px); padding-bottom: clamp(20px, 3vw, 40px);
+  left: -1rem;
+}
+.folio-page .folio-hero-preview .folio-mac-preview { width: 90%; }
+.folio-page .folio-hero-preview .folio-phone-preview {
+  position: absolute; width: 28%; right: 2%; bottom: 4%;
+  filter: drop-shadow(-10px 12px 18px rgba(0,0,0,.35));
+}
+@media (max-width: 900px) {
+  .folio-page .folio-hero-preview { width: calc(100% + 1rem); left: -.5rem; }
+}
+@media (max-width: 600px) {
+  .folio-page .folio-hero-preview { padding: 10px 8px 16px; border-radius: 14px; }
+  .folio-page .folio-hero-preview .folio-mac-preview { width: 92%; }
+  .folio-page .folio-hero-preview .folio-phone-preview { width: 29%; right: 2%; bottom: 5%; }
+}

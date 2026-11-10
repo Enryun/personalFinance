@@ -26,7 +26,7 @@ const phoneImages = {
   folders: [iphoneFolders480, iphoneFolders768], links: [iphoneLinkMap480, iphoneLinkMap768],
   assistant: [iphoneAssistant480, iphoneAssistant768],
 };
-const PhoneScreenshot = ({ name, alt, eager = false }) => <span className="folio-phone-preview"><img className="folio-phone-shot" src={phoneImages[name][0]} srcSet={`${phoneImages[name][0]} 480w, ${phoneImages[name][1]} 768w`} sizes="(max-width: 900px) 22vw, 210px" width="480" height="1039" loading={eager ? 'eager' : 'lazy'} decoding="async" alt={alt} /></span>;
+const PhoneScreenshot = ({ name, alt, eager = false }) => <span className="folio-phone-preview"><img className="folio-phone-shot" src={phoneImages[name][0]} srcSet={`${phoneImages[name][0]} 480w, ${phoneImages[name][1]} 768w`} sizes={eager ? '(max-width: 900px) 29vw, 400px' : '(max-width: 900px) 22vw, 210px'} width="480" height="1039" loading={eager ? 'eager' : 'lazy'} decoding="async" alt={alt} /></span>;
 const MacScreenshot = ({ image, alt, eager = false }) => <span className={`folio-mac-preview ${image === assistant ? 'folio-mac-window' : 'folio-mac-device'}`}><img className="folio-mac-shot" src={image} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" width={image === assistant ? '1600' : '2880'} height={image === assistant ? '971' : '1800'} /></span>;
 const scenes = [
   ['Write and preview Markdown', 'Write and preview Markdown on iPhone and Mac. Use Editor or Preview on iPhone, and choose Split View on Mac to see the source and rendered document side by side.', scene1, 'Folio Markdown document with source and rendered preview on Mac', 'editor', 'Folio Markdown editor and formatting toolbar on iPhone'],
@@ -62,7 +62,6 @@ const Folio = () => (
       <figure className="folio-hero-preview" aria-label="Folio on Mac and iPhone">
         <MacScreenshot image={scene1} alt="Folio Markdown editor with source and rendered preview on Mac" eager />
         <PhoneScreenshot name="preview" alt="Folio rendered Markdown note with images on iPhone" eager />
-        <figcaption>Markdown on iPhone and Mac</figcaption>
       </figure>
     </header>
     <main className="page-content" id="features">
