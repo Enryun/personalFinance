@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import screenshot1 from '../../../Image/TidyMac.png';
-import screenshot2 from '../../../Image/TidyMac1.png';
+import screenshot1 from '../../../Image/TidyMac.webp';
+import screenshot2 from '../../../Image/TidyMac1.webp';
 import './tidy_mac.scss';
 
 const TidyMac = () => {
@@ -33,7 +33,7 @@ const TidyMac = () => {
                 <div className="nav-content">
                     <div className="nav-left">
                         <Link to="/" className="nav-logo">
-                            <img src={screenshot1} alt="Tidy Mac" className="nav-icon" />
+                            <img decoding="async" src={screenshot1} alt="Tidy Mac" className="nav-icon" />
                             <span>Tidy Mac</span>
                         </Link>
                     </div>
@@ -51,7 +51,7 @@ const TidyMac = () => {
                     <h1>Keep Your Mac Clean</h1>
                     <p className="hero-subtitle">A powerful yet simple Mac utility to keep your system running smoothly</p>
                     <div className="hero-image">
-                        <img src={screenshot2} alt="Tidy Mac Screenshot" />
+                        <img decoding="async" src={screenshot2} alt="Tidy Mac Screenshot" />
                     </div>
                 </div>
             </div>

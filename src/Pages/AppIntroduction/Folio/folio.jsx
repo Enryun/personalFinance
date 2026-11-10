@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import folioIcon from '../../../Image/Folio.png';
-import scene1 from '../../../Image/Folio1.png';
-import scene2 from '../../../Image/Folio2.png';
-import scene3 from '../../../Image/Folio3.png';
-import scene4 from '../../../Image/Folio4.png';
-import scene5 from '../../../Image/Folio5.png';
+import folioIcon from '../../../Image/Folio.webp';
+import scene1 from '../../../Image/Folio1.webp';
+import scene2 from '../../../Image/Folio2.webp';
+import scene3 from '../../../Image/Folio3.webp';
+import scene4 from '../../../Image/Folio4.webp';
+import scene5 from '../../../Image/Folio5.webp';
 import './folio.scss';
 
 const APP_STORE_URL = 'https://apps.apple.com/app/id6765871325';
@@ -21,7 +21,7 @@ const Folio = () => {
         <div className="nav-content">
           <div className="nav-left">
             <Link to="/" className="nav-logo" aria-label="Back to home">
-              <img src={folioIcon} alt="Folio app icon" className="nav-icon" />
+              <img decoding="async" src={folioIcon} alt="Folio app icon" className="nav-icon" />
               <span>Folio</span>
             </Link>
           </div>
@@ -63,7 +63,7 @@ const Folio = () => {
             <div className="caption">Read Markdown clearly—no setup, no clutter.</div>
           </div>
           <figure className="scene-media">
-            <img src={scene1} alt="Folio simple Markdown viewer screenshot" />
+            <img loading="lazy" decoding="async" src={scene1} alt="Folio simple Markdown viewer screenshot" />
           </figure>
         </section>
 
@@ -77,7 +77,7 @@ const Folio = () => {
             <div className="caption">Sort by folder, label with tags, stay organized.</div>
           </div>
           <figure className="scene-media">
-            <img src={scene2} alt="Folio folders and tags organization screenshot" />
+            <img loading="lazy" decoding="async" src={scene2} alt="Folio folders and tags organization screenshot" />
           </figure>
         </section>
 
@@ -91,7 +91,7 @@ const Folio = () => {
             <div className="caption">Search your library and jump to the answer.</div>
           </div>
           <figure className="scene-media">
-            <img src={scene3} alt="Folio fast search screenshot" />
+            <img loading="lazy" decoding="async" src={scene3} alt="Folio fast search screenshot" />
           </figure>
         </section>
 
@@ -105,7 +105,7 @@ const Folio = () => {
             <div className="caption">Local-first by design—your notes stay on your Mac.</div>
           </div>
           <figure className="scene-media">
-            <img src={scene4} alt="Folio local Markdown hub screenshot" />
+            <img loading="lazy" decoding="async" src={scene4} alt="Folio local Markdown hub screenshot" />
           </figure>
         </section>
 
@@ -119,7 +119,7 @@ const Folio = () => {
             <div className="caption">Import from Git, extract Markdown, keep it local.</div>
           </div>
           <figure className="scene-media">
-            <img src={scene5} alt="Folio Git import screenshot" />
+            <img loading="lazy" decoding="async" src={scene5} alt="Folio Git import screenshot" />
           </figure>
         </section>
 

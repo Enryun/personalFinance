@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import appIcon from '../../../Image/PocketBloom.png';
-import screenshot1 from '../../../Image/PocketBloom1.png';
-import screenshot2 from '../../../Image/PocketBloom2.png';
-import screenshot3 from '../../../Image/PocketBloom3.png';
-import screenshot4 from '../../../Image/PocketBloom4.png';
-import screenshot5 from '../../../Image/PocketBloom5.png';
+import appIcon from '../../../Image/PocketBloom.webp';
+import screenshot1 from '../../../Image/PocketBloom1.webp';
+import screenshot2 from '../../../Image/PocketBloom2.webp';
+import screenshot3 from '../../../Image/PocketBloom3.webp';
+import screenshot4 from '../../../Image/PocketBloom4.webp';
+import screenshot5 from '../../../Image/PocketBloom5.webp';
 import './pocket_bloom.scss';
 
 const APP_STORE_URL = 'https://apps.apple.com/app/id6785750256';
@@ -21,7 +21,7 @@ const PocketBloom = () => {
                 <div className="nav-content">
                     <div className="nav-left">
                         <Link to="/" className="nav-logo" aria-label="Back to home">
-                            <img src={appIcon} alt="Pocket Bloom" className="nav-icon" />
+                            <img decoding="async" src={appIcon} alt="Pocket Bloom" className="nav-icon" />
                             <span>Pocket Bloom</span>
                         </Link>
                     </div>
@@ -75,7 +75,7 @@ const PocketBloom = () => {
                             </div>
                         </div>
                         <div className="mode-image">
-                            <img src={screenshot1} alt="Cozy puzzle gameplay" />
+                            <img decoding="async" src={screenshot1} alt="Cozy puzzle gameplay" />
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@ const PocketBloom = () => {
                             </div>
                         </div>
                         <div className="mode-image">
-                            <img src={screenshot2} alt="Find the perfect move" />
+                            <img decoding="async" src={screenshot2} alt="Find the perfect move" />
                             <div className="featured-badge">FEATURED</div>
                         </div>
                     </div>
@@ -154,7 +154,7 @@ const PocketBloom = () => {
                             </div>
                         </div>
                         <div className="mode-image">
-                            <img src={screenshot3} alt="Every puzzle fresh" />
+                            <img decoding="async" src={screenshot3} alt="Every puzzle fresh" />
                         </div>
                     </div>
                 </div>
@@ -193,7 +193,7 @@ const PocketBloom = () => {
                             </div>
                         </div>
                         <div className="mode-image">
-                            <img src={screenshot5} alt="Your garden journey" />
+                            <img decoding="async" src={screenshot5} alt="Your garden journey" />
                         </div>
                     </div>
                 </div>
@@ -210,7 +210,7 @@ const PocketBloom = () => {
                             </p>
                         </div>
                         <div className="mode-image">
-                            <img src={screenshot4} alt="Watch every bloom connect" />
+                            <img decoding="async" src={screenshot4} alt="Watch every bloom connect" />
                         </div>
                     </div>
                 </div>

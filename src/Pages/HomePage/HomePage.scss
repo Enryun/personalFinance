@@ -40,7 +40,7 @@
   .home-hero-art::before { content: ''; position: absolute; inset: 60px 0 20px 10px; border-radius: 50% 50% 4px 4px; background: #e1e5d9; z-index: -1; }
   .home-art-phone { position: absolute; width: 51%; margin: 0; overflow: hidden; height: 450px; border-radius: 23px; box-shadow: 0 24px 34px rgba(28,38,28,.16); }
   .home-art-phone img { width: 100%; height: auto; display: block; }
-  .home-art-vola { left: 2%; top: 50px; background: #071711; transform: rotate(-8deg); }
+  .home-art-vola { left: 2%; top: 50px; background: #f4f8f7; transform: rotate(-8deg); }
   .home-art-quan { right: 0; top: 108px; background: #f4efdd; transform: rotate(7deg); }
   .home-art-label { position: absolute; left: 20%; top: 0; color: var(--home-muted); font: .75rem/1.6 ui-monospace, monospace; letter-spacing: .1em; }
   .home-evidence { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 22px; padding: 28px 0; border-top: 1px solid var(--home-line); border-bottom: 1px solid var(--home-line); }
@@ -57,7 +57,7 @@
   .home-featured-card:first-child { grid-column: 1 / -1; display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; background: #e8e9e0; border-radius: 6px; }
   .home-project-stage { margin: 0; display: flex; justify-content: center; align-items: center; height: 430px; border-radius: 6px; overflow: hidden; background: #e3e6db; }
   .home-project-stage img { display: block; width: 100%; height: 100%; object-fit: contain; transition: transform .35s ease; }
-  .home-featured-vola .home-project-stage { height: 520px; background: #071711; }
+  .home-featured-vola .home-project-stage { height: 520px; background: #f4f8f7; }
   .home-featured-watch .home-project-stage { background: #080a12; }
   .home-featured-vola .home-project-stage img, .home-featured-watch .home-project-stage img { width: auto; max-width: 100%; }
   .home-featured-tidora .home-project-stage { background: #e6e8ea; padding: 20px; }

@@ -8,7 +8,7 @@ English is the main professional language. `/about` and `/swiftui-training` have
 
 `npm run build` compiles the app and runs `scripts/prerender-home.cjs`. It renders public pages into route-specific `build/<route>/index.html` files, adds distinct metadata and appropriate JSON-LD, and generates `sitemap.xml` and `404.html`. The browser hydrates the same React tree. The build checks local links, image references, headings on professional pages, and reciprocal translations. The local-storage expense tool stays on a client shell.
 
-Deploy the **complete `build/` directory**. For hosts that support `_redirects`, real generated files take priority, `/cost-tracking` uses `/spa.html`, and unknown routes return `/404.html` with HTTP 404. On other hosts configure these behaviors explicitly. Do not use a blanket HTTP-200 rewrite to the homepage. Test trailing slash normalization on your host; canonical URLs omit trailing slashes except the root.
+Deploy the **complete `build/` directory**. For hosts that support `_redirects`, real generated files take priority, `/cost-tracking` uses `/spa.html`, and unknown routes return `/404.html` with HTTP 404. On other hosts configure these behaviors explicitly. Do not use a blanket HTTP-200 rewrite to the homepage. Test trailing slash normalization on your host; canonical URLs omit trailing slashes except the root and the Vola product routes (`/vola/`, `/vi/vola/`), which match Netlify’s directory URLs.
 
 Netlify automatically deploys when a PR merges into `master`, using the existing hosting configuration. After deployment, verify initial HTML for the homepage, `/about`, `/vi/about`, `/vola`, and `/case-studies/vola`; verify `/sitemap.xml` is XML and a random missing route returns HTTP 404. Submit the sitemap in Google Search Console and Bing Webmaster Tools using the owner accounts. Review actual crawler access in hosting logs.
 
@@ -80,3 +80,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Vola languages
+
+Vola has 24 prerendered locale pages. `src/Pages/AppIntroduction/Vola/locales.js` is the shared registry for routes, native language names, writing direction, and screenshot source folders. English uses `/vola/`; other locales use `/<lowercase-code>/vola/`, including `/ja/vola/`, `/pt-br/vola/`, and `/zh-hant/vola/`.
+
+The page copy, local metadata and alt text are in `content.js` and `locales/*.json`. `translations.js` expands the compact translated packs without English product-copy fallbacks. Maintain the local/cloud privacy distinction when editing any locale.
+
+`npm run build` now validates every locale’s generated HTML, reciprocal alternates, canonical, direction, assets, schema, sitemap entry and store links. Screenshot exports can be regenerated with `python3 scripts/export-vola-locales.py --source /path/to/VolaAppstore` (Pillow required). They use the `jap` source folder for the web’s valid `ja` code.
+
+Native editorial review, language-specific demand research, Search Console indexing and AI-answer measurements remain rollout work; translated pages do not guarantee ranking or recommendations.

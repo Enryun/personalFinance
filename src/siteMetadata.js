@@ -1,3 +1,5 @@
+import { volaLocales, getVolaLocale } from './Pages/AppIntroduction/Vola/locales';
+import { volaContent, VOLA_STORE } from './Pages/AppIntroduction/Vola/content';
 import { copy as gameCopy } from './Pages/AppIntroduction/OAnQuan/copy';
 import { content as policyCopy } from './Pages/AppIntroduction/OAnQuan/policyCopy';
 import { professionalPages, books, publisherLinks } from './Pages/Professional/content';
@@ -20,6 +22,26 @@ export const profileSchema = {
 };
 export function getMetadata(pathname, search = '') {
   pathname = pathname.replace(/\/+$/, '') || '/';
+  const volaLocale = getVolaLocale(pathname);
+  if (volaLocale) {
+    const language = volaLocale.code;
+    const copy = volaContent[language];
+    const url = `${SITE_URL}${volaLocale.path}`;
+    const image = `${SITE_URL}/vola/${language}/social-card.png`;
+    return {
+      title: copy.title, description: copy.description, url, language, direction: volaLocale.direction,
+      image, imageAlt: copy.title,
+      alternates: [...volaLocales.map(locale => ({lang: locale.code, href: `${SITE_URL}${locale.path}`})), { lang: 'x-default', href: `${SITE_URL}/vola/` }],
+      schema: { '@context': 'https://schema.org', '@graph': [person, {
+        '@type': 'SoftwareApplication', '@id': `${SITE_URL}/vola/#app`, name: 'Vola: AI Voice Note Taker',
+        url, description: copy.description, inLanguage: language, image,
+        operatingSystem: 'iOS 26.0 or later, iPadOS 26.0 or later', applicationCategory: 'ProductivityApplication',
+        author: { '@id': person['@id'] }, downloadUrl: VOLA_STORE, sameAs: [VOLA_STORE],
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', url: VOLA_STORE,
+          description: copy.price }
+      }] }
+    };
+  }
   const page = professionalPages[pathname];
   const project = projects.find(item => item.route === pathname);
   const languageQuery = pathname.includes('o-an-quan') && new URLSearchParams(search).get('lang') === 'en' ? '?lang=en' : '';

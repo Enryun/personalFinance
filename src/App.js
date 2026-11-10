@@ -1,3 +1,4 @@
+import { volaLocales } from './Pages/AppIntroduction/Vola/locales';
 import React from 'react';
 import './App.css';
 import {Route, Switch} from "react-router-dom";
@@ -100,7 +101,7 @@ function App() {
       <Route exact path='/policy/folio' component={PolicyFolio} />
       <Route exact path='/battle-ship-pirate-war' component={BattleShipPirateWar} />
       <Route exact path='/policy/battle-ship-pirate-war' component={PolicyBattleShipPirateWar} />
-      <Route exact path='/vola' component={Vola} />
+      {volaLocales.map(locale => <Route exact path={locale.path.replace(/\/$/, '')} component={Vola} key={locale.code} />)}
       <Route exact path='/policy/vola' component={PolicyVola} />
       <Route exact path='/policy/vola-eula' component={VolaEULA} />
       <Route exact path='/pocket-bloom' component={PocketBloom} />

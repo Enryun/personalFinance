@@ -34,12 +34,13 @@ for (const extension of ['.png', '.jpg', '.JPG', '.webp', '.svg']) require.exten
 const App = require('../src/App.js').default;
 const { professionalPages } = require('../src/Pages/Professional/content.js');
 const { homeProjects: projects } = require('../src/Pages/HomePage/projects.js');
+const { volaLocales } = require('../src/Pages/AppIntroduction/Vola/locales.js');
 const { SITE_URL, HOME_TITLE, getMetadata } = require('../src/siteMetadata.js');
 const shell = fs.readFileSync(path.join(build, 'index.html'), 'utf8');
 if (!shell.includes('<div id="root"></div>')) throw new Error('Expected an empty React root in the build template.');
 fs.writeFileSync(path.join(build, 'spa.html'), shell);
 const legacyRoutes = [...fs.readFileSync(path.join(root, 'src/App.js'), 'utf8').matchAll(/path='([^']+)'/g)].map(match => match[1]);
-const routes = [...new Set([...legacyRoutes, ...Object.keys(professionalPages)])];
+const routes = [...new Set([...legacyRoutes, ...volaLocales.map(locale => locale.path.replace(/\/$/, '')), ...Object.keys(professionalPages)])];
 // Keep the local-storage tool on a client shell to avoid hydrating saved private data.
 const clientRoutes = ['/cost-tracking'];
 function renderRoute(route, notFound = false) {
@@ -47,6 +48,7 @@ function renderRoute(route, notFound = false) {
   const doc = new JSDOM(shell.replace('<div id="root"></div>', `<div id="root">${markup}</div>`)).window.document;
   const metadata = getMetadata(route);
   doc.documentElement.lang = metadata.language;
+  doc.documentElement.dir = metadata.direction || 'ltr';
   doc.title = notFound ? 'Page not found | James Thang' : metadata.title;
   const setMeta = (attribute, name, value) => {
     let element = doc.querySelector(`meta[${attribute}="${name}"]`);
@@ -59,6 +61,12 @@ function renderRoute(route, notFound = false) {
   setMeta('property', 'og:url', metadata.url);
   setMeta('name', 'twitter:title', doc.title);
   setMeta('name', 'twitter:description', metadata.description);
+  if (metadata.image) {
+    setMeta('property', 'og:image', metadata.image);
+    setMeta('property', 'og:image:alt', metadata.imageAlt);
+    setMeta('name', 'twitter:image', metadata.image);
+    setMeta('name', 'twitter:image:alt', metadata.imageAlt);
+  }
   if (notFound) setMeta('name', 'robots', 'noindex');
   else {
     const canonical = doc.createElement('link'); canonical.rel = 'canonical'; canonical.href = metadata.url; doc.head.appendChild(canonical);
@@ -85,7 +93,7 @@ for (const route of routes.filter(route => !clientRoutes.includes(route))) {
   fs.writeFileSync(path.join(directory, 'index.html'), renderRoute(route));
 }
 fs.writeFileSync(path.join(build, '404.html'), renderRoute('/404', true));
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.filter(route => !clientRoutes.includes(route)).map(route => `  <url><loc>${SITE_URL}${route}</loc></url>`).join('\n')}\n</urlset>\n`;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.filter(route => !clientRoutes.includes(route)).map(route => `  <url><loc>${getMetadata(route).url}</loc></url>`).join('\n')}\n</urlset>\n`;
 fs.writeFileSync(path.join(build, 'sitemap.xml'), sitemap);
 // Non-forced rules let static assets and generated route directories win.
 fs.writeFileSync(path.join(build, '_redirects'), `${clientRoutes.map(route => `${route} /spa.html 200`).join('\n')}\n/* /404.html 404\n`);

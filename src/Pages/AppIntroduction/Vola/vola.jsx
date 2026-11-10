@@ -1,203 +1,81 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import volaIcon from '../../../Image/Vola.png';
-import vola2 from '../../../Image/Vola2.png';
-import vola3 from '../../../Image/Vola3.png';
-import vola5 from '../../../Image/Vola5.png';
+import React, { useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { VOLA_STORE, volaContent } from './content';
+import { volaLocales, getVolaLocale } from './locales';
+import { countryFlagUrl } from './languageFlags';
+import appStoreBadge from '../../../Image/appStore.webp';
 import './vola.scss';
 
-const Vola = () => {
-    const handleDirectDownload = () => {
-        window.open('https://apps.apple.com/app/id6758566739', '_blank');
-    };
+function Screenshot({ lang, name, alt, hero = false, tablet = false }) {
+    return <img src={`/vola/${lang}/${name}-960.webp`} srcSet={`/vola/${lang}/${name}-480.webp 480w, /vola/${lang}/${name}-960.webp 960w`}
+        sizes={tablet ? '(max-width: 760px) 90vw, 700px' : '(max-width: 760px) 80vw, 360px'}
+        width={960} height={tablet ? 1280 : 2086} alt={alt} loading={hero ? 'eager' : 'lazy'} decoding="async" />;
+}
 
-    const highlights = [
-        { 
-            title: 'Live Note During Voice Transcribe', 
-            image: vola2,
-            benefits: [
-                { 
-                    icon: '🎙️', 
-                    name: 'Real-Time Transcription', 
-                    detail: 'Watch your words appear instantly with industry-leading accuracy. Perfect for meetings and brainstorming sessions.',
-                    badge: 'Live'
-                },
-                { 
-                    icon: '✍️', 
-                    name: 'Smart Formatting', 
-                    detail: 'Auto-adds punctuation and structure as you speak. No manual editing needed.',
-                    badge: 'Auto-Format'
-                },
-                { 
-                    icon: '🔍', 
-                    name: 'Searchable Notes', 
-                    detail: 'Find any word from past recordings in seconds with instant search and filtering.',
-                    badge: 'Searchable'
-                },
-                { 
-                    icon: '📝', 
-                    name: 'Edit While Recording', 
-                    detail: 'Edit, highlight, and organize without pausing. Notes are ready the moment you finish.',
-                    badge: 'Multi-task'
-                },
-            ]
-        },
-        { 
-            title: 'Instant Translation', 
-            image: vola3,
-            benefits: [
-                { 
-                    icon: '🌐', 
-                    name: 'Real-Time Translation', 
-                    detail: 'Translate text and conversations instantly with zero delay. Perfect for video calls and international collaboration.',
-                    badge: 'Real-Time'
-                },
-                { 
-                    icon: '🗣️', 
-                    name: '20+ Languages', 
-                    detail: 'Connect globally with support for 100+ languages including regional dialects.',
-                    badge: '20+ Languages'
-                },
-                { 
-                    icon: '💡', 
-                    name: 'Context Preserved', 
-                    detail: 'Maintains tone, idioms, and cultural nuance. Your message lands as intended across cultures.',
-                    badge: 'Nuanced'
-                },
-                { 
-                    icon: '📡', 
-                    name: 'Offline Mode', 
-                    detail: 'Works without internet for essential languages. Never stuck when traveling or in remote areas.',
-                    badge: 'Works Offline'
-                },
-            ]
-        },
-        { 
-            title: 'Edit & Take Important Notes While Recording', 
-            image: vola5,
-            benefits: [
-                { 
-                    icon: '✏️', 
-                    name: 'Live Editing', 
-                    detail: 'Edit text while recording. Fix typos and add clarifications without pausing.',
-                    badge: 'Real-Time'
-                },
-                { 
-                    icon: '⭐', 
-                    name: 'Highlight Key Moments', 
-                    detail: 'Mark important sections with one tap. Jump straight to what matters when reviewing.',
-                    badge: 'Quick Mark'
-                },
-                { 
-                    icon: '📌', 
-                    name: 'Instant Tags & Labels', 
-                    detail: 'Add tags and categories during recording. Your notes are organized before you finish.',
-                    badge: 'Organized'
-                },
-                { 
-                    icon: '🎯', 
-                    name: 'Action Items Tracker', 
-                    detail: 'Create tasks with one tap. Meeting audio becomes a clear next-steps checklist instantly.',
-                    badge: 'Actionable'
-                },
-            ]
-        },
-    ];
+function LanguagePicker({ lang, ui }) {
+    const current = volaLocales.find(locale => locale.code === lang);
+    const picker = useRef(null);
+    useEffect(() => {
+        const closeOutside = event => {
+            if (picker.current && !picker.current.contains(event.target)) picker.current.open = false;
+        };
+        const closeOnEscape = event => {
+            if (event.key === 'Escape' && picker.current && picker.current.open) {
+                picker.current.open = false;
+                picker.current.querySelector('summary').focus();
+            }
+        };
+        document.addEventListener('pointerdown', closeOutside);
+        document.addEventListener('keydown', closeOnEscape);
+        return () => {
+            document.removeEventListener('pointerdown', closeOutside);
+            document.removeEventListener('keydown', closeOnEscape);
+        };
+    }, []);
+    return <details className="vola-language-picker" ref={picker} dir="ltr">
+        <summary aria-label={`${ui.language}: ${current.name}`}>
+            <img className="vola-language-flag" src={countryFlagUrl(current.country)} width="24" height="16" decoding="async" alt="" aria-hidden="true" /><span className="vola-language-trigger-name">{current.name}</span><svg className="vola-language-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+        </summary>
+        <ul aria-label={ui.choose}>
+            {volaLocales.map(({code, name: label, path, country}) => <li key={code}>
+                <Link to={path} lang={code} dir="ltr" hrefLang={code} aria-current={code === lang ? 'page' : undefined} onClick={() => { picker.current.open = false; }}><span className="vola-language-option"><img className="vola-language-flag" src={countryFlagUrl(country)} width="24" height="16" decoding="async" alt="" aria-hidden="true" /><span>{label}</span></span>{code === lang && <span aria-hidden="true">✓</span>}</Link>
+            </li>)}
+        </ul>
+    </details>;
+}
 
-    return (
-        <div className="vola-landing">
-            <header className="vola-nav" role="banner">
-                <div className="vola-nav-inner">
-                    <Link to="/" className="vola-logo" aria-label="Vola – Home">
-                        <img src={volaIcon} alt="" className="vola-logo-img" />
-                        <span>Vola</span>
-                    </Link>
-                    <button
-                        type="button"
-                        onClick={handleDirectDownload}
-                        className="vola-cta vola-cta--nav"
-                        aria-label="Try Vola now"
-                    >
-                        Try it free
-                    </button>
-                </div>
-            </header>
+export default function Vola() {
+    const { pathname } = useLocation();
+    const locale = getVolaLocale(pathname) || volaLocales[0];
+    const lang = locale.code;
+    const c = volaContent[lang];
+    const download = (place) => <a className={`vola-cta${place === 'navigation' ? '' : ' vola-cta--badge'}`} aria-label={`${c.download} — App Store`} href={VOLA_STORE} target="_blank" rel="noopener noreferrer" data-product="vola" data-placement={place} onClick={() => window.dispatchEvent(new CustomEvent('vola:app-store-click', { detail: { product: 'vola', locale: lang, placement: place } }))}>{place === 'navigation' ? c.download : <img src={appStoreBadge} width="498" height="167" decoding="async" alt="" />}</a>;
+    return <div className="vola-landing" lang={lang} dir={locale.direction}>
+        <a className="vola-skip" href="#vola-main">{c.ui.skip}</a>
+        <header className="vola-nav"><nav className="vola-container vola-nav-inner" aria-label={c.ui.nav}>
+            <Link className="vola-logo" to={locale.path}><img decoding="async" src="/vola/icon.webp" width="36" height="36" alt="" />Vola</Link>
+            <div className="vola-nav-actions"><LanguagePicker lang={lang} ui={c.ui} />{download('navigation')}</div>
+        </nav></header>
+        <main id="vola-main">
+            <section className="vola-container vola-hero">
+                <div className="vola-hero-copy"><p className="vola-eyebrow">{c.eyebrow}</p><h1>{c.heading}</h1><p className="vola-lead">{c.intro}</p><div className="vola-hero-download">{download('hero')}<a className="vola-how-link" href="#vola-features">{c.ui.how}<span aria-hidden="true"> ↓</span></a></div><div className="vola-hero-meta"><p className="vola-small">{c.price}</p><p className="vola-small">{c.compatibility}</p></div></div>
+                <div className="vola-hero-image"><Screenshot lang={lang} name="live" alt={c.liveAlt} hero /></div>
+            </section>
+            <section className="vola-privacy" aria-labelledby="vola-local"><div className="vola-container vola-two-col"><div><p className="vola-eyebrow">{c.ui.data}</p><h2 id="vola-local">{c.local}</h2><p>{c.localText}</p></div><div><h3>{c.cloud}</h3><p>{c.cloudText}</p><Link to="/policy/vola">{c.privacy} →</Link></div></div></section>
+            <section id="vola-features" className="vola-container vola-features" aria-labelledby="vola-features-heading"><h2 id="vola-features-heading">{c.featuresLabel}</h2>
+                {c.features.map((feature, index) => <article className={`vola-feature${index % 2 ? ' vola-feature-reverse' : ''}`} key={feature.image}><div className="vola-feature-copy"><p className="vola-eyebrow">0{index + 1}</p><h3>{feature.title}</h3><p>{feature.text}</p><p className="vola-small">{feature.detail}</p></div><div className="vola-feature-image"><Screenshot lang={lang} name={feature.image} alt={feature.alt} /></div></article>)}
+            </section>
+            <section className="vola-import"><div className="vola-container"><div className="vola-section-intro"><h2>{c.importHeading}</h2><p>{c.importText}</p></div><div className="vola-tablet"><Screenshot lang={lang} name="import" alt={c.importAlt} tablet /></div></div></section>
+            <section id="vola-how-it-works" className="vola-container vola-section"><h2>{c.stepsHeading}</h2><ol className="vola-steps">{c.steps.map(([title, text], index) => <li key={title}><span className="vola-step-number" aria-hidden="true">0{index + 1}</span><h3>{title}</h3><p>{text}</p></li>)}</ol></section>
+            <section className="vola-container vola-section vola-audiences"><h2>{c.audienceHeading}</h2><div className="vola-audience-grid">{c.audiences.map(([title,text]) => <article key={title}><h3>{title}</h3><p>{text}</p></article>)}</div><p className="vola-small">{c.consent}</p></section>
+            <section className="vola-container vola-section vola-faq"><h2>{c.faqHeading}</h2>{c.faqs.map(([question,answer]) => <details key={question}><summary>{question}</summary><p>{answer}</p></details>)}</section>
+            <section className="vola-final"><div className="vola-container"><h2>{c.finalHeading}</h2><p>{c.finalText}</p>{download('final')}<p className="vola-small">{c.price}</p></div></section>
+        </main>
+        <figure className="vola-download-qr">
+            <div className="vola-qr-art"><img src="/vola/download-qr.svg" width="216" height="216" decoding="async" alt={c.ui.qrAlt} /><img className="vola-qr-logo" src="/vola/qr-logo.webp" width="192" height="192" decoding="async" alt="" /></div>
+            <figcaption>{c.ui.qrCaption}</figcaption>
+        </figure>
 
-            <main>
-                <section className="vola-hero" aria-labelledby="vola-heading">
-                    <div className="vola-hero-inner">
-                        <h1 id="vola-heading" className="vola-hero-title">
-                            Work smarter, not harder.
-                        </h1>
-                        <p className="vola-hero-lead">
-                            Voice to text, across languages, while staying organized.
-                        </p>
-                        <button
-                            type="button"
-                            onClick={handleDirectDownload}
-                            className="vola-cta vola-cta--primary"
-                            aria-label="Download Vola"
-                        >
-                            Get Vola
-                        </button>
-                    </div>
-                </section>
-
-                <section className="vola-benefits" aria-labelledby="vola-benefits-heading">
-                    <div className="vola-benefits-inner">
-                        <div className="vola-highlights-container">
-                            {highlights.map((item, index) => (
-                                <div key={item.title} className="vola-highlight-row">
-                                    <div className="vola-highlight-visual">
-                                        <img src={item.image} alt={`${item.title} preview`} />
-                                    </div>
-                                    <div className="vola-highlight-content">
-                                        <h3 className="vola-highlight-title">{item.title}</h3>
-                                        <div className="vola-benefit-cards">
-                                            {item.benefits.map((benefit) => (
-                                                <div key={benefit.name} className="vola-benefit-card">
-                                                    <div className="vola-benefit-header">
-                                                        <span className="vola-benefit-icon" aria-hidden="true">{benefit.icon}</span>
-                                                        <span className="vola-benefit-badge">{benefit.badge}</span>
-                                                    </div>
-                                                    <h4 className="vola-benefit-name">{benefit.name}</h4>
-                                                    <p className="vola-benefit-detail">{benefit.detail}</p>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                <section className="vola-final-cta" aria-labelledby="vola-final-heading">
-                    <h2 id="vola-final-heading" className="vola-final-title">
-                        Ready to try?
-                    </h2>
-                    <p className="vola-final-text">
-                        Download Vola and see the difference.
-                    </p>
-                    <button
-                        type="button"
-                        onClick={handleDirectDownload}
-                        className="vola-cta vola-cta--primary"
-                        aria-label="Download Vola"
-                    >
-                        Get Vola
-                    </button>
-                </section>
-            </main>
-
-            <footer className="vola-footer" role="contentinfo">
-                <div className="vola-footer-inner">
-                    <Link to="/policy/vola" className="vola-footer-link">Privacy Policy</Link>
-                    <Link to="/policy/vola-eula" className="vola-footer-link">Terms of Use (EULA)</Link>
-                </div>
-            </footer>
-        </div>
-    );
-};
-
-export default Vola;
+        <footer className="vola-container vola-footer"><p><Link to="/about">{c.developer}</Link> · <Link to="/case-studies/vola">{c.walkthrough}</Link></p><div><Link to="/policy/vola">{c.privacy}</Link><Link to="/policy/vola-eula">{c.terms}</Link><Link to="/">{c.home}</Link></div></footer>
+    </div>;
+}

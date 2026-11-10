@@ -1,0 +1,628 @@
+{
+  "images": 88,
+  "before": 73495410,
+  "after": 37331732,
+  "assets": [
+    {
+      "source": "public/vola/icon.png",
+      "webp": "public/vola/icon.webp",
+      "before": 11052,
+      "after": 6804,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/DarkHorse.png",
+      "webp": "src/Image/DarkHorse.webp",
+      "before": 57410,
+      "after": 13340,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/DarkHorse2.png",
+      "webp": "src/Image/DarkHorse2.webp",
+      "before": 337315,
+      "after": 115852,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Firebase.JPG",
+      "webp": "src/Image/Firebase.webp",
+      "before": 367971,
+      "after": 219082,
+      "lossless": false
+    },
+    {
+      "source": "src/Image/Folio.png",
+      "webp": "src/Image/Folio.webp",
+      "before": 1138859,
+      "after": 456390,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Folio1.png",
+      "webp": "src/Image/Folio1.webp",
+      "before": 1034823,
+      "after": 503606,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Folio2.png",
+      "webp": "src/Image/Folio2.webp",
+      "before": 744163,
+      "after": 361282,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Folio3.png",
+      "webp": "src/Image/Folio3.webp",
+      "before": 739107,
+      "after": 365774,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Folio4.png",
+      "webp": "src/Image/Folio4.webp",
+      "before": 918325,
+      "after": 465632,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Folio5.png",
+      "webp": "src/Image/Folio5.webp",
+      "before": 632173,
+      "after": 299980,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Galaxy1.png",
+      "webp": "src/Image/Galaxy1.webp",
+      "before": 1082593,
+      "after": 490250,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Galaxy2.png",
+      "webp": "src/Image/Galaxy2.webp",
+      "before": 1104405,
+      "after": 567226,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Galaxy3.png",
+      "webp": "src/Image/Galaxy3.webp",
+      "before": 1540230,
+      "after": 862332,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Galaxy4.png",
+      "webp": "src/Image/Galaxy4.webp",
+      "before": 1213367,
+      "after": 638558,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Gallaxy.png",
+      "webp": "src/Image/Gallaxy.webp",
+      "before": 555506,
+      "after": 394654,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Horology.png",
+      "webp": "src/Image/Horology.webp",
+      "before": 772004,
+      "after": 308760,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Horology1.png",
+      "webp": "src/Image/Horology1.webp",
+      "before": 1638343,
+      "after": 1053846,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Horology2.png",
+      "webp": "src/Image/Horology2.webp",
+      "before": 1510396,
+      "after": 1018386,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Horology3.png",
+      "webp": "src/Image/Horology3.webp",
+      "before": 835276,
+      "after": 514142,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Horology4.png",
+      "webp": "src/Image/Horology4.webp",
+      "before": 1154146,
+      "after": 815800,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Horology5.png",
+      "webp": "src/Image/Horology5.webp",
+      "before": 1454718,
+      "after": 1130900,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Horology6.png",
+      "webp": "src/Image/Horology6.webp",
+      "before": 1590643,
+      "after": 1029164,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Horology7.png",
+      "webp": "src/Image/Horology7.webp",
+      "before": 1550234,
+      "after": 1008948,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Neon.png",
+      "webp": "src/Image/Neon.webp",
+      "before": 184070,
+      "after": 99014,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Neon2.png",
+      "webp": "src/Image/Neon2.webp",
+      "before": 537903,
+      "after": 226450,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Oanquan.png",
+      "webp": "src/Image/Oanquan.webp",
+      "before": 189639,
+      "after": 111506,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Oanquan1.png",
+      "webp": "src/Image/Oanquan1.webp",
+      "before": 1506648,
+      "after": 963590,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Oanquan2.png",
+      "webp": "src/Image/Oanquan2.webp",
+      "before": 1078177,
+      "after": 735304,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Oanquan3.png",
+      "webp": "src/Image/Oanquan3.webp",
+      "before": 746356,
+      "after": 423006,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Oanquan4.png",
+      "webp": "src/Image/Oanquan4.webp",
+      "before": 903041,
+      "after": 581876,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Oanquan5.png",
+      "webp": "src/Image/Oanquan5.webp",
+      "before": 700450,
+      "after": 424368,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/POS1.png",
+      "webp": "src/Image/POS1.webp",
+      "before": 1588900,
+      "after": 879910,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/POS11.jpg",
+      "webp": "src/Image/POS11.webp",
+      "before": 234053,
+      "after": 75336,
+      "lossless": false
+    },
+    {
+      "source": "src/Image/POS12.jpg",
+      "webp": "src/Image/POS12.webp",
+      "before": 449348,
+      "after": 167930,
+      "lossless": false
+    },
+    {
+      "source": "src/Image/POS13.jpg",
+      "webp": "src/Image/POS13.webp",
+      "before": 248964,
+      "after": 74310,
+      "lossless": false
+    },
+    {
+      "source": "src/Image/POS14.jpg",
+      "webp": "src/Image/POS14.webp",
+      "before": 241933,
+      "after": 71756,
+      "lossless": false
+    },
+    {
+      "source": "src/Image/POS15.jpg",
+      "webp": "src/Image/POS15.webp",
+      "before": 372129,
+      "after": 143106,
+      "lossless": false
+    },
+    {
+      "source": "src/Image/POS16.jpg",
+      "webp": "src/Image/POS16.webp",
+      "before": 330599,
+      "after": 130626,
+      "lossless": false
+    },
+    {
+      "source": "src/Image/POS17.jpg",
+      "webp": "src/Image/POS17.webp",
+      "before": 483337,
+      "after": 193900,
+      "lossless": false
+    },
+    {
+      "source": "src/Image/POS5.jpg",
+      "webp": "src/Image/POS5.webp",
+      "before": 570457,
+      "after": 262670,
+      "lossless": false
+    },
+    {
+      "source": "src/Image/POS6.jpg",
+      "webp": "src/Image/POS6.webp",
+      "before": 348423,
+      "after": 103322,
+      "lossless": false
+    },
+    {
+      "source": "src/Image/POS7.jpg",
+      "webp": "src/Image/POS7.webp",
+      "before": 251682,
+      "after": 87312,
+      "lossless": false
+    },
+    {
+      "source": "src/Image/POS8.jpg",
+      "webp": "src/Image/POS8.webp",
+      "before": 495654,
+      "after": 220642,
+      "lossless": false
+    },
+    {
+      "source": "src/Image/POS9.jpg",
+      "webp": "src/Image/POS9.webp",
+      "before": 1052305,
+      "after": 160866,
+      "lossless": false
+    },
+    {
+      "source": "src/Image/POS_Logo.png",
+      "webp": "src/Image/POS_Logo.webp",
+      "before": 77210,
+      "after": 28736,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/PayDaily.png",
+      "webp": "src/Image/PayDaily.webp",
+      "before": 167306,
+      "after": 45554,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/PayDaily2.png",
+      "webp": "src/Image/PayDaily2.webp",
+      "before": 1738400,
+      "after": 1033624,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/PirateWar1.png",
+      "webp": "src/Image/PirateWar1.webp",
+      "before": 1287343,
+      "after": 569152,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/PirateWar2.png",
+      "webp": "src/Image/PirateWar2.webp",
+      "before": 1090549,
+      "after": 492380,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/PirateWar3.png",
+      "webp": "src/Image/PirateWar3.webp",
+      "before": 1532487,
+      "after": 795782,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/PirateWar4.png",
+      "webp": "src/Image/PirateWar4.webp",
+      "before": 632064,
+      "after": 155292,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/PirateWar5.png",
+      "webp": "src/Image/PirateWar5.webp",
+      "before": 873819,
+      "after": 351498,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/PocketBloom.png",
+      "webp": "src/Image/PocketBloom.webp",
+      "before": 132568,
+      "after": 73668,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/PocketBloom1.png",
+      "webp": "src/Image/PocketBloom1.webp",
+      "before": 1195519,
+      "after": 831482,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/PocketBloom2.png",
+      "webp": "src/Image/PocketBloom2.webp",
+      "before": 1221633,
+      "after": 900474,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/PocketBloom3.png",
+      "webp": "src/Image/PocketBloom3.webp",
+      "before": 1206576,
+      "after": 847864,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/PocketBloom4.png",
+      "webp": "src/Image/PocketBloom4.webp",
+      "before": 1402142,
+      "after": 1039880,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/PocketBloom5.png",
+      "webp": "src/Image/PocketBloom5.webp",
+      "before": 1561846,
+      "after": 1051382,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/RandomRover.png",
+      "webp": "src/Image/RandomRover.webp",
+      "before": 2239952,
+      "after": 1463450,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/RandomRover1.png",
+      "webp": "src/Image/RandomRover1.webp",
+      "before": 701965,
+      "after": 272830,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/RandomRover2.png",
+      "webp": "src/Image/RandomRover2.webp",
+      "before": 3594249,
+      "after": 1949772,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/RandomRover3.png",
+      "webp": "src/Image/RandomRover3.webp",
+      "before": 236882,
+      "after": 68340,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/RandomRover4.png",
+      "webp": "src/Image/RandomRover4.webp",
+      "before": 186395,
+      "after": 35198,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Sudoku.png",
+      "webp": "src/Image/Sudoku.webp",
+      "before": 42527,
+      "after": 13168,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/SudokuZen1.png",
+      "webp": "src/Image/SudokuZen1.webp",
+      "before": 806767,
+      "after": 65242,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/SudokuZen2.png",
+      "webp": "src/Image/SudokuZen2.webp",
+      "before": 2333775,
+      "after": 799302,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/SudokuZen3.png",
+      "webp": "src/Image/SudokuZen3.webp",
+      "before": 795955,
+      "after": 66150,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/SudokuZen4.png",
+      "webp": "src/Image/SudokuZen4.webp",
+      "before": 245408,
+      "after": 66614,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/SudokuZen5.png",
+      "webp": "src/Image/SudokuZen5.webp",
+      "before": 765697,
+      "after": 60290,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/SwiftUI.jpg",
+      "webp": "src/Image/SwiftUI.webp",
+      "before": 2157285,
+      "after": 313996,
+      "lossless": false
+    },
+    {
+      "source": "src/Image/SwiftUI_Udemy.png",
+      "webp": "src/Image/SwiftUI_Udemy.webp",
+      "before": 391102,
+      "after": 255502,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Tidora.png",
+      "webp": "src/Image/Tidora.webp",
+      "before": 122985,
+      "after": 108066,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/TidyMac.png",
+      "webp": "src/Image/TidyMac.webp",
+      "before": 1119185,
+      "after": 730766,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/TidyMac1.png",
+      "webp": "src/Image/TidyMac1.webp",
+      "before": 1688083,
+      "after": 376632,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Vola.png",
+      "webp": "src/Image/Vola.webp",
+      "before": 784388,
+      "after": 576098,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/Vola2.png",
+      "webp": "src/Image/Vola2.webp",
+      "before": 780585,
+      "after": 491680,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/WordSearch.png",
+      "webp": "src/Image/WordSearch.webp",
+      "before": 2975766,
+      "after": 1628890,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/WordSearch1.png",
+      "webp": "src/Image/WordSearch1.webp",
+      "before": 227460,
+      "after": 65816,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/WordSearch2.png",
+      "webp": "src/Image/WordSearch2.webp",
+      "before": 238201,
+      "after": 49062,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/WordSearch3.png",
+      "webp": "src/Image/WordSearch3.webp",
+      "before": 399641,
+      "after": 140780,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/WordSearch4.png",
+      "webp": "src/Image/WordSearch4.webp",
+      "before": 304362,
+      "after": 57472,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/appStore.png",
+      "webp": "src/Image/appStore.webp",
+      "before": 4714,
+      "after": 3818,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/finance1_iphonexspacegrey_portrait.png",
+      "webp": "src/Image/finance1_iphonexspacegrey_portrait.webp",
+      "before": 246678,
+      "after": 108198,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/finance2.png",
+      "webp": "src/Image/finance2.webp",
+      "before": 337629,
+      "after": 127934,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/finance3_iphonexspacegrey_portrait.png",
+      "webp": "src/Image/finance3_iphonexspacegrey_portrait.webp",
+      "before": 336082,
+      "after": 157074,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/finance6_iphonexspacegrey_portrait.png",
+      "webp": "src/Image/finance6_iphonexspacegrey_portrait.webp",
+      "before": 455093,
+      "after": 149492,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/finance8_iphonexspacegrey_portrait.png",
+      "webp": "src/Image/finance8_iphonexspacegrey_portrait.webp",
+      "before": 247074,
+      "after": 99468,
+      "lossless": true
+    },
+    {
+      "source": "src/Image/financeLogo.png",
+      "webp": "src/Image/financeLogo.webp",
+      "before": 112936,
+      "after": 36356,
+      "lossless": true
+    }
+  ],
+  "cleanup": {
+    "removedUnusedOriginals": 103,
+    "removedBytes": 83268896,
+    "recovery": "Previously tracked originals remain available in Git history."
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import appIcon from '../../Image/Oanquan.png';
+import appIcon from '../../Image/Oanquan.webp';
 import { LanguageSwitch, useOAnQuanLanguage } from '../AppIntroduction/OAnQuan/language';
 import '../AppIntroduction/OAnQuan/o_an_quan.scss';
 
@@ -13,7 +13,7 @@ export default function PolicyOAnQuan() {
   const { language, suffix } = useOAnQuanLanguage(`Ô Ăn Quan — ${t.title}`, t.intro);
   return (
     <div className="oq-policy-page" lang={language}>
-      <header className="oq-nav"><Link to={`/o-an-quan${suffix}`} className="oq-brand" aria-label={t.back}><img src={appIcon} alt="" width="40" height="40" /><span>Ô Ăn Quan</span></Link><LanguageSwitch language={language} /></header>
+      <header className="oq-nav"><Link to={`/o-an-quan${suffix}`} className="oq-brand" aria-label={t.back}><img decoding="async" src={appIcon} alt="" width="40" height="40" /><span>Ô Ăn Quan</span></Link><LanguageSwitch language={language} /></header>
       <main className="oq-policy oq-container">
         <p className="oq-eyebrow">Ô ĂN QUAN: TRÒ CHƠI DÂN GIAN</p>
         <h1>{t.title}</h1><p className="oq-policy-date"><time dateTime="2026-10-06">{t.date}</time></p><p>{t.intro}</p>

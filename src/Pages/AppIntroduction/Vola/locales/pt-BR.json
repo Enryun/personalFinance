@@ -1,0 +1,101 @@
+{
+  "title": "Vola: Transcrição de voz no iPhone e notas com IA",
+  "description": "Transforme fala em texto no iPhone e iPad. Organize gravações e escolha resumos e perguntas com IA na nuvem. Baixe grátis, com limites de uso.",
+  "heading": "Da voz para o texto, no seu dispositivo",
+  "intro": "O Vola transforma conversas em notas no iPhone e iPad. Transcreva ao vivo no dispositivo e use a IA na nuvem quando quiser.",
+  "get": "Baixar Vola",
+  "price": "Download grátis com uso limitado. Assinaturas oferecem mais recursos e limites maiores.",
+  "os": "Requer iOS 26 ou iPadOS 26 ou posterior.",
+  "local": "Transcrição ao vivo no dispositivo",
+  "localText": "As notas ao vivo usam o reconhecimento de voz da Apple no dispositivo. As gravações e notas ficam salvas localmente, sem sincronização com um servidor de armazenamento do Vola. Pode gravar e transcrever sem ativar a IA.",
+  "cloud": "IA quando quiser",
+  "cloudText": "Com autorização, o Google Gemini recebe texto, título e idioma disponíveis, a pergunta e o histórico relevante quando aplicável. Não recebe o áudio. Pode retirar a autorização nas configurações para impedir pedidos futuros.",
+  "privacy": "Ler a política de privacidade",
+  "featuresHeading": "De conversas a notas úteis",
+  "features": [
+    [
+      "Reveja os pontos essenciais",
+      "Resuma temas, decisões e tarefas com IA. Confirme os detalhes na gravação original.",
+      "Vola no iPhone com transcrição e resumo de uma reunião"
+    ],
+    [
+      "Faça perguntas às notas",
+      "Consulte um prazo ou os próximos passos. As respostas da IA podem conter erros.",
+      "Vola responde a uma pergunta sobre uma reunião gravada"
+    ],
+    [
+      "Encontre aquela ideia",
+      "Pesquise notas salvas, use tags e favoritos, edite e destaque texto.",
+      "Pesquisa do Vola com notas de voz correspondentes"
+    ]
+  ],
+  "aiLimit": "A IA requer sessão iniciada, internet, créditos disponíveis e autorização para comcompartilhamentor texto.",
+  "share": "Traduza idiomas suportados e exporte notas ou resumos em PDF ou texto. A disponibilidade e os limites dependem do dispositivo, idioma e plano.",
+  "importHeading": "Já tem uma gravação?",
+  "importText": "Importe arquivos de áudio ou vídeo suportados para ler, editar e pesquisar o conteúdo.",
+  "importNetwork": "Nos arquivos importados, a Apple pode processar áudio pela rede, conforme o idioma e dispositivo.",
+  "importAlt": "Vola no iPad com entrevista importada e transcrição",
+  "stepsHeading": "Como funciona o Vola",
+  "steps": [
+    [
+      "Grave ou importe",
+      "Inicie uma nota de voz ou selecione um arquivo suportado."
+    ],
+    [
+      "Reveja e organize",
+      "Corrija a transcrição, destaque texto e adicione tags."
+    ],
+    [
+      "Escolha a IA",
+      "Autorize a compartilhamento de texto para resumir ou fazer perguntas."
+    ]
+  ],
+  "audienceHeading": "Mais espaço para ouvir",
+  "audiences": [
+    [
+      "Reuniões",
+      "Reveja decisões depois da conversa."
+    ],
+    [
+      "Aulas",
+      "Guarde explicações para estudar."
+    ],
+    [
+      "Entrevistas",
+      "Compare citações com a gravação original."
+    ],
+    [
+      "Idiomas",
+      "Acompanhe o texto e traduza quando suportado."
+    ]
+  ],
+  "consent": "Obtenha as autorizações necessárias antes de gravar outras pessoas.",
+  "faqHeading": "Perguntas frequentes",
+  "questions": [
+    "O Vola funciona sem internet?",
+    "Meu áudio é enviado?",
+    "Que dados recebe a IA opcional?",
+    "Que idiomas são suportados?",
+    "O Vola é gratuito?",
+    "Posso importar arquivos e comcompartilhamentor notas?"
+  ],
+  "offline": "A transcrição ao vivo funciona no dispositivo quando o idioma e equipamento o permitem. A IA requer internet; os arquivos importados também podem precisar de rede. O Vola não é totalmente offline.",
+  "languages": "O reconhecimento e a tradução dependem do dispositivo, sistema e idioma escolhido. Consulte as opções na aplicativo. Os idiomas da interface não equivalem aos de transcrição.",
+  "finalHeading": "Volte à sua próxima conversa",
+  "finalText": "Comece com uma nota de voz e consulte os detalhes mais tarde.",
+  "developer": "Criado por James Thang",
+  "walkthrough": "Conhecer o Vola (em inglês)",
+  "terms": "Termos de uso (em inglês)",
+  "home": "Site de James Thang",
+  "liveAlt": "Vola no iPhone com gravação e transcrição ao vivo",
+  "ui": [
+    "Pular para o conteúdo",
+    "Navegação do Vola",
+    "Idioma",
+    "Escolher idioma",
+    "Veja como funciona",
+    "CLAREZA SOBRE OS SEUS DADOS",
+    "Código QR do Vola na App Store",
+    "Menos digitação, mais atenção"
+  ]
+}

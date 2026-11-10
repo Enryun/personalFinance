@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { renderToString } from 'react-dom/server';
-import { act } from 'react-dom/test-utils';
+import { act, Simulate } from 'react-dom/test-utils';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 import App from '../App';
@@ -11,11 +11,13 @@ let container;
 let originalHead;
 let originalTitle;
 let originalLanguage;
+let originalDirection;
 let originalScroll;
 beforeEach(() => {
   originalHead = document.head.innerHTML;
   originalTitle = document.title;
   originalLanguage = document.documentElement.lang;
+  originalDirection = document.documentElement.dir;
   originalScroll = window.scrollTo;
   window.scrollTo = jest.fn();
   container = document.createElement('div');
@@ -27,6 +29,7 @@ afterEach(() => {
   document.head.innerHTML = originalHead;
   document.title = originalTitle;
   document.documentElement.lang = originalLanguage;
+  document.documentElement.dir = originalDirection;
   window.scrollTo = originalScroll;
 });
 
@@ -96,7 +99,7 @@ it('keeps multilingual identity and metadata consistent during navigation', () =
   expect(document.querySelector('meta[name="robots"]')).toBeNull();
 });
 
-it.each(['/about/', '/vi/swiftui-training', '/books', '/case-studies/vola', '/articles/swiftui-or-uikit'])('hydrates %s without mismatches', route => {
+it.each(['/about/', '/vi/swiftui-training', '/books', '/case-studies/vola', '/articles/swiftui-or-uikit', '/vola/', '/vi/vola/'])('hydrates %s without mismatches', route => {
   const history = createMemoryHistory({ initialEntries: [route] });
   container.innerHTML = renderToString(<Router history={history}><App /></Router>);
   const heading = container.querySelector('h1');
@@ -106,4 +109,64 @@ it.each(['/about/', '/vi/swiftui-training', '/books', '/case-studies/vola', '/ar
     expect(container.querySelector('h1')).toBe(heading);
     expect(errors).not.toHaveBeenCalled();
   } finally { errors.mockRestore(); }
+});
+
+it('keeps Vola language, app identity, store links, and social images consistent across navigation', () => {
+  const history = createMemoryHistory({ initialEntries: ['/vola/'] });
+  act(() => { ReactDOM.render(<Router history={history}><App /></Router>, container); });
+  expect(document.title).toContain('On-Device Speech to Text');
+  expect(document.querySelector('link[rel="canonical"]').href).toBe(`${SITE_URL}/vola/`);
+  const appId = JSON.parse(document.getElementById('page-schema').textContent)['@graph'][1]['@id'];
+  expect(container.querySelectorAll('a[href="https://apps.apple.com/app/id6758566739"]')).toHaveLength(3);
+  expect(container.textContent).toContain('Imported-media transcription may use');
+  const click = jest.fn();
+  window.addEventListener('vola:app-store-click', click);
+  try {
+    Simulate.click(container.querySelector('a[data-placement="hero"]'));
+    expect(click.mock.calls[0][0].detail).toEqual({ product: 'vola', locale: 'en', placement: 'hero' });
+  } finally { window.removeEventListener('vola:app-store-click', click); }
+  act(() => history.push('/vi/vola/'));
+  expect(document.documentElement.lang).toBe('vi');
+  expect(document.querySelector('link[rel="canonical"]').href).toBe(`${SITE_URL}/vi/vola/`);
+  expect(document.querySelector('link[hreflang="en"]').href).toBe(`${SITE_URL}/vola/`);
+  expect(container.querySelector('h1').textContent).toContain('Chuyển giọng nói');
+  expect(container.querySelector('img[src*="/vi/live-"]')).not.toBeNull();
+  expect(JSON.parse(document.getElementById('page-schema').textContent)['@graph'][1]['@id']).toBe(appId);
+  expect(document.querySelector('meta[property="og:image"]').content).toBe(`${SITE_URL}/vola/vi/social-card.png`);
+  act(() => history.push('/'));
+  expect(document.querySelector('meta[property="og:image"]').content).toBe(`${SITE_URL}/social-card.png`);
+  expect(document.querySelector('link[hreflang]')).toBeNull();
+});
+
+it('switches Vola languages and closes the language picker with Escape and outside clicks', () => {
+  const history = createMemoryHistory({ initialEntries: ['/vola/'] });
+  act(() => { ReactDOM.render(<Router history={history}><App /></Router>, container); });
+  const picker = container.querySelector('.vola-language-picker');
+  expect(picker.querySelector('[aria-current="page"]').textContent).toContain('English');
+  picker.open = true;
+  document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+  expect(picker.open).toBe(false);
+  expect(document.activeElement).toBe(picker.querySelector('summary'));
+  picker.open = true;
+  document.body.dispatchEvent(new Event('pointerdown', { bubbles: true }));
+  expect(picker.open).toBe(false);
+  picker.open = true;
+  act(() => { Simulate.click(picker.querySelector('a[hreflang="vi"]'), { button: 0 }); });
+  expect(history.location.pathname).toBe('/vi/vola/');
+  expect(picker.open).toBe(false);
+  expect(container.querySelector('.vola-language-picker [aria-current="page"]').textContent).toContain('Tiếng Việt');
+  expect(container.querySelector('.vola-download-qr img').getAttribute('src')).toBe('/vola/download-qr.svg');
+});
+
+it('resets right-to-left document direction when leaving an Arabic Vola page', () => {
+  const history = createMemoryHistory({ initialEntries: ['/ar/vola/'] });
+  act(() => { ReactDOM.render(<Router history={history}><App /></Router>, container); });
+  expect(document.documentElement.dir).toBe('rtl');
+  expect(document.documentElement.lang).toBe('ar');
+  act(() => history.push('/de/vola/'));
+  expect(document.documentElement.dir).toBe('ltr');
+  expect(document.documentElement.lang).toBe('de');
+  act(() => history.push('/'));
+  expect(document.documentElement.lang).toBe('en');
+  expect(document.documentElement.dir).toBe('ltr');
 });
