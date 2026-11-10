@@ -8,6 +8,7 @@ export default function SiteMetadata() {
     const metadata = getMetadata(pathname, search);
     document.title = metadata.title;
     document.documentElement.lang = metadata.language;
+    document.documentElement.dir = metadata.direction || 'ltr';
     function setMeta(attribute, name, content) {
       let element = document.querySelector(`meta[${attribute}="${name}"]`);
       if (!element) { element = document.createElement('meta'); element.setAttribute(attribute, name); document.head.appendChild(element); }

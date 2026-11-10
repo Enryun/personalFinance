@@ -80,3 +80,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Vola languages
+
+Vola has 24 prerendered locale pages. `src/Pages/AppIntroduction/Vola/locales.js` is the shared registry for routes, native language names, writing direction, and screenshot source folders. English uses `/vola/`; other locales use `/<lowercase-code>/vola/`, including `/ja/vola/`, `/pt-br/vola/`, and `/zh-hant/vola/`.
+
+The page copy, local metadata and alt text are in `content.js` and `locales/*.json`. `translations.js` expands the compact translated packs without English product-copy fallbacks. Maintain the local/cloud privacy distinction when editing any locale.
+
+`npm run build` now validates every locale’s generated HTML, reciprocal alternates, canonical, direction, assets, schema, sitemap entry and store links. Screenshot exports can be regenerated with `python3 scripts/export-vola-locales.py --source /path/to/VolaAppstore` (Pillow required). They use the `jap` source folder for the web’s valid `ja` code.
+
+Native editorial review, language-specific demand research, Search Console indexing and AI-answer measurements remain rollout work; translated pages do not guarantee ranking or recommendations.

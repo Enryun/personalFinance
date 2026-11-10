@@ -1,3 +1,4 @@
+import { translatedContent, makeVolaUi } from './translations';
 export const VOLA_STORE = 'https://apps.apple.com/app/id6758566739';
 export const volaContent = {
   en: {
@@ -85,3 +86,7 @@ export const volaContent = {
     terms: 'Điều khoản sử dụng (tiếng Anh)', home: 'Trang web của James Thang', liveAlt: 'Màn hình ghi âm Vola trên iPhone với bản chép lời nói trực tiếp'
   }
 };
+
+Object.assign(volaContent, translatedContent);
+volaContent.en.ui = makeVolaUi(['Skip to content','Vola navigation','Language','Choose language','See how it works','CLEAR ABOUT YOUR DATA','QR code opening Vola on the App Store','Less typing, more listening']);
+volaContent.vi.ui = makeVolaUi(['Đến nội dung chính','Điều hướng Vola','Ngôn ngữ','Chọn ngôn ngữ','Xem cách hoạt động','RÕ RÀNG VỀ DỮ LIỆU','Mã QR mở Vola trên App Store','Ít gõ hơn, lắng nghe nhiều hơn']);

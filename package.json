@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && node scripts/prerender-home.cjs",
+    "build": "react-scripts build && node scripts/prerender-home.cjs && node scripts/verify-vola-locales.cjs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

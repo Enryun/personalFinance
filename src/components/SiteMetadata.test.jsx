@@ -11,11 +11,13 @@ let container;
 let originalHead;
 let originalTitle;
 let originalLanguage;
+let originalDirection;
 let originalScroll;
 beforeEach(() => {
   originalHead = document.head.innerHTML;
   originalTitle = document.title;
   originalLanguage = document.documentElement.lang;
+  originalDirection = document.documentElement.dir;
   originalScroll = window.scrollTo;
   window.scrollTo = jest.fn();
   container = document.createElement('div');
@@ -27,6 +29,7 @@ afterEach(() => {
   document.head.innerHTML = originalHead;
   document.title = originalTitle;
   document.documentElement.lang = originalLanguage;
+  document.documentElement.dir = originalDirection;
   window.scrollTo = originalScroll;
 });
 
@@ -151,6 +154,19 @@ it('switches Vola languages and closes the language picker with Escape and outsi
   act(() => { Simulate.click(picker.querySelector('a[hreflang="vi"]'), { button: 0 }); });
   expect(history.location.pathname).toBe('/vi/vola/');
   expect(picker.open).toBe(false);
-  expect(picker.querySelector('[aria-current="page"]').textContent).toContain('Tiếng Việt');
+  expect(container.querySelector('.vola-language-picker [aria-current="page"]').textContent).toContain('Tiếng Việt');
   expect(container.querySelector('.vola-download-qr img').getAttribute('src')).toBe('/vola/download-qr.svg');
+});
+
+it('resets right-to-left document direction when leaving an Arabic Vola page', () => {
+  const history = createMemoryHistory({ initialEntries: ['/ar/vola/'] });
+  act(() => { ReactDOM.render(<Router history={history}><App /></Router>, container); });
+  expect(document.documentElement.dir).toBe('rtl');
+  expect(document.documentElement.lang).toBe('ar');
+  act(() => history.push('/de/vola/'));
+  expect(document.documentElement.dir).toBe('ltr');
+  expect(document.documentElement.lang).toBe('de');
+  act(() => history.push('/'));
+  expect(document.documentElement.lang).toBe('en');
+  expect(document.documentElement.dir).toBe('ltr');
 });

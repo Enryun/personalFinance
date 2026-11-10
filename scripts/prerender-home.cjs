@@ -34,12 +34,13 @@ for (const extension of ['.png', '.jpg', '.JPG', '.webp', '.svg']) require.exten
 const App = require('../src/App.js').default;
 const { professionalPages } = require('../src/Pages/Professional/content.js');
 const { homeProjects: projects } = require('../src/Pages/HomePage/projects.js');
+const { volaLocales } = require('../src/Pages/AppIntroduction/Vola/locales.js');
 const { SITE_URL, HOME_TITLE, getMetadata } = require('../src/siteMetadata.js');
 const shell = fs.readFileSync(path.join(build, 'index.html'), 'utf8');
 if (!shell.includes('<div id="root"></div>')) throw new Error('Expected an empty React root in the build template.');
 fs.writeFileSync(path.join(build, 'spa.html'), shell);
 const legacyRoutes = [...fs.readFileSync(path.join(root, 'src/App.js'), 'utf8').matchAll(/path='([^']+)'/g)].map(match => match[1]);
-const routes = [...new Set([...legacyRoutes, ...Object.keys(professionalPages)])];
+const routes = [...new Set([...legacyRoutes, ...volaLocales.map(locale => locale.path.replace(/\/$/, '')), ...Object.keys(professionalPages)])];
 // Keep the local-storage tool on a client shell to avoid hydrating saved private data.
 const clientRoutes = ['/cost-tracking'];
 function renderRoute(route, notFound = false) {
@@ -47,6 +48,7 @@ function renderRoute(route, notFound = false) {
   const doc = new JSDOM(shell.replace('<div id="root"></div>', `<div id="root">${markup}</div>`)).window.document;
   const metadata = getMetadata(route);
   doc.documentElement.lang = metadata.language;
+  doc.documentElement.dir = metadata.direction || 'ltr';
   doc.title = notFound ? 'Page not found | James Thang' : metadata.title;
   const setMeta = (attribute, name, value) => {
     let element = doc.querySelector(`meta[${attribute}="${name}"]`);

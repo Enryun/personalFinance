@@ -1,3 +1,4 @@
+import { volaLocales, getVolaLocale } from './Pages/AppIntroduction/Vola/locales';
 import { volaContent, VOLA_STORE } from './Pages/AppIntroduction/Vola/content';
 import { copy as gameCopy } from './Pages/AppIntroduction/OAnQuan/copy';
 import { content as policyCopy } from './Pages/AppIntroduction/OAnQuan/policyCopy';
@@ -21,15 +22,16 @@ export const profileSchema = {
 };
 export function getMetadata(pathname, search = '') {
   pathname = pathname.replace(/\/+$/, '') || '/';
-  if (pathname === '/vola' || pathname === '/vi/vola') {
-    const language = pathname.startsWith('/vi/') ? 'vi' : 'en';
+  const volaLocale = getVolaLocale(pathname);
+  if (volaLocale) {
+    const language = volaLocale.code;
     const copy = volaContent[language];
-    const url = `${SITE_URL}${pathname}/`;
+    const url = `${SITE_URL}${volaLocale.path}`;
     const image = `${SITE_URL}/vola/${language}/social-card.png`;
     return {
-      title: copy.title, description: copy.description, url, language,
-      image, imageAlt: language === 'vi' ? 'Vola — Chép lời trực tiếp trên thiết bị, ghi chú AI tùy chọn' : 'Vola — On-device live transcription, optional AI voice notes',
-      alternates: [{ lang: 'en', href: `${SITE_URL}/vola/` }, { lang: 'vi', href: `${SITE_URL}/vi/vola/` }, { lang: 'x-default', href: `${SITE_URL}/vola/` }],
+      title: copy.title, description: copy.description, url, language, direction: volaLocale.direction,
+      image, imageAlt: copy.title,
+      alternates: [...volaLocales.map(locale => ({lang: locale.code, href: `${SITE_URL}${locale.path}`})), { lang: 'x-default', href: `${SITE_URL}/vola/` }],
       schema: { '@context': 'https://schema.org', '@graph': [person, {
         '@type': 'SoftwareApplication', '@id': `${SITE_URL}/vola/#app`, name: 'Vola: AI Voice Note Taker',
         url, description: copy.description, inLanguage: language, image,
