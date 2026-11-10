@@ -1,3 +1,4 @@
+import { isOAnQuanPath } from '../../Pages/AppIntroduction/OAnQuan/locales';
 import { getVolaLocale } from '../../Pages/AppIntroduction/Vola/locales';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
@@ -5,7 +6,7 @@ import './footer.styles.scss';
 
 const Footer = () => {
     const { pathname } = useLocation();
-    if (getVolaLocale(pathname) || pathname.replace(/\/+$/, '') === '/folio') return null;
+    if (isOAnQuanPath(pathname) || getVolaLocale(pathname) || pathname.replace(/\/+$/, '') === '/folio') return null;
     const editorial = pathname === '/' || pathname === '/contact' || pathname.startsWith('/vi/') || ['/about', '/ios-consulting', '/swiftui-training', '/books'].includes(pathname) || pathname.startsWith('/case-studies/') || pathname.startsWith('/articles');
     return (
         <footer className={`footer${editorial ? ' editorial-footer' : ''}`}>

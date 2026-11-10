@@ -73,7 +73,7 @@ function renderRoute(route, notFound = false) {
     for (const alternate of metadata.alternates) { const link = doc.createElement('link'); link.rel = 'alternate'; link.hreflang = alternate.lang; link.href = alternate.href; doc.head.appendChild(link); }
     if (metadata.schema) { const schema = doc.createElement('script'); schema.id = route === '/' ? 'profile-schema' : 'page-schema'; schema.type = 'application/ld+json'; schema.textContent = JSON.stringify(metadata.schema).replace(/</g, '\\u003c'); doc.head.appendChild(schema); }
   }
-  if (professionalPages[route] || route === '/') {
+  if (professionalPages[route] || route === '/' || route.includes('o-an-quan')) {
     if (doc.querySelectorAll('h1').length !== 1) throw new Error(`${route}: expected one h1`);
     if (doc.querySelector('link[rel="canonical"]').href !== metadata.url) throw new Error(`${route}: wrong canonical`);
   }
@@ -96,7 +96,11 @@ fs.writeFileSync(path.join(build, '404.html'), renderRoute('/404', true));
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.filter(route => !clientRoutes.includes(route)).map(route => `  <url><loc>${getMetadata(route).url}</loc></url>`).join('\n')}\n</urlset>\n`;
 fs.writeFileSync(path.join(build, 'sitemap.xml'), sitemap);
 // Non-forced rules let static assets and generated route directories win.
-fs.writeFileSync(path.join(build, '_redirects'), `${clientRoutes.map(route => `${route} /spa.html 200`).join('\n')}\n/* /404.html 404\n`);
+const oqLegacyRedirects = ['/o-an-quan', '/policy/o-an-quan'].flatMap(route => [
+  `${route} lang=en /en${route}/? 301!`,
+  `${route}/ lang=en /en${route}/? 301!`,
+]);
+fs.writeFileSync(path.join(build, '_redirects'), `${oqLegacyRedirects.join('\n')}\n${clientRoutes.map(route => `${route} /spa.html 200`).join('\n')}\n/* /404.html 404\n`);
 // Validate all local links and reciprocal language declarations in generated content.
 for (const route of routes.filter(route => !clientRoutes.includes(route))) {
   const doc = new JSDOM(fs.readFileSync(path.join(build, route, 'index.html'), 'utf8')).window.document;
