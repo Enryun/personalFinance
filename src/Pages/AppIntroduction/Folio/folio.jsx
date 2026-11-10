@@ -32,7 +32,7 @@ const scenes = [
   ['Write and preview Markdown', 'Write and preview Markdown on iPhone and Mac. Use Editor or Preview on iPhone, and choose Split View on Mac to see the source and rendered document side by side.', scene1, 'Folio Markdown document with source and rendered preview on Mac', 'editor', 'Folio Markdown editor and formatting toolbar on iPhone'],
   ['Give every note a home', 'Organize Markdown notes with folders and tags on iPhone and Mac. Needs Organizing gives new imports a place to land; on Mac, nested folders and pinned favorites help structure a larger library.', scene2, 'Folio local Markdown library with folders and tags on Mac', 'folders', 'Folio folders and Needs Organizing inbox on iPhone'],
   ['Find the note. Follow the connection.', 'Find documents in your library, then explore connections between linked Markdown notes with Link Map on iPhone and Mac. On Mac, sidebar search and in-document find help you locate the passage you need.', scene3, 'Folio sidebar search for documents in a local Markdown library on Mac', 'links', 'Folio Link Map showing connections between Markdown notes on iPhone'],
-  ['A writing assistant that runs on your device', 'Refine a draft, improve wording, or turn a note into an outline with the on-device Writing Assistant. Download a supported local model first; availability and performance depend on your device and chosen model.', assistant, 'Folio on-device Writing Assistant beside a Markdown document on Mac', 'assistant', 'Folio Writing Assistant with draft, brainstorm, and outline actions on iPhone'],
+  ['AI writing assistance. Processed on your device.', 'Draft, brainstorm, outline, and refine your writing locally on iPhone or Mac. Your text is not sent to a cloud AI service.', assistant, 'Folio on-device Writing Assistant beside a Markdown document on Mac', 'assistant', 'Folio Writing Assistant with draft, brainstorm, and outline actions on iPhone'],
   ['Bring GitHub docs into your library', 'Import Markdown from supported public GitHub repositories or individual files, then keep a local reference copy. Git import brings documents into Folio; it does not continuously sync repository changes.', scene5, 'Folio importing Markdown documents from a GitHub link'],
 ];
 const questions = [
@@ -54,7 +54,7 @@ const Folio = () => (
     </div></nav>
     <header className="hero-section"><div className="hero-content">
       <div className="hero-badge">Markdown for iPhone and Mac · Local-first</div>
-      <h1>Write, organize, and connect your Markdown notes</h1>
+      <h1>Markdown notes with on-device AI</h1>
       <p className="hero-subtitle">A local-first Markdown editor for iPhone and Mac. Write and preview your notes, connect ideas with Link Map, and refine drafts with on-device writing assistance.</p>
       <div className="hero-actions"><StoreBadge /><a className="secondary-cta" href="#features">See how it works <span aria-hidden="true">↓</span></a></div>
       <p className="folio-requirements">Free download · Optional one-time Pro purchase · English</p><p className="folio-compatibility">iPhone: iOS 17+ · Mac: macOS 14+</p>
@@ -67,7 +67,7 @@ const Folio = () => (
     </header>
     <main className="page-content" id="features">
       {scenes.map(([title, description, image, alt, phone, phoneAlt], index) => <section className={`scene${index % 2 ? ' reverse' : ''}`} key={title}>
-        <div className="scene-text"><h2>{title}</h2><p>{description}</p></div>
+        <div className="scene-text"><h2>{title}</h2><p>{description}</p>{image === assistant && <p className="folio-model-requirements">Requires a supported device and a downloaded local model. Availability and performance depend on your device and chosen model.</p>}</div>
         <figure className={`scene-media${phone ? ' folio-paired-media' : ''}`}><MacScreenshot image={image} alt={alt} />{phone && <PhoneScreenshot name={phone} alt={phoneAlt} />}</figure>
       </section>)}
       <section className="folio-use-cases" aria-labelledby="folio-audience"><h2 id="folio-audience">A local library for the work you keep</h2><div>
