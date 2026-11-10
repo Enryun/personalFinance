@@ -13,7 +13,7 @@ export const volaContent = {
     localText: 'Live voice notes use Apple’s on-device speech recognition. Your recordings and notes are stored locally. You can record and transcribe without enabling AI data sharing.',
     cloud: 'AI when you choose it.',
     cloudText: 'With your permission, summaries and questions send note text to Google Gemini. Audio is not sent to Gemini. Imported-media transcription may use Apple’s network service, depending on language and device.',
-    privacy: 'Read the privacy policy (English)',
+    privacy: 'Read the privacy policy',
     featuresLabel: 'From spoken words to useful notes',
     features: [
       { image: 'summary', title: 'Review the key points, without starting over.', text: 'Turn a transcript into an AI summary of topics, decisions, and action items. Keep the original recording nearby to check important details.', detail: 'Optional cloud AI requires sign-in, internet, available credits, and permission to share note text.', alt: 'Vola on iPhone showing a meeting transcript and AI summary with launch action items' },

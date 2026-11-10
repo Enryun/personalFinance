@@ -55,11 +55,11 @@ export default function Vola() {
         </nav></header>
         <main id="vola-main">
             <section className="vola-container vola-hero">
-                <div className="vola-hero-copy"><p className="vola-eyebrow">{c.eyebrow}</p><h1>{c.heading}</h1><p className="vola-lead">{c.intro}</p><div className="vola-hero-download">{download('hero')}<a className="vola-how-link" href="#vola-how-it-works">{lang === 'vi' ? 'Xem cách hoạt động' : 'See how it works'}<span aria-hidden="true"> ↓</span></a></div><div className="vola-hero-meta"><p className="vola-small">{c.price}</p><p className="vola-small">{c.compatibility}</p></div></div>
+                <div className="vola-hero-copy"><p className="vola-eyebrow">{c.eyebrow}</p><h1>{c.heading}</h1><p className="vola-lead">{c.intro}</p><div className="vola-hero-download">{download('hero')}<a className="vola-how-link" href="#vola-features">{lang === 'vi' ? 'Xem cách hoạt động' : 'See how it works'}<span aria-hidden="true"> ↓</span></a></div><div className="vola-hero-meta"><p className="vola-small">{c.price}</p><p className="vola-small">{c.compatibility}</p></div></div>
                 <div className="vola-hero-image"><Screenshot lang={lang} name="live" alt={c.liveAlt} hero /></div>
             </section>
             <section className="vola-privacy" aria-labelledby="vola-local"><div className="vola-container vola-two-col"><div><p className="vola-eyebrow">{lang === 'vi' ? 'RÕ RÀNG VỀ DỮ LIỆU' : 'CLEAR ABOUT YOUR DATA'}</p><h2 id="vola-local">{c.local}</h2><p>{c.localText}</p></div><div><h3>{c.cloud}</h3><p>{c.cloudText}</p><Link to="/policy/vola">{c.privacy} →</Link></div></div></section>
-            <section className="vola-container vola-features" aria-labelledby="vola-features-heading"><h2 id="vola-features-heading">{c.featuresLabel}</h2>
+            <section id="vola-features" className="vola-container vola-features" aria-labelledby="vola-features-heading"><h2 id="vola-features-heading">{c.featuresLabel}</h2>
                 {c.features.map((feature, index) => <article className={`vola-feature${index % 2 ? ' vola-feature-reverse' : ''}`} key={feature.image}><div className="vola-feature-copy"><p className="vola-eyebrow">0{index + 1}</p><h3>{feature.title}</h3><p>{feature.text}</p><p className="vola-small">{feature.detail}</p></div><div className="vola-feature-image"><Screenshot lang={lang} name={feature.image} alt={feature.alt} /></div></article>)}
             </section>
             <section className="vola-import"><div className="vola-container"><div className="vola-section-intro"><h2>{c.importHeading}</h2><p>{c.importText}</p></div><div className="vola-tablet"><Screenshot lang={lang} name="import" alt={c.importAlt} tablet /></div></div></section>
