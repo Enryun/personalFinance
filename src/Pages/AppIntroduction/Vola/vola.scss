@@ -78,3 +78,20 @@
 }
 @media (max-width: 420px) { .vola-audience-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .vola-landing * { transition: none !important; } }
+
+.vola-language-picker { position: relative; }
+.vola-language-picker summary { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 10px; cursor: pointer; list-style: none; font-weight: 650; border-radius: 12px; }
+.vola-language-picker summary::-webkit-details-marker { display: none; }
+.vola-language-picker summary:hover { background: #e2efeb; }
+.vola-language-picker[open] .vola-language-chevron { transform: rotate(180deg); }
+.vola-language-picker ul { position: absolute; right: 0; top: calc(100% + 8px); z-index: 20; min-width: 200px; padding: 8px; margin: 0; list-style: none; background: white; border: 1px solid var(--vola-line); border-radius: 16px; box-shadow: 0 16px 40px rgba(22,48,53,.14); }
+.vola-language-picker a { display: flex; justify-content: space-between; gap: 24px; align-items: center; padding: 12px 16px; min-height: 48px; border-radius: 10px; text-decoration: none; color: var(--vola-ink); }
+.vola-language-picker a:hover, .vola-language-picker a[aria-current="page"] { background: var(--vola-canvas); }
+.vola-language-picker a[aria-current="page"] span { color: var(--vola-accent); }
+.vola-hero-download { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.vola-download-qr { position: fixed; right: 24px; bottom: 24px; z-index: 15; width: 234px; margin: 0; padding: 8px; background: white; border: 1px solid var(--vola-line); border-radius: 24px; text-align: center; box-shadow: 0 12px 36px rgba(22,48,53,.14); }
+.vola-qr-art { position: relative; }
+.vola-qr-art > img:first-child { width: 216px; height: 216px; }
+.vola-qr-art .vola-qr-logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; padding: 3px; background: white; border-radius: 11px; object-fit: contain; }
+.vola-download-qr figcaption { font-size: .8125rem; font-weight: 650; line-height: 1.5; padding: 4px 0 6px; white-space: nowrap; }
+@media (max-width: 1023px), (max-height: 600px) { .vola-download-qr { display: none; } }

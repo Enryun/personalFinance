@@ -134,3 +134,23 @@ it('keeps Vola language, app identity, store links, and social images consistent
   expect(document.querySelector('meta[property="og:image"]').content).toBe(`${SITE_URL}/social-card.png`);
   expect(document.querySelector('link[hreflang]')).toBeNull();
 });
+
+it('switches Vola languages and closes the language picker with Escape and outside clicks', () => {
+  const history = createMemoryHistory({ initialEntries: ['/vola/'] });
+  act(() => { ReactDOM.render(<Router history={history}><App /></Router>, container); });
+  const picker = container.querySelector('.vola-language-picker');
+  expect(picker.querySelector('[aria-current="page"]').textContent).toContain('English');
+  picker.open = true;
+  document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+  expect(picker.open).toBe(false);
+  expect(document.activeElement).toBe(picker.querySelector('summary'));
+  picker.open = true;
+  document.body.dispatchEvent(new Event('pointerdown', { bubbles: true }));
+  expect(picker.open).toBe(false);
+  picker.open = true;
+  act(() => { Simulate.click(picker.querySelector('a[hreflang="vi"]'), { button: 0 }); });
+  expect(history.location.pathname).toBe('/vi/vola/');
+  expect(picker.open).toBe(false);
+  expect(picker.querySelector('[aria-current="page"]').textContent).toContain('Tiếng Việt');
+  expect(container.querySelector('.vola-download-qr img').getAttribute('src')).toBe('/vola/download-qr.svg');
+});
