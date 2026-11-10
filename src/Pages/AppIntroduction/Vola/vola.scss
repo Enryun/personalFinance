@@ -11,9 +11,12 @@
     img { max-width: 100%; height: auto; display: block; }
     .vola-small { font-size: .9375rem; color: var(--vola-muted); margin: 16px 0 0; }
     .vola-eyebrow { font-size: .75rem; font-weight: 700; letter-spacing: .14em; margin-bottom: 20px; color: var(--vola-accent); }
-    .vola-cta { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 48px; padding: 14px 24px; background: var(--vola-accent); color: white; border-radius: 100px; text-decoration: none; font-size: 1rem; font-weight: 650; transition: background .15s; }
+    .vola-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 10px 18px; background: var(--vola-accent); color: white; border-radius: 100px; text-decoration: none; font-size: 1rem; font-weight: 650; transition: background .15s; }
     .vola-cta:hover { background: #00596a; }
     .vola-cta:active { opacity: .8; }
+    .vola-cta--badge { padding: 0; background: transparent; border-radius: 10px; min-height: 0; }
+    .vola-cta--badge img { display: block; width: 180px; height: auto; }
+    .vola-cta--badge:hover { background: transparent; opacity: .88; }
 }
 .vola-container { width: min(1120px, calc(100% - 64px)); margin: 0 auto; }
 .vola-skip { position: absolute; left: 16px; top: -100px; z-index: 10; background: white; padding: 12px; }
@@ -95,3 +98,7 @@
 .vola-qr-art .vola-qr-logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; padding: 3px; background: white; border-radius: 11px; object-fit: contain; }
 .vola-download-qr figcaption { font-size: .8125rem; font-weight: 650; line-height: 1.5; padding: 4px 0 6px; white-space: nowrap; }
 @media (max-width: 1023px), (max-height: 600px) { .vola-download-qr { display: none; } }
+
+.vola-how-link { display: inline-flex; align-items: center; min-height: 44px; gap: 4px; font-size: 1rem; font-weight: 650; text-decoration: none; }
+.vola-how-link:hover { text-decoration: underline; }
+#vola-how-it-works { scroll-margin-top: 32px; }
