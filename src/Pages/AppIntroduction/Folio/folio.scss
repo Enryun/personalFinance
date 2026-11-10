@@ -330,3 +330,101 @@
   }
 }
 
+
+// Keep product typography independent of portfolio-wide heading styles.
+.folio-page {
+  h1, h2, h3 { padding: 0; text-transform: none; text-align: left; }
+  .hero-section h1 { text-align: center; }
+  a:focus-visible, summary:focus-visible { outline: 3px solid #2563eb; outline-offset: 5px; }
+  .nav-button { text-decoration: none; }
+  #features { scroll-margin-top: 90px; }
+  .folio-store-badge { display: inline-flex; line-height: 0; border-radius: 10px; }
+  .folio-store-badge img { display: block; width: 180px; height: auto; }
+  .hero-section .hero-content .hero-actions .secondary-cta { background: transparent; border: 0; color: #1d4ed8; padding: .75rem 0; }
+  .folio-requirements { color: #475569; font-size: .875rem; line-height: 1.7; margin: 1rem 0 0; }
+  .folio-use-cases, .folio-privacy, .folio-final-cta { border-top: 1px solid rgba(15,23,42,.08); padding: 2.75rem 0; }
+  .folio-use-cases h2, .folio-privacy h2, .folio-final-cta h2 { font-size: 2rem; line-height: 1.2; letter-spacing: -.03em; color: #0f172a; margin: 0 0 1.5rem; }
+  .folio-use-cases > div { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 2rem; }
+  .folio-use-cases h3 { font-size: 1.2rem; letter-spacing: -.02em; margin: 0 0 .75rem; color: #0f172a; }
+  .folio-use-cases p, .folio-privacy p, .folio-final-cta p { font-size: 1.05rem; line-height: 1.75; color: #334155; margin: 0 0 1rem; }
+  .folio-privacy { max-width: 800px; }
+  .folio-privacy a, .folio-footer a { color: #1d4ed8; }
+  .folio-final-cta { margin-top: 3rem; text-align: center; }
+  .folio-final-cta h2 { text-align: center; }
+  .faq .faq-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .folio-footer { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; padding: 1.5rem 1rem 2rem; font-size: .875rem; }
+  .folio-download-qr { position: fixed; right: 24px; bottom: 24px; z-index: 15; width: 234px; box-sizing: border-box; margin: 0; padding: 8px; background: #fff; border: 1px solid #e2e8f0; border-radius: 24px; box-shadow: 0 12px 40px rgba(15,23,42,.12); }
+  .folio-qr-art { position: relative; line-height: 0; }
+  .folio-qr-art > img:first-child { width: 216px; height: 216px; display: block; }
+  .folio-qr-art .folio-qr-logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); box-sizing: content-box; width: 34px; height: 34px; padding: 3px; background: #fff; border-radius: 11px; object-fit: contain; }
+  .folio-download-qr figcaption { color: #0f172a; text-align: center; font-size: .8125rem; font-weight: 650; line-height: 1.5; padding: 4px 0 6px; white-space: nowrap; }
+}
+@media (max-width: 900px) {
+  .folio-page .folio-use-cases > div, .folio-page .faq .faq-grid { grid-template-columns: 1fr; }
+  .folio-page .scene { gap: 1.25rem; }
+  .folio-page .hero-section .hero-content h1 { font-size: clamp(2rem, 7vw, 2.5rem); }
+}
+@media (max-width: 1023px), (max-height: 600px) { .folio-page .folio-download-qr { display: none; } }
+
+// Device-only views: keep App Store headlines outside each crop frame.
+.folio-page {
+  .folio-compatibility { margin: .25rem 0 0; color: #475569; font-size: .875rem; line-height: 1.6; }
+  .folio-hero-preview { display: grid; grid-template-columns: minmax(0,1fr) 22%; gap: 1.25rem; align-items: end; width: 100%; max-width: 1240px; margin: 2.5rem auto 0; }
+  .folio-hero-preview, .scene .scene-media {
+    box-sizing: border-box; background: #2c2b2c; padding: clamp(12px, 2.5vw, 28px);
+    border-radius: 20px; border: 1px solid rgba(15,23,42,.08); overflow: hidden;
+  }
+  .folio-hero-preview { padding: clamp(8px, 1.25vw, 16px); }
+  .scene > * { min-width: 0; }
+  .scene .scene-media { width: 100%; }
+  .scene .folio-paired-media { display: grid; grid-template-columns: minmax(0,1fr) 22%; align-items: end; gap: 1.25rem; width: 100%; }
+  .folio-mac-preview, .folio-phone-preview { display: block; position: relative; width: 100%; min-width: 0; overflow: hidden; }
+  // Mac artwork: 2880×1800, laptop bounds x=330, y=400, w=2220, h=1350.
+  .folio-mac-device { aspect-ratio: 2220 / 1350; }
+  .folio-hero-preview .folio-mac-device .folio-mac-shot,
+  .scene .scene-media .folio-mac-device .folio-mac-shot {
+    position: absolute; width: 129.7297%; max-width: none; height: auto;
+    left: -14.8649%; top: -29.6296%; border: 0; border-radius: 0; box-shadow: none;
+  }
+  .folio-mac-window { aspect-ratio: 1600 / 971; border: 1px solid #cbd5e1; border-radius: 10px; box-shadow: 0 16px 32px -24px rgba(15,23,42,.3); }
+  .scene .scene-media .folio-mac-window .folio-mac-shot { display: block; width: 100%; height: auto; border: 0; border-radius: 0; box-shadow: none; }
+  // iPhone artwork: 1284×2778, phone bounds x=98, y=560, w=1088, h=2218.
+  .folio-phone-preview { aspect-ratio: 1088 / 2218; border-radius: 17% / 8.3%; }
+  .folio-hero-preview .folio-phone-preview .folio-phone-shot,
+  .scene .folio-paired-media .folio-phone-preview .folio-phone-shot {
+    position: absolute; width: 118.0147%; max-width: none; height: auto;
+    left: -9.0074%; top: -25.2480%; border: 0; border-radius: 0; box-shadow: none;
+  }
+}
+@media (min-width: 901px) {
+  .folio-page .scene { grid-template-columns: .8fr 1.4fr; }
+  .folio-page .scene.reverse { grid-template-columns: 1.4fr .8fr; }
+}
+@media (max-width: 600px) {
+  .folio-page .folio-hero-preview { gap: .625rem; margin-top: 1.75rem; }
+  .folio-page .scene .folio-paired-media { gap: .625rem; }
+  .folio-page .folio-mac-window { border-radius: 5px; }
+}
+
+.folio-page .scene .scene-text .folio-model-requirements { font-size: .875rem; color: #475569; line-height: 1.6; }
+
+// Give the opening product preview more room than the feature-row pairs.
+.folio-page .folio-hero-preview {
+  position: relative; display: block; width: calc(100% + 2rem);
+  max-width: 1440px; margin-left: auto; margin-right: auto;
+  padding: clamp(16px, 2vw, 28px); padding-bottom: clamp(20px, 3vw, 40px);
+  left: -1rem;
+}
+.folio-page .folio-hero-preview .folio-mac-preview { width: 90%; }
+.folio-page .folio-hero-preview .folio-phone-preview {
+  position: absolute; width: 28%; right: 2%; bottom: 4%;
+  filter: drop-shadow(-10px 12px 18px rgba(0,0,0,.35));
+}
+@media (max-width: 900px) {
+  .folio-page .folio-hero-preview { width: calc(100% + 1rem); left: -.5rem; }
+}
+@media (max-width: 600px) {
+  .folio-page .folio-hero-preview { padding: 10px 8px 16px; border-radius: 14px; }
+  .folio-page .folio-hero-preview .folio-mac-preview { width: 92%; }
+  .folio-page .folio-hero-preview .folio-phone-preview { width: 29%; right: 2%; bottom: 5%; }
+}

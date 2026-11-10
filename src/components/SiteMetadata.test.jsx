@@ -41,8 +41,8 @@ it('updates canonicals and profile data when navigating between home and app pag
   expect(JSON.parse(document.getElementById('profile-schema').textContent).mainEntity.name).toBe('James Thang');
 
   act(() => history.push('/folio'));
-  expect(document.title).toBe('Folio | James Thang');
-  expect(document.querySelector('link[rel="canonical"]').href).toBe(`${SITE_URL}/folio`);
+  expect(document.title).toBe('Folio: Markdown Editor & Notes for iPhone and Mac');
+  expect(document.querySelector('link[rel="canonical"]').href).toBe(`${SITE_URL}/folio/`);
   expect(document.getElementById('profile-schema')).toBeNull();
 
   act(() => history.push('/o-an-quan'));
@@ -169,4 +169,30 @@ it('resets right-to-left document direction when leaving an Arabic Vola page', (
   act(() => history.push('/'));
   expect(document.documentElement.lang).toBe('en');
   expect(document.documentElement.dir).toBe('ltr');
+});
+
+it('serves Folio in English with its own store destination, social image, and app entity after an RTL page', () => {
+  const history = createMemoryHistory({ initialEntries: ['/ar/vola/'] });
+  act(() => { ReactDOM.render(<Router history={history}><App /></Router>, container); });
+  act(() => history.push('/folio/'));
+  expect(document.documentElement.lang).toBe('en');
+  expect(document.documentElement.dir).toBe('ltr');
+  expect(document.querySelector('link[hreflang]')).toBeNull();
+  expect(document.querySelector('meta[property="og:image"]').content).toBe(`${SITE_URL}/folio/social-card.png`);
+  const app = JSON.parse(document.getElementById('page-schema').textContent)['@graph'].find(item => item['@type'] === 'SoftwareApplication');
+  expect(app.downloadUrl).toBe('https://apps.apple.com/app/id6765871325');
+  expect(app.inLanguage).toBe('en');
+  expect(app.operatingSystem).toBe('iOS 17 or later, macOS 14 or later');
+  expect(container.querySelector('.folio-hero-preview .folio-phone-shot')).not.toBeNull();
+  expect(container.querySelectorAll('.folio-paired-media .folio-phone-shot')).toHaveLength(4);
+  expect(container.textContent).toContain('iPhone: iOS 17+');
+  const qr = container.querySelector('.folio-download-qr');
+  expect(qr.querySelector('a').href).toBe(app.downloadUrl);
+  expect(qr.querySelector('.folio-qr-logo').getAttribute('src')).toBe('/folio/qr-logo.webp');
+  expect(qr.querySelector('button')).toBeNull();
+  expect(container.querySelector('a[href="#features"]')).not.toBeNull();
+  expect(container.querySelectorAll('h1')).toHaveLength(1);
+  expect(container.querySelectorAll('footer')).toHaveLength(1);
+  expect(container.textContent).not.toContain('Full Privacy');
+  expect(container.textContent).toContain('usage analytics');
 });

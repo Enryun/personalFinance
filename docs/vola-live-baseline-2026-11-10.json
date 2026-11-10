@@ -1,0 +1,223 @@
+{
+  "sitemapUrls": 80,
+  "locales": [
+    {
+      "url": "https://www.jamesthang.com/vola/",
+      "status": "200",
+      "title": "Vola: On-Device Speech to Text & AI Voice Notes",
+      "language": "en",
+      "canonical": "https://www.jamesthang.com/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/vi/vola/",
+      "status": "200",
+      "title": "Vola: Chuyển giọng nói thành văn bản trên iPhone",
+      "language": "vi",
+      "canonical": "https://www.jamesthang.com/vi/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/de/vola/",
+      "status": "200",
+      "title": "Vola: Sprache zu Text auf dem iPhone & KI-Sprachnotizen",
+      "language": "de",
+      "canonical": "https://www.jamesthang.com/de/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/es/vola/",
+      "status": "200",
+      "title": "Vola: Voz a texto en iPhone y notas de voz con IA",
+      "language": "es",
+      "canonical": "https://www.jamesthang.com/es/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/fr/vola/",
+      "status": "200",
+      "title": "Vola : transcription sur iPhone et notes vocales IA",
+      "language": "fr",
+      "canonical": "https://www.jamesthang.com/fr/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/it/vola/",
+      "status": "200",
+      "title": "Vola: Da voce a testo su iPhone e note vocali IA",
+      "language": "it",
+      "canonical": "https://www.jamesthang.com/it/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/ja/vola/",
+      "status": "200",
+      "title": "Vola：iPhoneの音声文字起こし・AIボイスメモ",
+      "language": "ja",
+      "canonical": "https://www.jamesthang.com/ja/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/ko/vola/",
+      "status": "200",
+      "title": "Vola: 아이폰 음성 텍스트 변환과 AI 음성 메모",
+      "language": "ko",
+      "canonical": "https://www.jamesthang.com/ko/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/pt-br/vola/",
+      "status": "200",
+      "title": "Vola: Transcrição de voz no iPhone e notas com IA",
+      "language": "pt-BR",
+      "canonical": "https://www.jamesthang.com/pt-br/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/pt-pt/vola/",
+      "status": "200",
+      "title": "Vola: Voz para texto no iPhone e notas com IA",
+      "language": "pt-PT",
+      "canonical": "https://www.jamesthang.com/pt-pt/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/zh-hans/vola/",
+      "status": "200",
+      "title": "Vola：iPhone 本地语音转文字与 AI 语音笔记",
+      "language": "zh-Hans",
+      "canonical": "https://www.jamesthang.com/zh-hans/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/zh-hant/vola/",
+      "status": "200",
+      "title": "Vola：iPhone 本機語音轉文字與 AI 語音筆記",
+      "language": "zh-Hant",
+      "canonical": "https://www.jamesthang.com/zh-hant/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/ar/vola/",
+      "status": "200",
+      "title": "Vola: تحويل الصوت إلى نص على iPhone وملاحظات ذكية",
+      "language": "ar",
+      "canonical": "https://www.jamesthang.com/ar/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/ur/vola/",
+      "status": "200",
+      "title": "Vola: iPhone پر آواز سے متن اور AI صوتی نوٹس",
+      "language": "ur",
+      "canonical": "https://www.jamesthang.com/ur/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/bn/vola/",
+      "status": "200",
+      "title": "Vola: iPhone-এ কথাকে লেখায় রূপান্তর ও AI ভয়েস নোট",
+      "language": "bn",
+      "canonical": "https://www.jamesthang.com/bn/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/hi/vola/",
+      "status": "200",
+      "title": "Vola: iPhone पर आवाज़ से टेक्स्ट और AI वॉइस नोट्स",
+      "language": "hi",
+      "canonical": "https://www.jamesthang.com/hi/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/gu/vola/",
+      "status": "200",
+      "title": "Vola: iPhone પર અવાજથી લખાણ અને AI વૉઇસ નોટ્સ",
+      "language": "gu",
+      "canonical": "https://www.jamesthang.com/gu/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/kn/vola/",
+      "status": "200",
+      "title": "Vola: iPhone ಧ್ವನಿಯಿಂದ ಪಠ್ಯ ಮತ್ತು AI ಧ್ವನಿ ಟಿಪ್ಪಣಿಗಳು",
+      "language": "kn",
+      "canonical": "https://www.jamesthang.com/kn/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/ml/vola/",
+      "status": "200",
+      "title": "Vola: iPhone ശബ്ദം എഴുത്താക്കലും AI വോയ്സ് നോട്ടുകളും",
+      "language": "ml",
+      "canonical": "https://www.jamesthang.com/ml/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/mr/vola/",
+      "status": "200",
+      "title": "Vola: iPhone वर आवाजाचे मजकुरात रूपांतर व AI नोट्स",
+      "language": "mr",
+      "canonical": "https://www.jamesthang.com/mr/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/or/vola/",
+      "status": "200",
+      "title": "Vola: iPhone ରେ ସ୍ୱରରୁ ଲେଖା ଓ AI ଭଏସ୍ ନୋଟ୍",
+      "language": "or",
+      "canonical": "https://www.jamesthang.com/or/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/pa/vola/",
+      "status": "200",
+      "title": "Vola: iPhone ਉੱਤੇ ਆਵਾਜ਼ ਤੋਂ ਲਿਖਤ ਅਤੇ AI ਵੌਇਸ ਨੋਟਸ",
+      "language": "pa",
+      "canonical": "https://www.jamesthang.com/pa/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/ta/vola/",
+      "status": "200",
+      "title": "Vola: iPhone குரலை எழுத்தாக்கும் AI குரல் குறிப்புகள்",
+      "language": "ta",
+      "canonical": "https://www.jamesthang.com/ta/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    },
+    {
+      "url": "https://www.jamesthang.com/te/vola/",
+      "status": "200",
+      "title": "Vola: iPhoneలో మాటల నుంచి టెక్స్ట్, AI వాయిస్ నోట్స్",
+      "language": "te",
+      "canonical": "https://www.jamesthang.com/te/vola/",
+      "noindex": false,
+      "languageAttributeCount": 49
+    }
+  ],
+  "date": "2026-11-10",
+  "note": "languageAttributeCount includes language-menu anchors as well as head annotations; actual head alternates were separately checked on English, Vietnamese, German and Arabic."
+}

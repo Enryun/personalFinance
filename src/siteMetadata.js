@@ -1,3 +1,4 @@
+import { FOLIO_STORE, FOLIO_TITLE, FOLIO_DESCRIPTION } from './Pages/AppIntroduction/Folio/content';
 import { volaLocales, getVolaLocale } from './Pages/AppIntroduction/Vola/locales';
 import { volaContent, VOLA_STORE } from './Pages/AppIntroduction/Vola/content';
 import { copy as gameCopy } from './Pages/AppIntroduction/OAnQuan/copy';
@@ -39,6 +40,23 @@ export function getMetadata(pathname, search = '') {
         author: { '@id': person['@id'] }, downloadUrl: VOLA_STORE, sameAs: [VOLA_STORE],
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', url: VOLA_STORE,
           description: copy.price }
+      }] }
+    };
+  }
+  if (pathname === '/folio') {
+    const url = `${SITE_URL}/folio/`;
+    const image = `${SITE_URL}/folio/social-card.png`;
+    return {
+      title: FOLIO_TITLE, description: FOLIO_DESCRIPTION, url, language: 'en', direction: 'ltr',
+      image, imageAlt: 'Folio Markdown editor and connected notes on iPhone and Mac', alternates: [],
+      schema: { '@context': 'https://schema.org', '@graph': [person, {
+        '@type': 'SoftwareApplication', '@id': `${url}#app`, name: 'Folio: Markdown Library',
+        url, description: FOLIO_DESCRIPTION, inLanguage: 'en', image,
+        operatingSystem: 'iOS 17 or later, macOS 14 or later', applicationCategory: 'ProductivityApplication',
+        author: { '@id': person['@id'] }, downloadUrl: FOLIO_STORE, sameAs: [FOLIO_STORE],
+        featureList: ['Markdown Editor, Preview, and Split View', 'Folders, tags, and library search', 'Link Map', 'On-device Writing Assistant', 'Public GitHub Markdown import'],
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', url: FOLIO_STORE,
+          description: 'Free download with an optional one-time Pro purchase. See the App Store for current pricing.' }
       }] }
     };
   }
