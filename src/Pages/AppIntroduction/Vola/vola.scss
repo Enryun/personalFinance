@@ -1,299 +1,76 @@
 .vola-landing {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background: #fafbfc;
+    --vola-ink: #163035; --vola-muted: #456166; --vola-accent: #00758a; --vola-canvas: #f3f9f7; --vola-line: #cfdfdb;
+    color: var(--vola-ink); background: var(--vola-canvas); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.65;
+    h1, h2, h3 { color: var(--vola-ink); text-align: left; text-transform: none; letter-spacing: -.035em; line-height: 1.12; margin: 0 0 24px; }
+    h1 { font-size: clamp(2.75rem, 5.6vw, 4.8rem); }
+    h2 { font-size: clamp(2rem, 3.5vw, 3.2rem); }
+    h3 { font-size: clamp(1.5rem, 2.7vw, 2.5rem); }
+    p { margin: 0 0 24px; font-size: 1.125rem; }
+    a { color: var(--vola-accent); text-underline-offset: 4px; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--vola-accent); outline-offset: 5px; }
+    img { max-width: 100%; height: auto; display: block; }
+    .vola-small { font-size: .9375rem; color: var(--vola-muted); margin: 16px 0 0; }
+    .vola-eyebrow { font-size: .75rem; font-weight: 700; letter-spacing: .14em; margin-bottom: 20px; color: var(--vola-accent); }
+    .vola-cta { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 48px; padding: 14px 24px; background: var(--vola-accent); color: white; border-radius: 100px; text-decoration: none; font-size: 1rem; font-weight: 650; transition: background .15s; }
+    .vola-cta:hover { background: #00596a; }
+    .vola-cta:active { opacity: .8; }
 }
-
-.vola-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(255, 255, 255, 0.95);
-    border-bottom: 1px solid #e5e7eb;
-    backdrop-filter: blur(8px);
+.vola-container { width: min(1120px, calc(100% - 64px)); margin: 0 auto; }
+.vola-skip { position: absolute; left: 16px; top: -100px; z-index: 10; background: white; padding: 12px; }
+.vola-skip:focus { top: 8px; }
+.vola-nav { border-bottom: 1px solid var(--vola-line); }
+.vola-nav-inner { display: flex; justify-content: space-between; align-items: center; min-height: 88px; gap: 16px; }
+.vola-logo { display: inline-flex; align-items: center; gap: 12px; font-size: 1.5rem; font-weight: 750; text-decoration: none; color: var(--vola-ink) !important; min-height: 44px; }
+.vola-logo img { border-radius: 9px; }
+.vola-nav-actions { display: flex; align-items: center; gap: 20px; }
+.vola-language { display: inline-flex; min-height: 44px; align-items: center; }
+.vola-hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 72px; align-items: center; padding-top: 64px; padding-bottom: 80px; }
+.vola-hero-copy { max-width: 620px; }
+.vola-hero-image { max-width: 340px; justify-self: center; }
+.vola-hero-image img, .vola-feature-image img, .vola-tablet img { border-radius: 16px; }
+.vola-landing .vola-lead { font-size: 1.25rem; color: var(--vola-muted); }
+.vola-privacy { background: #e2efeb; padding: 64px 0; }
+.vola-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.vola-privacy h3 { font-size: 1.6rem; }
+.vola-features { padding-top: 96px; }
+.vola-features > h2 { max-width: 620px; margin-bottom: 64px; }
+.vola-feature { display: grid; grid-template-columns: 1fr 1fr; gap: 96px; align-items: center; margin-bottom: 96px; }
+.vola-feature-image { width: 100%; max-width: 320px; justify-self: center; }
+.vola-feature-reverse .vola-feature-image { order: 2; }
+.vola-import { background: #e9f1ef; padding: 72px 0; }
+.vola-section-intro { max-width: 740px; margin: 0 auto 40px; }
+.vola-tablet { max-width: 700px; margin: auto; }
+.vola-section { padding-top: 88px; padding-bottom: 16px; }
+.vola-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; list-style: none; padding: 0; margin: 40px 0 0; }
+.vola-step-number { display: block; color: var(--vola-accent); font-weight: 650; border-top: 1px solid var(--vola-line); padding: 20px 0; }
+.vola-steps h3, .vola-audience-grid h3 { font-size: 1.4rem; letter-spacing: -.02em; }
+.vola-audience-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 40px; }
+.vola-faq { max-width: 800px; padding-bottom: 88px; }
+.vola-faq details { border-bottom: 1px solid var(--vola-line); }
+.vola-faq summary { cursor: pointer; padding: 24px 4px; font-size: 1.125rem; font-weight: 650; }
+.vola-faq details p { color: var(--vola-muted); padding: 0 4px; }
+.vola-final { background: #dcece7; padding: 80px 0; }
+.vola-final .vola-container { max-width: 800px; }
+.vola-footer { padding: 40px 0; }
+.vola-footer div { display: flex; gap: 24px; flex-wrap: wrap; }
+.vola-footer a { display: inline-flex; align-items: center; min-height: 44px; }
+@media (max-width: 760px) {
+    .vola-container { width: calc(100% - 40px); }
+    .vola-nav-inner { min-height: 80px; }
+    .vola-nav-actions .vola-cta { display: none; }
+    .vola-hero { grid-template-columns: 1fr; gap: 40px; padding-top: 48px; padding-bottom: 48px; }
+    .vola-hero-image { max-width: 300px; }
+    .vola-two-col, .vola-feature { grid-template-columns: 1fr; gap: 32px; }
+    .vola-privacy { padding: 48px 0; }
+    .vola-features { padding-top: 56px; }
+    .vola-feature { margin-bottom: 56px; }
+    .vola-feature-reverse .vola-feature-image { order: 0; }
+    .vola-feature-image { max-width: 300px; }
+    .vola-steps { grid-template-columns: 1fr; gap: 16px; }
+    .vola-audience-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .vola-section { padding-top: 56px; }
+    .vola-faq { padding-bottom: 56px; }
+    .vola-final { padding: 56px 0; }
 }
-
-.vola-nav-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0.875rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.vola-logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: #111827;
-    font-weight: 700;
-    font-size: 1.25rem;
-
-    .vola-logo-img {
-        width: 28px;
-        height: 28px;
-        border-radius: 6px;
-        display: block;
-        object-fit: contain;
-    }
-}
-
-.vola-cta {
-    cursor: pointer;
-    font-weight: 600;
-    border: none;
-    transition: opacity 0.2s, transform 0.15s;
-
-    &:hover {
-        opacity: 0.9;
-        transform: translateY(-1px);
-    }
-    &:active {
-        transform: translateY(0);
-    }
-    &:focus-visible {
-        outline: 2px solid #33A6BF;
-        outline-offset: 2px;
-    }
-}
-
-.vola-cta--nav {
-    padding: 0.5rem 1rem;
-    font-size: 0.9375rem;
-    color: #fff;
-    background: linear-gradient(135deg, #33A6BF 0%, #4FB8CF 100%);
-    border-radius: 8px;
-}
-
-.vola-cta--primary {
-    padding: 0.875rem 1.75rem;
-    font-size: 1.0625rem;
-    color: #fff;
-    background: linear-gradient(135deg, #33A6BF 0%, #4FB8CF 100%);
-    border-radius: 10px;
-    display: inline-block;
-}
-
-.vola-hero {
-    padding: 3rem 1.5rem 3.5rem;
-    text-align: center;
-}
-
-.vola-hero-inner {
-    max-width: 640px;
-    margin: 0 auto;
-}
-
-.vola-hero-title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: #111827;
-    line-height: 1.2;
-    margin: 0 0 0.75rem;
-    letter-spacing: -0.02em;
-}
-
-.vola-hero-lead {
-    font-size: 1.125rem;
-    color: #4b5563;
-    line-height: 1.55;
-    margin: 0 0 1.5rem;
-}
-
-.vola-hero .vola-cta--primary {
-    margin-bottom: 0;
-}
-
-.vola-benefits {
-    padding: 4rem 1.5rem;
-    background: #fff;
-}
-
-.vola-benefits-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.vola-highlights-container {
-    display: grid;
-    gap: 4rem;
-}
-
-.vola-highlight-row {
-    display: grid;
-    grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
-    gap: 4.5rem;
-    align-items: flex-start;
-}
-
-.vola-highlight-visual {
-    width: 100%;
-    border-radius: 14px;
-    overflow: hidden;
-    background: #f9fafb;
-    box-shadow: 0 12px 28px -16px rgba(0, 0, 0, 0.2), 0 4px 10px -8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e5e7eb;
-
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: contain;
-    }
-}
-
-.vola-highlight-content {
-    text-align: left;
-}
-
-.vola-highlight-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #111827;
-    margin: 0 0 1.5rem;
-}
-
-.vola-benefit-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-}
-
-.vola-benefit-card {
-    padding: 1.5rem;
-    border-radius: 14px;
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.2);
-        border-color: #d1d5db;
-    }
-}
-
-.vola-benefit-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.75rem;
-}
-
-.vola-benefit-icon {
-    font-size: 1.75rem;
-    line-height: 1;
-}
-
-.vola-benefit-badge {
-    font-size: 0.6875rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #33A6BF;
-    background: rgba(51, 166, 191, 0.1);
-    padding: 0.25rem 0.5rem;
-    border-radius: 6px;
-    border: 1px solid rgba(51, 166, 191, 0.2);
-}
-
-.vola-benefit-name {
-    font-size: 1.375rem;
-    font-weight: 700;
-    color: #111827;
-    margin: 0 0 0.625rem;
-}
-
-.vola-benefit-detail {
-    font-size: 1.125rem;
-    color: #374151;
-    line-height: 1.7;
-    margin: 0;
-}
-
-.vola-final-cta {
-    padding: 3rem 1.5rem;
-    text-align: center;
-    background: #ecfeff;
-    border-top: 1px solid #cffafe;
-}
-
-.vola-final-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #111827;
-    margin: 0 0 0.5rem;
-}
-
-.vola-final-text {
-    font-size: 1rem;
-    color: #4b5563;
-    margin: 0 0 1.25rem;
-}
-
-.vola-footer {
-    margin-top: auto;
-    padding: 1.25rem 1.5rem;
-    border-top: 1px solid #e5e7eb;
-    background: #fff;
-}
-
-.vola-footer-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.vola-footer-link {
-    font-size: 0.875rem;
-    color: #33A6BF;
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-@media (max-width: 768px) {
-    .vola-hero-title {
-        font-size: 1.875rem;
-    }
-
-    .vola-hero-lead {
-        font-size: 1rem;
-    }
-
-    .vola-highlight-row {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .vola-highlight-visual {
-        max-width: 280px;
-        margin: 0 auto;
-    }
-
-    .vola-benefit-cards {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .vola-benefits-inner {
-        gap: 1.5rem;
-    }
-
-    .vola-highlights-container {
-        gap: 2.5rem;
-    }
-
-    .vola-highlight-visual {
-        max-width: 100%;
-    }
-}
+@media (max-width: 420px) { .vola-audience-grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .vola-landing * { transition: none !important; } }

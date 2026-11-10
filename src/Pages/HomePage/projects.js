@@ -38,8 +38,8 @@ export const projects = [
         },
         { 
             title: 'Vola', 
-            route: '/vola', 
-            story: 'AI note taker with live transcription, summaries, translation, and questions about your notes',
+            route: '/vola/',
+            story: 'On-device live transcription for iPhone and iPad, with optional AI summaries and questions',
             icon: require('../../Image/Vola.png')
         },
         { 

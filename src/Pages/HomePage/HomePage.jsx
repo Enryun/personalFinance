@@ -7,12 +7,13 @@ import { homeProjects as projects } from './projects';
 import horologyShot from '../../Image/Horology1.png';
 import folioShot from '../../Image/Folio1.png';
 import oAnQuanShot from '../../Image/Oanquan1.png';
-import volaShot from '../../Image/Vola2.png';
 import tidoraShot from '../../Image/TidyMac1.png';
 import './HomePage.scss';
 
+const volaShot = '/vola/en/live-960.webp';
+
 const featured = [
-  { route: '/vola', title: 'Vola — AI Note Taker', category: '01 / FEATURED · iOS · AI productivity', detail: 'Stay in the conversation. Vola brings live transcription, AI summaries, and questions about your notes together, with translation and editing while you record.', image: volaShot, alt: 'Vola AI note taker with live transcription, AI summary, and questions about recorded notes', theme: 'vola' },
+  { route: '/vola/', title: 'Vola — AI Note Taker', category: '01 / FEATURED · iOS · AI productivity', detail: 'Stay in the conversation. Vola transcribes live speech on your device, with optional cloud AI summaries and questions about your notes.', image: volaShot, alt: 'Vola AI note taker with live transcription, AI summary, and questions about recorded notes', theme: 'vola' },
   { route: '/tidora', title: 'Tidora — Mac Cleaner', category: '02 / macOS · Cleaning & maintenance', detail: 'Make room for what matters. Tidora scans for unnecessary files, caches, and logs, helping you reclaim disk space and keep everyday Mac maintenance straightforward.', image: tidoraShot, alt: 'Tidora Mac cleaning utility showing a scan of application caches and system logs', theme: 'tidora' },
   { route: '/horology-studio', category: '03 / iOS · Interactive experiences', detail: 'A mechanical timepiece made personal. Watch customization, widgets, and system alarms, built around the pleasure of the details.', image: horologyShot, alt: 'Horology Studio interactive watch on an iPhone', theme: 'watch' },
   { route: '/folio', category: '04 / macOS · Developer tools', detail: 'A quieter place for Markdown. Local files, thoughtful organization, and fast search in a focused Mac reading experience.', image: folioShot, alt: 'Folio Markdown reader with source and rendered content on a Mac', theme: 'folio' },
@@ -49,7 +50,7 @@ export default function HomePage() {
           </div>
           <div className="home-hero-art" aria-label="A glimpse of my iOS apps">
             <span className="home-art-label">A LITTLE CRAFT. A LOT OF CARE.</span>
-            <figure className="home-art-phone home-art-vola"><img src={volaShot} alt="Vola AI note taker with live transcription and Ask AI" width="1284" height="2778" /></figure>
+            <figure className="home-art-phone home-art-vola"><img src={volaShot} alt="Vola AI note taker with live transcription and Ask AI" width="960" height="2086" /></figure>
             <figure className="home-art-phone home-art-quan"><img src={oAnQuanShot} alt="Ô Ăn Quan traditional Vietnamese game" width="1206" height="2622" /></figure>
           </div>
         </section>

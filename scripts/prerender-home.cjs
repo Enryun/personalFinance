@@ -59,6 +59,12 @@ function renderRoute(route, notFound = false) {
   setMeta('property', 'og:url', metadata.url);
   setMeta('name', 'twitter:title', doc.title);
   setMeta('name', 'twitter:description', metadata.description);
+  if (metadata.image) {
+    setMeta('property', 'og:image', metadata.image);
+    setMeta('property', 'og:image:alt', metadata.imageAlt);
+    setMeta('name', 'twitter:image', metadata.image);
+    setMeta('name', 'twitter:image:alt', metadata.imageAlt);
+  }
   if (notFound) setMeta('name', 'robots', 'noindex');
   else {
     const canonical = doc.createElement('link'); canonical.rel = 'canonical'; canonical.href = metadata.url; doc.head.appendChild(canonical);
@@ -85,7 +91,7 @@ for (const route of routes.filter(route => !clientRoutes.includes(route))) {
   fs.writeFileSync(path.join(directory, 'index.html'), renderRoute(route));
 }
 fs.writeFileSync(path.join(build, '404.html'), renderRoute('/404', true));
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.filter(route => !clientRoutes.includes(route)).map(route => `  <url><loc>${SITE_URL}${route}</loc></url>`).join('\n')}\n</urlset>\n`;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.filter(route => !clientRoutes.includes(route)).map(route => `  <url><loc>${getMetadata(route).url}</loc></url>`).join('\n')}\n</urlset>\n`;
 fs.writeFileSync(path.join(build, 'sitemap.xml'), sitemap);
 // Non-forced rules let static assets and generated route directories win.
 fs.writeFileSync(path.join(build, '_redirects'), `${clientRoutes.map(route => `${route} /spa.html 200`).join('\n')}\n/* /404.html 404\n`);

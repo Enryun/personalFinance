@@ -4,6 +4,7 @@ import './footer.styles.scss';
 
 const Footer = () => {
     const { pathname } = useLocation();
+    if (pathname.replace(/\/+$/, '') === '/vola' || pathname.replace(/\/+$/, '') === '/vi/vola') return null;
     const editorial = pathname === '/' || pathname === '/contact' || pathname.startsWith('/vi/') || ['/about', '/ios-consulting', '/swiftui-training', '/books'].includes(pathname) || pathname.startsWith('/case-studies/') || pathname.startsWith('/articles');
     return (
         <footer className={`footer${editorial ? ' editorial-footer' : ''}`}>

@@ -1,3 +1,4 @@
+import { volaContent, VOLA_STORE } from './Pages/AppIntroduction/Vola/content';
 import { copy as gameCopy } from './Pages/AppIntroduction/OAnQuan/copy';
 import { content as policyCopy } from './Pages/AppIntroduction/OAnQuan/policyCopy';
 import { professionalPages, books, publisherLinks } from './Pages/Professional/content';
@@ -20,6 +21,25 @@ export const profileSchema = {
 };
 export function getMetadata(pathname, search = '') {
   pathname = pathname.replace(/\/+$/, '') || '/';
+  if (pathname === '/vola' || pathname === '/vi/vola') {
+    const language = pathname.startsWith('/vi/') ? 'vi' : 'en';
+    const copy = volaContent[language];
+    const url = `${SITE_URL}${pathname}/`;
+    const image = `${SITE_URL}/vola/${language}/social-card.png`;
+    return {
+      title: copy.title, description: copy.description, url, language,
+      image, imageAlt: language === 'vi' ? 'Vola — Chép lời trực tiếp trên thiết bị, ghi chú AI tùy chọn' : 'Vola — On-device live transcription, optional AI voice notes',
+      alternates: [{ lang: 'en', href: `${SITE_URL}/vola/` }, { lang: 'vi', href: `${SITE_URL}/vi/vola/` }, { lang: 'x-default', href: `${SITE_URL}/vola/` }],
+      schema: { '@context': 'https://schema.org', '@graph': [person, {
+        '@type': 'SoftwareApplication', '@id': `${SITE_URL}/vola/#app`, name: 'Vola: AI Voice Note Taker',
+        url, description: copy.description, inLanguage: language, image,
+        operatingSystem: 'iOS 26.0 or later, iPadOS 26.0 or later', applicationCategory: 'ProductivityApplication',
+        author: { '@id': person['@id'] }, downloadUrl: VOLA_STORE, sameAs: [VOLA_STORE],
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', url: VOLA_STORE,
+          description: copy.price }
+      }] }
+    };
+  }
   const page = professionalPages[pathname];
   const project = projects.find(item => item.route === pathname);
   const languageQuery = pathname.includes('o-an-quan') && new URLSearchParams(search).get('lang') === 'en' ? '?lang=en' : '';

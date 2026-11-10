@@ -19,6 +19,14 @@ export default function SiteMetadata() {
     setMeta('property', 'og:url', metadata.url);
     setMeta('name', 'twitter:title', metadata.title);
     setMeta('name', 'twitter:description', metadata.description);
+    const image = metadata.image || 'https://www.jamesthang.com/social-card.png';
+    const imageAlt = metadata.imageAlt || 'James Thang — iOS and React Native developer, author, and instructor';
+    setMeta('property', 'og:image', image);
+    setMeta('property', 'og:image:alt', imageAlt);
+    setMeta('property', 'og:image:width', '1200');
+    setMeta('property', 'og:image:height', '630');
+    setMeta('name', 'twitter:image', image);
+    setMeta('name', 'twitter:image:alt', imageAlt);
     const notFound = Boolean(document.querySelector('.profile-not-found'));
     if (notFound) { document.title = 'Page not found | James Thang'; setMeta('name', 'robots', 'noindex'); }
     else { const robots = document.querySelector('meta[name="robots"]'); if (robots) robots.remove(); }
