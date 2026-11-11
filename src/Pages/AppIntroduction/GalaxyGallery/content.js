@@ -1,38 +1,32 @@
-export const GALAXY_STORE = 'https://apps.apple.com/app/id1662263674';
-export const GALAXY_TITLE = 'Galaxy Gallery: Explore Space & the Solar System';
-export const GALAXY_DESCRIPTION = 'Explore planets and moons in interactive 3D on iPhone and iPad. Compare planet sizes, discover space facts, and bring the Solar System into your room with AR.';
+import en from './locales/en.json';
+import vi from './locales/vi.json';
+import ja from './locales/ja.json';
+import zhHant from './locales/zh-Hant.json';
+import zhHans from './locales/zh-Hans.json';
+import ko from './locales/ko.json';
+import th from './locales/th.json';
+import id from './locales/id.json';
+import de from './locales/de.json';
+import fr from './locales/fr.json';
+import es from './locales/es.json';
+import ptBR from './locales/pt-BR.json';
+import it from './locales/it.json';
+import ptPT from './locales/pt-PT.json';
 
-export const galaxyQuestions = [
-  {
-    question: 'What is Galaxy Gallery?',
-    answer: 'Galaxy Gallery is a space exploration and learning app for iPhone and iPad. Explore planets and moons in interactive 3D, watch Solar System orbits, compare planet sizes, and discover facts about the universe. It also includes optional space-themed focus missions.',
-  },
-  {
-    question: 'Can I explore the Solar System in 3D?',
-    answer: 'Yes. Rotate and zoom in on planets, explore the Earth–Moon system, watch planetary orbits, and compare worlds at their relative sizes. Planet-size comparisons show relative body sizes, with spacing arranged for viewing.',
-  },
-  {
-    question: 'How does Galaxy Gallery help me learn about space?',
-    answer: 'Explore planet information, listen to optional narrated facts, and follow themed Wonder Journeys. Completing focus missions unlocks additional Wonders about planets, moons, and the universe.',
-  },
-  {
-    question: 'Can I see planets in my room?',
-    answer: 'Yes. AR Quick Look places planets in your surroundings so you can view them through your device. AR requires compatible hardware and camera access.',
-  },
-  {
-    question: 'Do I have to use the focus timer to explore space?',
-    answer: 'You can explore the 3D planets, Solar System, comparisons, and AR directly. Galaxy Focus is an additional way to spend time beside a planet and unlock discoveries through 15-, 25-, or 50-minute missions.',
-  },
-  {
-    question: 'Is Galaxy Gallery free?',
-    answer: 'Galaxy Gallery is free to download and contains ads and optional in-app purchases. Galaxy Plus provides an ad-free experience and unlimited Deep Focus, with monthly and lifetime options. Check the App Store and the app for current pricing and access details.',
-  },
-  {
-    question: 'What does Deep Focus do?',
-    answer: 'Deep Focus uses Apple Screen Time authorization to restrict selected distractions during a focus mission. You can block selected apps or keep essential apps available. Availability depends on device support and authorization. Galaxy Plus includes unlimited Deep Focus.',
-  },
-  {
-    question: 'Which devices does Galaxy Gallery support?',
-    answer: 'Galaxy Gallery supports iPhone with iOS 17 or later and iPad with iPadOS 17 or later. Features such as AR and Deep Focus also depend on device capabilities and the permissions you grant.',
-  },
-];
+export const GALAXY_STORE = 'https://apps.apple.com/app/id1662263674';
+export const galaxyContent = {
+  'en': en,
+  'vi': vi,
+  'ja': ja,
+  'zh-Hant': zhHant,
+  'zh-Hans': zhHans,
+  'ko': ko,
+  'th': th,
+  'id': id,
+  'de': de,
+  'fr': fr,
+  'es': es,
+  'pt-BR': ptBR,
+  'it': it,
+  'pt-PT': ptPT,
+};

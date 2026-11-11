@@ -34,13 +34,14 @@ for (const extension of ['.png', '.jpg', '.JPG', '.webp', '.svg']) require.exten
 const App = require('../src/App.js').default;
 const { professionalPages } = require('../src/Pages/Professional/content.js');
 const { homeProjects: projects } = require('../src/Pages/HomePage/projects.js');
+const { galaxyLocales } = require('../src/Pages/AppIntroduction/GalaxyGallery/locales.js');
 const { volaLocales } = require('../src/Pages/AppIntroduction/Vola/locales.js');
 const { SITE_URL, HOME_TITLE, getMetadata } = require('../src/siteMetadata.js');
 const shell = fs.readFileSync(path.join(build, 'index.html'), 'utf8');
 if (!shell.includes('<div id="root"></div>')) throw new Error('Expected an empty React root in the build template.');
 fs.writeFileSync(path.join(build, 'spa.html'), shell);
 const legacyRoutes = [...fs.readFileSync(path.join(root, 'src/App.js'), 'utf8').matchAll(/path='([^']+)'/g)].map(match => match[1]);
-const routes = [...new Set([...legacyRoutes, ...volaLocales.map(locale => locale.path.replace(/\/$/, '')), ...Object.keys(professionalPages)])];
+const routes = [...new Set([...legacyRoutes, ...galaxyLocales.map(locale => locale.path.replace(/\/$/, '')), ...volaLocales.map(locale => locale.path.replace(/\/$/, '')), ...Object.keys(professionalPages)])];
 // Keep the local-storage tool on a client shell to avoid hydrating saved private data.
 const clientRoutes = ['/cost-tracking'];
 function renderRoute(route, notFound = false) {

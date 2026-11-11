@@ -12,8 +12,8 @@ function Screenshot({ lang, name, alt, hero = false, tablet = false }) {
         width={960} height={tablet ? 1280 : 2086} alt={alt} loading={hero ? 'eager' : 'lazy'} decoding="async" />;
 }
 
-function LanguagePicker({ lang, ui }) {
-    const current = volaLocales.find(locale => locale.code === lang);
+export function LanguagePicker({ lang, ui, locales = volaLocales, className = 'vola-language-picker' }) {
+    const current = locales.find(locale => locale.code === lang);
     const picker = useRef(null);
     useEffect(() => {
         const closeOutside = event => {
@@ -32,12 +32,12 @@ function LanguagePicker({ lang, ui }) {
             document.removeEventListener('keydown', closeOnEscape);
         };
     }, []);
-    return <details className="vola-language-picker" ref={picker} dir="ltr">
+    return <details className={className} ref={picker} dir="ltr">
         <summary aria-label={`${ui.language}: ${current.name}`}>
             <img className="vola-language-flag" src={countryFlagUrl(current.country)} width="24" height="16" decoding="async" alt="" aria-hidden="true" /><span className="vola-language-trigger-name">{current.name}</span><svg className="vola-language-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
         </summary>
         <ul aria-label={ui.choose}>
-            {volaLocales.map(({code, name: label, path, country}) => <li key={code}>
+            {locales.map(({code, name: label, path, country}) => <li key={code}>
                 <Link to={path} lang={code} dir="ltr" hrefLang={code} aria-current={code === lang ? 'page' : undefined} onClick={() => { picker.current.open = false; }}><span className="vola-language-option"><img className="vola-language-flag" src={countryFlagUrl(country)} width="24" height="16" decoding="async" alt="" aria-hidden="true" /><span>{label}</span></span>{code === lang && <span aria-hidden="true">✓</span>}</Link>
             </li>)}
         </ul>

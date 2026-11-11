@@ -1,0 +1,98 @@
+{
+  "title": "Galaxy Gallery : explorer l’espace et le Système solaire",
+  "description": "Explorez les planètes et les lunes en 3D sur iPhone et iPad. Comparez leurs tailles, découvrez l’Univers et placez des planètes chez vous en réalité augmentée.",
+  "heading": "Explorez l’Univers",
+  "lede": "Découvrez les planètes et les lunes en 3D interactive, explorez le Système solaire et apprenez des faits fascinants sur l’espace.",
+  "download": "Télécharger sur l’App Store",
+  "get": "Télécharger",
+  "closer": "Découvrir de plus près",
+  "free": "Téléchargement gratuit avec publicités et achats facultatifs",
+  "skip": "Aller au contenu",
+  "language": "Langue",
+  "choose": "Choisir une langue",
+  "worldsTitle": "Le Système solaire à portée de main",
+  "worldsText": "Approchez les planètes et les lunes. Faites pivoter un monde, zoomez sur sa surface et observez le système Terre-Lune et les orbites planétaires en mouvement.",
+  "details": [
+    [
+      "Regardez de plus près",
+      "Explorez le jour et la nuit sur Terre et observez les planètes sous un nouvel angle."
+    ],
+    [
+      "Des mondes en mouvement",
+      "Suivez la Terre, la Lune et les planètes autour du Soleil."
+    ],
+    [
+      "Suivez votre curiosité",
+      "Consultez les informations sur les planètes et écoutez les récits facultatifs."
+    ]
+  ],
+  "comparisonTitle": "Quelle est la taille de votre monde ?",
+  "comparisonText": "Placez la Terre à côté de Jupiter, de Saturne et des autres planètes pour mieux comprendre les différences de taille dans le Système solaire.",
+  "scaleNote": "Les tailles des planètes sont comparées à échelle relative. Les espacements facilitent la présentation.",
+  "discoveryTitle": "Une découverte en appelle une autre",
+  "discoveryText": "Suivez des voyages thématiques, de la Terre et des mondes voisins aux missions humaines et à l’espace lointain. Découvrez les planètes, les lunes et l’Univers, puis retrouvez vos découvertes préférées.",
+  "discoveryMore": "Terminez des missions de concentration facultatives pour débloquer d’autres découvertes et enrichir votre collection.",
+  "arTitle": "Une planète dans votre pièce",
+  "arText": "Placez un monde autour de vous avec AR Quick Look. Déplacez-vous pour l’observer et transformez une pièce familière en lieu d’exploration spatiale.",
+  "arNote": "Nécessite un appareil compatible et l’accès à la caméra.",
+  "focusTitle": "Prenez le temps de découvrir",
+  "focusText": "Concentrez-vous à côté d’une planète animée pendant 15, 25 ou 50 minutes. Fixez un objectif, terminez la séance et découvrez un nouveau fait sur l’espace.",
+  "focusMore": "Consultez vos progrès et vos découvertes. Deep Focus peut limiter les distractions choisies pendant une mission avec l’autorisation Temps d’écran sur les appareils compatibles.",
+  "pricingTitle": "Commencez l’exploration",
+  "pricingText": "Galaxy Gallery se télécharge gratuitement, avec publicités et achats facultatifs. Galaxy Plus supprime les publicités et offre Deep Focus illimité, avec des formules mensuelle et à vie.",
+  "pricingNote": "Consultez l’app et l’App Store pour les tarifs et les conditions d’accès actuels.",
+  "faqTitle": "Avant le décollage",
+  "faqs": [
+    {
+      "question": "Qu’est-ce que Galaxy Gallery ?",
+      "answer": "Une app de découverte et d’apprentissage de l’espace sur iPhone et iPad, avec planètes 3D, orbites, comparaisons, faits et missions de concentration facultatives."
+    },
+    {
+      "question": "Puis-je explorer le Système solaire en 3D ?",
+      "answer": "Oui. Faites pivoter les planètes, zoomez, explorez le système Terre-Lune et comparez les tailles relatives. Les espacements sont adaptés à la présentation."
+    },
+    {
+      "question": "Comment apprendre sur l’espace ?",
+      "answer": "Lisez les informations, écoutez les récits facultatifs et suivez des voyages thématiques. Les missions de concentration débloquent des faits supplémentaires."
+    },
+    {
+      "question": "Puis-je voir une planète dans ma pièce ?",
+      "answer": "Oui, avec AR Quick Look sur un appareil compatible et avec l’accès à la caméra."
+    },
+    {
+      "question": "Le minuteur est-il obligatoire ?",
+      "answer": "Les planètes, le Système solaire, les comparaisons et la réalité augmentée sont accessibles directement. Galaxy Focus ajoute des missions de 15, 25 ou 50 minutes."
+    },
+    {
+      "question": "Galaxy Gallery est-elle gratuite ?",
+      "answer": "Le téléchargement est gratuit avec publicités et achats facultatifs. Galaxy Plus propose une formule mensuelle ou à vie pour supprimer les publicités et utiliser Deep Focus sans limite. Voir les tarifs dans l’app."
+    },
+    {
+      "question": "À quoi sert Deep Focus ?",
+      "answer": "Avec l’autorisation Temps d’écran d’Apple, bloquez les apps choisies ou gardez uniquement les apps essentielles. La disponibilité dépend de l’appareil et des autorisations."
+    },
+    {
+      "question": "Quels appareils sont compatibles ?",
+      "answer": "iPhone sous iOS 17 ou version ultérieure et iPad sous iPadOS 17 ou version ultérieure. La réalité augmentée et Deep Focus dépendent aussi des capacités et autorisations."
+    }
+  ],
+  "closingTitle": "Votre prochaine découverte vous attend",
+  "closingText": "Choisissez une planète et laissez-vous guider par votre curiosité.",
+  "qrHook": "Un univers à explorer",
+  "qrAlt": "Code QR vers Galaxy Gallery sur l’App Store",
+  "madeBy": "Créé par James Thang",
+  "privacy": "Confidentialité",
+  "support": "Assistance",
+  "alts": {
+    "tablet": "Système solaire et orbites sur iPad",
+    "phone": "Terre en 3D interactive avec effets sur iPhone",
+    "orbits": "Soleil, planètes et orbites dans Galaxy Gallery",
+    "comparison": "Comparaison des tailles de la Terre, Jupiter, Saturne, Uranus et Neptune",
+    "journeys": "Voyages thématiques dans l’espace sur iPad",
+    "facts": "Découverte sur les océans de la Terre après une mission",
+    "ar": "Capture AR réelle de la Terre dans une pièce sur iPhone",
+    "focus": "Compte à rebours Galaxy Focus près de la Terre sur iPhone"
+  },
+  "home": "James Thang",
+  "requirements": "iPhone · iPad · iOS / iPadOS 17+"
+}

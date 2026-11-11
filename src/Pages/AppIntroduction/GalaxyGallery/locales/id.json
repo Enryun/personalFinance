@@ -1,0 +1,98 @@
+{
+  "title": "Galaxy Gallery: jelajahi antariksa dan Tata Surya",
+  "description": "Jelajahi planet dan bulan dalam 3D di iPhone dan iPad. Bandingkan ukuran, pelajari fakta antariksa, dan hadirkan planet di ruangan Anda dengan AR.",
+  "heading": "Jelajahi alam semesta",
+  "lede": "Temukan planet dan bulan dalam 3D interaktif, jelajahi Tata Surya, dan pelajari fakta menarik tentang antariksa.",
+  "download": "Unduh di App Store",
+  "get": "Unduh aplikasi",
+  "closer": "Lihat lebih dekat",
+  "free": "Unduhan gratis dengan iklan dan pembelian opsional",
+  "skip": "Langsung ke konten",
+  "language": "Bahasa",
+  "choose": "Pilih bahasa",
+  "worldsTitle": "Tata Surya dalam jangkauan",
+  "worldsText": "Dekati planet dan bulan. Putar sebuah dunia, perbesar permukaannya, dan amati gerakan sistem Bumi–Bulan serta orbit planet.",
+  "details": [
+    [
+      "Amati lebih dekat",
+      "Jelajahi siang dan malam di Bumi dan lihat planet dari sudut baru."
+    ],
+    [
+      "Dunia yang bergerak",
+      "Ikuti Bumi, Bulan, dan planet yang mengorbit Matahari."
+    ],
+    [
+      "Ikuti rasa ingin tahu",
+      "Buka informasi planet dan dengarkan narasi opsional saat menjelajah."
+    ]
+  ],
+  "comparisonTitle": "Seberapa besar dunia Anda?",
+  "comparisonText": "Letakkan Bumi di samping Jupiter, Saturnus, dan planet lain. Perbandingan ukuran relatif membantu memahami skala Tata Surya.",
+  "scaleNote": "Ukuran planet dibandingkan dalam skala relatif. Jarak diatur agar mudah dilihat.",
+  "discoveryTitle": "Satu penemuan menuju penemuan berikutnya",
+  "discoveryText": "Ikuti perjalanan bertema dari Bumi dan dunia terdekat hingga misi manusia dan antariksa jauh. Pelajari planet, bulan, dan alam semesta, lalu kembali ke penemuan yang menarik perhatian Anda.",
+  "discoveryMore": "Selesaikan misi fokus opsional untuk membuka fakta baru dan menambah koleksi penemuan Anda.",
+  "arTitle": "Hadirkan planet di ruangan Anda",
+  "arText": "Tempatkan sebuah dunia di sekitar Anda dengan AR Quick Look. Bergeraklah untuk mengamatinya dan ubah ruangan yang akrab menjadi tempat menjelajah antariksa.",
+  "arNote": "Memerlukan perangkat yang kompatibel dan akses kamera.",
+  "focusTitle": "Luangkan waktu untuk menemukan",
+  "focusText": "Fokus di samping planet yang hidup selama 15, 25, atau 50 menit. Tetapkan tujuan, selesaikan sesi, dan temukan fakta antariksa baru.",
+  "focusMore": "Tinjau kemajuan dan penemuan Anda. Deep Focus dapat membatasi gangguan pilihan selama misi dengan izin Durasi Layar pada perangkat yang didukung.",
+  "pricingTitle": "Mulai menjelajah",
+  "pricingText": "Galaxy Gallery gratis diunduh dengan iklan dan pembelian opsional. Galaxy Plus memberikan pengalaman tanpa iklan dan Deep Focus tanpa batas, dengan pilihan bulanan dan seumur hidup.",
+  "pricingNote": "Lihat aplikasi dan App Store untuk harga serta ketentuan akses terbaru.",
+  "faqTitle": "Sebelum berangkat",
+  "faqs": [
+    {
+      "question": "Apa itu Galaxy Gallery?",
+      "answer": "Aplikasi eksplorasi dan pembelajaran antariksa untuk iPhone dan iPad dengan planet 3D, orbit, perbandingan ukuran, fakta, dan misi fokus opsional."
+    },
+    {
+      "question": "Bisakah saya menjelajahi Tata Surya dalam 3D?",
+      "answer": "Ya. Putar dan perbesar planet, jelajahi sistem Bumi–Bulan, serta bandingkan ukuran relatif. Jarak diatur agar mudah diamati."
+    },
+    {
+      "question": "Bagaimana cara belajar tentang antariksa?",
+      "answer": "Baca informasi planet, dengarkan narasi opsional, dan ikuti perjalanan bertema. Misi fokus membuka fakta tambahan."
+    },
+    {
+      "question": "Bisakah saya melihat planet di ruangan saya?",
+      "answer": "Ya, dengan AR Quick Look pada perangkat yang kompatibel dan dengan izin kamera."
+    },
+    {
+      "question": "Apakah saya harus memakai pengatur waktu fokus?",
+      "answer": "Planet, Tata Surya, perbandingan, dan AR dapat dijelajahi langsung. Galaxy Focus menambahkan misi 15, 25, atau 50 menit."
+    },
+    {
+      "question": "Apakah Galaxy Gallery gratis?",
+      "answer": "Unduh gratis dengan iklan dan pembelian opsional. Galaxy Plus memiliki pilihan bulanan dan seumur hidup untuk menghapus iklan serta menggunakan Deep Focus tanpa batas. Harga tersedia di aplikasi."
+    },
+    {
+      "question": "Apa fungsi Deep Focus?",
+      "answer": "Dengan izin Durasi Layar Apple, batasi aplikasi yang dipilih atau izinkan hanya aplikasi penting. Ketersediaan bergantung pada perangkat dan izin."
+    },
+    {
+      "question": "Perangkat apa yang didukung?",
+      "answer": "iPhone dengan iOS 17 atau lebih baru dan iPad dengan iPadOS 17 atau lebih baru. AR dan Deep Focus juga bergantung pada kemampuan serta izin perangkat."
+    }
+  ],
+  "closingTitle": "Penemuan berikutnya menanti Anda",
+  "closingText": "Pilih sebuah planet dan ikuti rasa ingin tahu Anda.",
+  "qrHook": "Alam semesta menanti",
+  "qrAlt": "Kode QR Galaxy Gallery di App Store",
+  "madeBy": "Dibuat oleh James Thang",
+  "privacy": "Privasi",
+  "support": "Bantuan",
+  "alts": {
+    "tablet": "Tata Surya dan orbit planet di iPad",
+    "phone": "Bumi 3D interaktif dengan efek di iPhone",
+    "orbits": "Matahari, planet, dan orbit di Galaxy Gallery",
+    "comparison": "Perbandingan ukuran Bumi, Jupiter, Saturnus, Uranus, dan Neptunus",
+    "journeys": "Perjalanan bertema antariksa di iPad",
+    "facts": "Fakta tentang samudra Bumi yang terbuka setelah misi",
+    "ar": "Tangkapan AR nyata Bumi di dalam ruangan pada iPhone",
+    "focus": "Hitung mundur Galaxy Focus di samping Bumi pada iPhone"
+  },
+  "home": "James Thang",
+  "requirements": "iPhone · iPad · iOS / iPadOS 17+"
+}

@@ -1,4 +1,5 @@
-import { GALAXY_STORE, GALAXY_TITLE, GALAXY_DESCRIPTION } from './Pages/AppIntroduction/GalaxyGallery/content';
+import { galaxyLocales, getGalaxyLocale } from './Pages/AppIntroduction/GalaxyGallery/locales';
+import { GALAXY_STORE, galaxyContent } from './Pages/AppIntroduction/GalaxyGallery/content';
 import { OANQUAN_STORE, getOAnQuanLanguage, getOAnQuanPath, isOAnQuanPath } from './Pages/AppIntroduction/OAnQuan/locales';
 import { FOLIO_STORE, FOLIO_TITLE, FOLIO_DESCRIPTION } from './Pages/AppIntroduction/Folio/content';
 import { volaLocales, getVolaLocale } from './Pages/AppIntroduction/Vola/locales';
@@ -70,22 +71,25 @@ export function getMetadata(pathname, search = '') {
       }] }
     };
   }
-  if (pathname === '/galaxy-gallery') {
-    const url = `${SITE_URL}/galaxy-gallery/`;
-    const image = `${SITE_URL}/galaxy-gallery/social-card.png`;
+  const galaxyLocale = getGalaxyLocale(pathname);
+  if (galaxyLocale) {
+    const language = galaxyLocale.code;
+    const copy = galaxyContent[language];
+    const url = `${SITE_URL}${galaxyLocale.path}`;
+    const image = language === 'en' ? `${SITE_URL}/galaxy-gallery/social-card.png` : `${SITE_URL}/galaxy-gallery/${language}/social-card.png`;
     return {
-      title: GALAXY_TITLE, description: GALAXY_DESCRIPTION, url, language: 'en', direction: 'ltr',
-      image, imageAlt: 'Galaxy Gallery — explore space and the Solar System on iPhone and iPad', alternates: [],
+      title: copy.title, description: copy.description, url, language, direction: 'ltr',
+      image, imageAlt: copy.title, alternates: [...galaxyLocales.map(locale => ({ lang: locale.code, href: `${SITE_URL}${locale.path}` })), { lang: 'x-default', href: `${SITE_URL}/galaxy-gallery/` }],
       schema: { '@context': 'https://schema.org', '@graph': [person, {
-        '@type': 'SoftwareApplication', '@id': `${url}#app`, name: 'Galaxy Gallery: Space & Focus',
-        url, description: GALAXY_DESCRIPTION, image,
+        '@type': 'SoftwareApplication', '@id': `${SITE_URL}/galaxy-gallery/#app`, name: 'Galaxy Gallery: Space & Focus',
+        url, description: copy.description, image,
         inLanguage: ['en', 'vi', 'ja', 'zh-Hant', 'zh-Hans', 'ko', 'th', 'id', 'de', 'fr', 'es', 'pt-BR', 'it', 'pt-PT'],
         operatingSystem: 'iOS 17 or later, iPadOS 17 or later', applicationCategory: 'ProductivityApplication',
         applicationSubCategory: 'Space exploration and astronomy education',
         author: { '@id': person['@id'] }, downloadUrl: GALAXY_STORE, sameAs: [GALAXY_STORE],
-        featureList: ['Interactive 3D planets and moons', 'Solar System and Earth–Moon orbits', 'Relative planet-size comparisons', 'AR Quick Look', 'Space facts and Wonder Journeys', 'Optional Galaxy Focus missions'],
+        featureList: [copy.worldsTitle, copy.comparisonTitle, copy.discoveryTitle, copy.arTitle, copy.focusTitle],
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', url: GALAXY_STORE,
-          description: 'Free download with ads and optional in-app purchases. Galaxy Plus offers monthly and lifetime options.' }
+          description: copy.pricingText }
       }] }
     };
   }

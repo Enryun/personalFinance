@@ -234,7 +234,7 @@ it('identifies Galaxy Gallery consistently across its metadata, download links, 
   expect(document.documentElement.dir).toBe('ltr');
   expect(document.querySelector('link[rel="canonical"]').href).toBe(`${SITE_URL}/galaxy-gallery/`);
   expect(document.querySelector('meta[property="og:image"]').content).toBe(`${SITE_URL}/galaxy-gallery/social-card.png`);
-  expect(document.querySelector('link[hreflang]')).toBeNull();
+  expect(document.querySelectorAll('link[hreflang]')).toHaveLength(15);
   const graph = JSON.parse(document.getElementById('page-schema').textContent)['@graph'];
   const app = graph.find(entity => entity['@type'] === 'SoftwareApplication');
   expect(app.name).toBe('Galaxy Gallery: Space & Focus');
@@ -249,4 +249,29 @@ it('identifies Galaxy Gallery consistently across its metadata, download links, 
   expect(container.querySelector('#explore').compareDocumentPosition(container.querySelector('.galaxy-focus')) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
   act(() => history.push('/'));
   expect(document.querySelector('meta[property="og:image"]').content).not.toContain('/galaxy-gallery/');
+});
+
+it('switches Galaxy Gallery languages through the flag picker and clears its locale metadata when leaving', () => {
+  const history = createMemoryHistory({ initialEntries: ['/galaxy-gallery/'] });
+  act(() => { ReactDOM.render(<Router history={history}><App /></Router>, container); });
+  const picker = container.querySelector('.galaxy-language-picker');
+  picker.open = true;
+  act(() => { Simulate.click(picker.querySelector('a[hreflang="vi"]'), { button: 0 }); });
+  expect(picker.open).toBe(false);
+  expect(history.location.pathname).toBe('/vi/galaxy-gallery/');
+  expect(document.documentElement.lang).toBe('vi');
+  expect(container.querySelector('h1').textContent).toBe('Khám phá vũ trụ');
+  expect(document.querySelector('meta[property="og:image"]').content).toBe(`${SITE_URL}/galaxy-gallery/vi/social-card.png`);
+  expect(container.querySelectorAll('footer')).toHaveLength(1);
+  const switchedPicker = container.querySelector('.galaxy-language-picker');
+  switchedPicker.open = true;
+  document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+  expect(switchedPicker.open).toBe(false);
+  expect(document.activeElement).toBe(switchedPicker.querySelector('summary'));
+  switchedPicker.open = true;
+  document.body.dispatchEvent(new Event('pointerdown', { bubbles: true }));
+  expect(switchedPicker.open).toBe(false);
+  act(() => history.push('/folio/'));
+  expect(document.documentElement.lang).toBe('en');
+  expect(document.querySelector('link[hreflang]')).toBeNull();
 });

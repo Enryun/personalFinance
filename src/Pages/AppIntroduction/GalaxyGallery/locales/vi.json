@@ -1,0 +1,98 @@
+{
+  "title": "Galaxy Gallery: Khám phá vũ trụ và Hệ Mặt Trời",
+  "description": "Khám phá các hành tinh và vệ tinh bằng 3D trên iPhone, iPad. So sánh kích thước, tìm hiểu kiến thức vũ trụ và đưa hành tinh vào căn phòng bằng AR.",
+  "heading": "Khám phá vũ trụ",
+  "lede": "Khám phá hành tinh và vệ tinh bằng 3D tương tác, tìm hiểu Hệ Mặt Trời và những điều thú vị về không gian.",
+  "download": "Tải trên App Store",
+  "get": "Tải ứng dụng",
+  "closer": "Khám phá ngay",
+  "free": "Tải miễn phí, có quảng cáo và mua tùy chọn",
+  "skip": "Đến nội dung",
+  "language": "Ngôn ngữ",
+  "choose": "Chọn ngôn ngữ",
+  "worldsTitle": "Hệ Mặt Trời trong tầm tay",
+  "worldsText": "Đến gần các hành tinh và vệ tinh. Xoay để quan sát, phóng to bề mặt và theo dõi chuyển động của hệ Trái Đất–Mặt Trăng cùng quỹ đạo các hành tinh.",
+  "details": [
+    [
+      "Quan sát gần hơn",
+      "Khám phá ngày và đêm trên Trái Đất, xoay hành tinh và nhìn từ một góc mới."
+    ],
+    [
+      "Theo dõi chuyển động",
+      "Quan sát Trái Đất, Mặt Trăng và các hành tinh chuyển động quanh Mặt Trời."
+    ],
+    [
+      "Tìm hiểu điều bạn tò mò",
+      "Mở thông tin hành tinh và nghe thuyết minh tùy chọn trong lúc khám phá."
+    ]
+  ],
+  "comparisonTitle": "Hành tinh của bạn lớn đến đâu?",
+  "comparisonText": "Đặt Trái Đất cạnh Sao Mộc, Sao Thổ và các hành tinh khác để dễ hình dung sự khác biệt về kích thước trong Hệ Mặt Trời.",
+  "scaleNote": "Kích thước hành tinh được so sánh theo tỷ lệ tương đối. Khoảng cách được bố trí để dễ quan sát.",
+  "discoveryTitle": "Mỗi khám phá mở ra điều mới",
+  "discoveryText": "Theo các hành trình khám phá theo chủ đề, từ Trái Đất và những thế giới lân cận đến các sứ mệnh của con người và không gian sâu. Tìm hiểu hành tinh, vệ tinh và vũ trụ, rồi trở lại những điều khiến bạn thích thú.",
+  "discoveryMore": "Hoàn thành nhiệm vụ tập trung tùy chọn để mở thêm kiến thức và làm phong phú bộ sưu tập khám phá.",
+  "arTitle": "Đưa hành tinh vào căn phòng",
+  "arText": "Dùng AR Quick Look để đặt một thế giới vào không gian quanh bạn. Di chuyển để quan sát và biến căn phòng quen thuộc thành nơi khám phá vũ trụ.",
+  "arNote": "Cần thiết bị tương thích và quyền truy cập camera.",
+  "focusTitle": "Dành thời gian cho khám phá",
+  "focusText": "Tập trung bên một hành tinh sống động trong 15, 25 hoặc 50 phút. Đặt mục tiêu, hoàn thành phiên và mở một kiến thức vũ trụ mới.",
+  "focusMore": "Xem lại tiến độ và các khám phá theo thời gian. Deep Focus có thể hạn chế những yếu tố gây xao nhãng bạn chọn, với quyền Thời gian sử dụng trên thiết bị hỗ trợ.",
+  "pricingTitle": "Bắt đầu khám phá",
+  "pricingText": "Galaxy Gallery được tải miễn phí, có quảng cáo và mua tùy chọn. Galaxy Plus cung cấp trải nghiệm không quảng cáo và Deep Focus không giới hạn, với lựa chọn hằng tháng hoặc trọn đời.",
+  "pricingNote": "Xem giá và quyền truy cập hiện tại trong ứng dụng và trên App Store.",
+  "faqTitle": "Trước khi bắt đầu hành trình",
+  "faqs": [
+    {
+      "question": "Galaxy Gallery là gì?",
+      "answer": "Ứng dụng khám phá và tìm hiểu vũ trụ trên iPhone, iPad, với hành tinh 3D, quỹ đạo, so sánh kích thước, kiến thức và nhiệm vụ tập trung tùy chọn."
+    },
+    {
+      "question": "Có thể khám phá Hệ Mặt Trời bằng 3D không?",
+      "answer": "Có. Bạn có thể xoay, phóng to hành tinh, quan sát hệ Trái Đất–Mặt Trăng và so sánh kích thước tương đối. Khoảng cách được bố trí để dễ nhìn."
+    },
+    {
+      "question": "Ứng dụng giúp học về vũ trụ như thế nào?",
+      "answer": "Đọc thông tin hành tinh, nghe thuyết minh tùy chọn và theo các hành trình theo chủ đề. Hoàn thành nhiệm vụ tập trung để mở thêm kiến thức."
+    },
+    {
+      "question": "Có thể xem hành tinh trong phòng không?",
+      "answer": "Có. AR Quick Look đặt hành tinh vào không gian quanh bạn. Cần phần cứng tương thích và quyền camera."
+    },
+    {
+      "question": "Có bắt buộc dùng bộ đếm tập trung không?",
+      "answer": "Bạn có thể trực tiếp khám phá hành tinh, Hệ Mặt Trời, so sánh và AR. Galaxy Focus bổ sung các nhiệm vụ 15, 25 hoặc 50 phút để mở khám phá."
+    },
+    {
+      "question": "Galaxy Gallery có miễn phí không?",
+      "answer": "Tải miễn phí, có quảng cáo và mua tùy chọn. Galaxy Plus có lựa chọn hằng tháng và trọn đời, với trải nghiệm không quảng cáo và Deep Focus không giới hạn. Xem giá trong ứng dụng."
+    },
+    {
+      "question": "Deep Focus làm gì?",
+      "answer": "Dùng quyền Thời gian sử dụng của Apple để chặn ứng dụng đã chọn hoặc chỉ cho phép ứng dụng cần thiết trong nhiệm vụ. Tính khả dụng tùy thiết bị và quyền cấp."
+    },
+    {
+      "question": "Ứng dụng hỗ trợ thiết bị nào?",
+      "answer": "iPhone với iOS 17 trở lên và iPad với iPadOS 17 trở lên. AR và Deep Focus phụ thuộc khả năng thiết bị và quyền bạn cấp."
+    }
+  ],
+  "closingTitle": "Khám phá tiếp theo đang chờ bạn",
+  "closingText": "Chọn một hành tinh. Để sự tò mò dẫn lối.",
+  "qrHook": "Cả vũ trụ để khám phá",
+  "qrAlt": "Mã QR mở Galaxy Gallery trên App Store",
+  "madeBy": "Phát triển bởi James Thang",
+  "privacy": "Quyền riêng tư",
+  "support": "Hỗ trợ",
+  "alts": {
+    "tablet": "Hệ Mặt Trời và quỹ đạo hành tinh trên iPad",
+    "phone": "Trái Đất 3D tương tác với hiệu ứng trên iPhone",
+    "orbits": "Mặt Trời, các hành tinh và quỹ đạo trong Galaxy Gallery",
+    "comparison": "So sánh kích thước Trái Đất, Sao Mộc, Sao Thổ, Sao Thiên Vương và Sao Hải Vương",
+    "journeys": "Các hành trình tìm hiểu vũ trụ trên iPad",
+    "facts": "Kiến thức về đại dương Trái Đất được mở sau nhiệm vụ trên iPhone",
+    "ar": "Ảnh AR thực tế đặt Trái Đất trong căn phòng trên iPhone",
+    "focus": "Đếm ngược phiên Galaxy Focus bên Trái Đất trên iPhone"
+  },
+  "home": "James Thang",
+  "requirements": "iPhone · iPad · iOS / iPadOS 17+"
+}

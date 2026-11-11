@@ -1,0 +1,98 @@
+{
+  "title": "Galaxy Gallery: Explore Space & the Solar System",
+  "description": "Explore planets and moons in interactive 3D on iPhone and iPad. Compare planet sizes, discover space facts, and bring the Solar System into your room with AR.",
+  "heading": "Explore the universe",
+  "lede": "Discover planets and moons in interactive 3D, explore the Solar System, and learn fascinating facts about space.",
+  "download": "Download on the App Store",
+  "get": "Get the app",
+  "closer": "Take a closer look",
+  "requirements": "For iPhone and iPad · iOS / iPadOS 17+",
+  "free": "Free download with ads and optional purchases",
+  "skip": "Skip to content",
+  "home": "James Thang home",
+  "language": "Language",
+  "choose": "Choose a language",
+  "worldsTitle": "The Solar System, within reach",
+  "worldsText": "Get closer to planets and moons. Rotate a world, zoom in on its surface, and watch the Earth–Moon system and planetary orbits in motion.",
+  "details": [
+    [
+      "Look closer",
+      "Explore day and night on Earth, turn a planet around, and inspect it from a new angle."
+    ],
+    [
+      "See worlds in motion",
+      "Follow the Earth and Moon, then explore how the planets move around the Sun."
+    ],
+    [
+      "Follow your curiosity",
+      "Open planet information and hear optional narrated facts as you explore."
+    ]
+  ],
+  "comparisonTitle": "How big is your world?",
+  "comparisonText": "Put Earth beside Jupiter, Saturn, and the other planets. Comparing their relative sizes makes the scale of the Solar System easier to grasp.",
+  "scaleNote": "Planet sizes are compared at relative scale. Spacing is arranged for viewing.",
+  "discoveryTitle": "One discovery leads to another",
+  "discoveryText": "Follow themed Wonder Journeys, from Earth and nearby worlds to humanity’s missions and deep space. Discover facts about planets, moons, and the universe, then return to the ideas that caught your attention.",
+  "discoveryMore": "Complete optional focus missions to unlock more Wonders and grow your collection of discoveries.",
+  "arTitle": "Bring a planet into your room",
+  "arText": "Place a world in your surroundings with AR Quick Look. Move around it and see a familiar room become a place to explore space.",
+  "arNote": "Requires a compatible device and camera access.",
+  "focusTitle": "Make time for discovery",
+  "focusText": "Settle beside a living planet for a 15-, 25-, or 50-minute focus mission. Set an intention, complete your session, and uncover a new space fact.",
+  "focusMore": "Review your progress and follow your discoveries over time. Deep Focus can restrict chosen distractions during a mission, with Screen Time authorization on supported devices.",
+  "pricingTitle": "Start exploring",
+  "pricingText": "Galaxy Gallery is free to download, with ads and optional purchases. Galaxy Plus adds an ad-free experience and unlimited Deep Focus, with monthly and lifetime options.",
+  "pricingNote": "See the App Store and the app for current pricing and access details.",
+  "faqTitle": "Before you lift off",
+  "faqs": [
+    {
+      "question": "What is Galaxy Gallery?",
+      "answer": "Galaxy Gallery is a space exploration and learning app for iPhone and iPad. Explore planets and moons in interactive 3D, watch Solar System orbits, compare planet sizes, and discover facts about the universe. It also includes optional space-themed focus missions."
+    },
+    {
+      "question": "Can I explore the Solar System in 3D?",
+      "answer": "Yes. Rotate and zoom in on planets, explore the Earth–Moon system, watch planetary orbits, and compare worlds at their relative sizes. Planet-size comparisons show relative body sizes, with spacing arranged for viewing."
+    },
+    {
+      "question": "How does Galaxy Gallery help me learn about space?",
+      "answer": "Explore planet information, listen to optional narrated facts, and follow themed Wonder Journeys. Completing focus missions unlocks additional Wonders about planets, moons, and the universe."
+    },
+    {
+      "question": "Can I see planets in my room?",
+      "answer": "Yes. AR Quick Look places planets in your surroundings so you can view them through your device. AR requires compatible hardware and camera access."
+    },
+    {
+      "question": "Do I have to use the focus timer to explore space?",
+      "answer": "You can explore the 3D planets, Solar System, comparisons, and AR directly. Galaxy Focus is an additional way to spend time beside a planet and unlock discoveries through 15-, 25-, or 50-minute missions."
+    },
+    {
+      "question": "Is Galaxy Gallery free?",
+      "answer": "Galaxy Gallery is free to download and contains ads and optional in-app purchases. Galaxy Plus provides an ad-free experience and unlimited Deep Focus, with monthly and lifetime options. Check the App Store and the app for current pricing and access details."
+    },
+    {
+      "question": "What does Deep Focus do?",
+      "answer": "Deep Focus uses Apple Screen Time authorization to restrict selected distractions during a focus mission. You can block selected apps or keep essential apps available. Availability depends on device support and authorization. Galaxy Plus includes unlimited Deep Focus."
+    },
+    {
+      "question": "Which devices does Galaxy Gallery support?",
+      "answer": "Galaxy Gallery supports iPhone with iOS 17 or later and iPad with iPadOS 17 or later. Features such as AR and Deep Focus also depend on device capabilities and the permissions you grant."
+    }
+  ],
+  "closingTitle": "Your next discovery awaits",
+  "closingText": "Choose a planet. See where your curiosity takes you.",
+  "qrHook": "A universe to explore",
+  "qrAlt": "QR code linking to Galaxy Gallery on the App Store",
+  "madeBy": "Made by James Thang",
+  "privacy": "Privacy policy",
+  "support": "Support",
+  "alts": {
+    "tablet": "Galaxy Gallery Solar System with planetary orbits on iPad",
+    "phone": "Interactive 3D Earth with planet effects in Galaxy Gallery on iPhone",
+    "orbits": "Galaxy Gallery’s 3D Solar System view with the Sun, planets, and their orbital paths",
+    "comparison": "Relative planet-size comparison showing Earth beside Jupiter, Saturn, Uranus, and Neptune",
+    "journeys": "Wonder Journeys on iPad with themes about Earth, other worlds, space missions, and deep space",
+    "facts": "A Galaxy Gallery Wonder about Earth’s oceans unlocked after a focus mission on iPhone",
+    "ar": "Real iPhone AR capture showing Earth placed inside a room with Galaxy Gallery",
+    "focus": "Galaxy Focus session counting down beside a rotating Earth on iPhone"
+  }
+}
