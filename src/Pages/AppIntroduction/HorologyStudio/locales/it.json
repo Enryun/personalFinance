@@ -1,0 +1,133 @@
+{
+  "download": "Scarica su App Store",
+  "get": "Scarica l’app",
+  "skip": "Vai al contenuto",
+  "home": "James Thang",
+  "language": "Lingua",
+  "choose": "Scegli una lingua",
+  "madeBy": "Creato da James Thang",
+  "privacy": "Privacy",
+  "support": "Assistenza",
+  "title": "Horology Studio: orologi 3D e widget per iPhone",
+  "description": "Crea il tuo orologio meccanico 3D su iPhone. Personalizza e salva i design, aggiungi widget analogici e mondiali e usa sveglie e timer.",
+  "closer": "Esplora la collezione",
+  "free": "Download gratuito · Acquisti una tantum facoltativi di orologi",
+  "pricingTitle": "Inizia la tua collezione",
+  "pricingText": "Horology Studio è gratuita da scaricare. Altri modelli e la collezione completa sono disponibili tramite acquisti in-app facoltativi una tantum.",
+  "pricingNote": "Consulta prezzi e modelli inclusi nell’app e su App Store.",
+  "faqTitle": "Domande su Horology Studio",
+  "heading": "Il tuo orologio meccanico",
+  "lede": "Porta una collezione di orologi tutta tua sul tuo iPhone. Esplora segnatempo meccanici in 3D, personalizzane i dettagli e ritrova i tuoi preferiti nei widget della schermata Home.",
+  "alarmsNote": "Le sveglie e il conto alla rovescia richiedono iOS 26 o versioni successive.",
+  "localNote": "Non serve un account. I design salvati e le impostazioni delle sveglie restano sul dispositivo. Altri modelli di orologio sono disponibili tramite acquisti in-app.",
+  "closingText": "Scegli un orologio, rendilo tuo e goditelo ogni giorno.",
+  "qrHook": "Il tuo orologio meccanico",
+  "headlines": [
+    "Il tuo orologio meccanico",
+    "Ogni dettaglio come piace a te",
+    "Il tuo orologio a colpo d’occhio",
+    "Trova l’orologio che fa per te",
+    "Da ogni angolazione",
+    "Scopri il suo meccanismo",
+    "L’ora nel mondo a colpo d’occhio",
+    "Imposta le sveglie con stile",
+    "Conto alla rovescia sul tuo orologio",
+    "Condividi la tua creazione"
+  ],
+  "scenes": [
+    {
+      "title": "Trova l’orologio che fa per te",
+      "text": [
+        "Scopri orologi originali con forme, materiali e complicazioni diversi: modelli a cuore aperto, cronografi, calendari e indicazioni astronomiche.",
+        "Ruota l’orologio in 3D per osservare il quadrante, la cassa e il fondello.",
+        "Goditi una vista a tutto schermo che mette il tuo segnatempo al centro."
+      ],
+      "shots": [
+        "04",
+        "05"
+      ]
+    },
+    {
+      "title": "Ogni dettaglio come piace a te",
+      "text": [
+        "Scegli quadranti, lancette, casse, cinturini, materiali e finiture.",
+        "Personalizza la disposizione del movimento, il datario e i dettagli del fondello con le opzioni disponibili per ciascun modello.",
+        "Salva più design per ogni orologio e passa da un preferito all’altro.",
+        "Condividi un’immagine della tua creazione con un messaggio e una firma personale."
+      ],
+      "shots": [
+        "02",
+        "10"
+      ]
+    },
+    {
+      "title": "Il tuo orologio a colpo d’occhio",
+      "text": [
+        "Aggiungi un widget piccolo con il design dell’orologio che hai scelto.",
+        "Assegna a ogni widget piccolo un design salvato diverso."
+      ],
+      "shots": [
+        "03"
+      ]
+    },
+    {
+      "title": "L’ora nel mondo a colpo d’occhio",
+      "text": [
+        "Configura un widget Ora mondiale con quattro orologi e scegli città o fusi orari indipendenti per ciascuno."
+      ],
+      "shots": [
+        "07"
+      ]
+    },
+    {
+      "title": "Scopri il suo meccanismo",
+      "text": [
+        "Carica il movimento, regola l’ora con la corona o sincronizza l’orologio con il dispositivo."
+      ],
+      "shots": [
+        "06"
+      ]
+    },
+    {
+      "title": "Imposta le sveglie con stile",
+      "text": [
+        "Imposta sveglie singole o settimanali, con la possibilità di rimandare la suoneria.",
+        "Avvia un conto alla rovescia che mantiene il design del tuo orologio."
+      ],
+      "shots": [
+        "08",
+        "09"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Quali dispositivi e versioni di iOS sono supportati?",
+      "answer": "iPhone · iOS 18+. Le sveglie e il conto alla rovescia richiedono iOS 26 o versioni successive."
+    },
+    {
+      "question": "Posso salvare più design per un orologio?",
+      "answer": "Salva più design per ogni orologio e passa da un preferito all’altro."
+    },
+    {
+      "question": "Ogni widget può mostrare un design diverso?",
+      "answer": "Aggiungi un widget piccolo con il design dell’orologio che hai scelto. Assegna a ogni widget piccolo un design salvato diverso."
+    },
+    {
+      "question": "Posso vedere più fusi orari contemporaneamente?",
+      "answer": "Configura un widget Ora mondiale con quattro orologi e scegli città o fusi orari indipendenti per ciascuno."
+    },
+    {
+      "question": "Quando posso usare sveglie e timer?",
+      "answer": "Le sveglie e il conto alla rovescia richiedono iOS 26 o versioni successive."
+    },
+    {
+      "question": "Horology Studio è gratuita?",
+      "answer": "Horology Studio è gratuita da scaricare. Altri modelli e la collezione completa sono disponibili tramite acquisti in-app facoltativi una tantum."
+    },
+    {
+      "question": "Serve un account?",
+      "answer": "Non serve un account. I design salvati e le impostazioni delle sveglie restano sul dispositivo. Altri modelli di orologio sono disponibili tramite acquisti in-app."
+    }
+  ]
+}

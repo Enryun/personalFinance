@@ -275,3 +275,34 @@ it('switches Galaxy Gallery languages through the flag picker and clears its loc
   expect(document.documentElement.lang).toBe('en');
   expect(document.querySelector('link[hreflang]')).toBeNull();
 });
+
+it('switches Horology Studio language and clears watch metadata when navigating away', () => {
+  const history = createMemoryHistory({ initialEntries: ['/horology-studio/'] });
+  act(() => { ReactDOM.render(<Router history={history}><App /></Router>, container); });
+  expect(document.title).toBe('Horology Studio: 3D Watches & Clock Widgets for iPhone');
+  expect(container.querySelectorAll('footer')).toHaveLength(1);
+  const picker = container.querySelector('.horology-language-picker');
+  picker.open = true;
+  act(() => { Simulate.click(picker.querySelector('a[hreflang="vi"]'), { button: 0 }); });
+  expect(history.location.pathname).toBe('/vi/horology-studio/');
+  expect(document.documentElement.lang).toBe('vi');
+  expect(document.querySelector('link[rel="canonical"]').href).toBe(`${SITE_URL}/vi/horology-studio/`);
+  expect(document.querySelector('meta[property="og:image"]').content).toBe(`${SITE_URL}/horology-studio/vi/social-card.png`);
+  expect(container.querySelectorAll('footer')).toHaveLength(1);
+  expect(container.querySelector('.horology-screen img').getAttribute('src')).toContain('/horology-studio/vi/');
+  act(() => history.push('/folio/'));
+  expect(document.documentElement.lang).toBe('en');
+  expect(document.querySelector('link[hreflang]')).toBeNull();
+});
+
+it.each(['/horology-studio/', '/vi/horology-studio/'])('hydrates the Horology Studio page at %s without replacing its content', path => {
+  const history = createMemoryHistory({ initialEntries: [path] });
+  container.innerHTML = renderToString(<Router history={history}><App /></Router>);
+  const heading = container.querySelector('h1');
+  const errors = jest.spyOn(console, 'error').mockImplementation(() => {});
+  try {
+    act(() => { ReactDOM.hydrate(<Router history={history}><App /></Router>, container); });
+    expect(container.querySelector('h1')).toBe(heading);
+    expect(errors).not.toHaveBeenCalled();
+  } finally { errors.mockRestore(); }
+});

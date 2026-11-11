@@ -1,0 +1,133 @@
+{
+  "download": "Download on the App Store",
+  "get": "Get the app",
+  "skip": "Skip to content",
+  "home": "James Thang home",
+  "language": "Language",
+  "choose": "Choose a language",
+  "madeBy": "Made by James Thang",
+  "privacy": "Privacy policy",
+  "support": "Support",
+  "title": "Horology Studio: 3D Watches & Clock Widgets for iPhone",
+  "description": "Create your own 3D mechanical watch on iPhone. Customize and save designs, add analog clock and World Time widgets, and use alarms and countdown timers.",
+  "closer": "Explore the collection",
+  "free": "Free download · Optional one-time watch purchases",
+  "pricingTitle": "Start your collection",
+  "pricingText": "Horology Studio is free to download. Additional watch models and the Complete Collection are available through optional one-time in-app purchases.",
+  "pricingNote": "See current prices and included models in the app and on the App Store.",
+  "faqTitle": "Questions about Horology Studio",
+  "heading": "Your own mechanical watch",
+  "lede": "Turn your iPhone into a personal watch collection. Explore mechanical timepieces in 3D, customize their details, and display your favorites as Home Screen widgets.",
+  "alarmsNote": "Alarms and countdown timers require iOS 26 or later.",
+  "localNote": "No account is required. Your saved watch designs and alarm settings are stored on your device. Additional watch models are available through in-app purchases.",
+  "closingText": "Choose a watch, make it yours, and enjoy it every day.",
+  "qrHook": "Your own mechanical watch",
+  "headlines": [
+    "Your Own Mechanical Watch",
+    "Make Every Detail Yours",
+    "Your Watch at a Glance",
+    "Find Your Signature Piece",
+    "Explore Every Angle",
+    "Discover What Makes It Tick",
+    "World Time at a Glance",
+    "Set Alarms with Style",
+    "Count Down with Your Watch",
+    "Share Your Signature Design"
+  ],
+  "scenes": [
+    {
+      "title": "Find Your Signature Piece",
+      "text": [
+        "Discover original watches with distinctive shapes, materials, and complications, including open-heart, chronograph, calendar, and celestial designs.",
+        "Rotate your watch in 3D to explore the dial, case, and caseback.",
+        "Enjoy a full-screen view that puts your timepiece at the center."
+      ],
+      "shots": [
+        "04",
+        "05"
+      ]
+    },
+    {
+      "title": "Make Every Detail Yours",
+      "text": [
+        "Choose dials, hands, cases, straps, materials, and finishes.",
+        "Personalize movement layouts, date displays, and caseback details, with options tailored to each model.",
+        "Save multiple designs for each watch and switch between your favorites.",
+        "Share an image of your creation with a personal message and signature."
+      ],
+      "shots": [
+        "02",
+        "10"
+      ]
+    },
+    {
+      "title": "Your Watch at a Glance",
+      "text": [
+        "Add a small widget featuring your chosen watch design.",
+        "Choose a different saved design for each small widget."
+      ],
+      "shots": [
+        "03"
+      ]
+    },
+    {
+      "title": "World Time at a Glance",
+      "text": [
+        "Set up a World Time widget with four watches and independently selected cities or time zones."
+      ],
+      "shots": [
+        "07"
+      ]
+    },
+    {
+      "title": "Discover What Makes It Tick",
+      "text": [
+        "Wind the movement, adjust the time with the crown, or synchronize your watch with your device."
+      ],
+      "shots": [
+        "06"
+      ]
+    },
+    {
+      "title": "Set Alarms with Style",
+      "text": [
+        "Set one-time or weekly alarms with optional snooze.",
+        "Count down with a timer that keeps your chosen watch design."
+      ],
+      "shots": [
+        "08",
+        "09"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Which devices and iOS versions are supported?",
+      "answer": "iPhone · iOS 18+. Alarms and countdown timers require iOS 26 or later."
+    },
+    {
+      "question": "Can I save more than one watch design?",
+      "answer": "Save multiple designs for each watch and switch between your favorites."
+    },
+    {
+      "question": "Can each widget use a different design?",
+      "answer": "Add a small widget featuring your chosen watch design. Choose a different saved design for each small widget."
+    },
+    {
+      "question": "Can I see several time zones at once?",
+      "answer": "Set up a World Time widget with four watches and independently selected cities or time zones."
+    },
+    {
+      "question": "When can I use alarms and countdown timers?",
+      "answer": "Alarms and countdown timers require iOS 26 or later."
+    },
+    {
+      "question": "Is Horology Studio free?",
+      "answer": "Horology Studio is free to download. Additional watch models and the Complete Collection are available through optional one-time in-app purchases."
+    },
+    {
+      "question": "Do I need an account?",
+      "answer": "No account is required. Your saved watch designs and alarm settings are stored on your device. Additional watch models are available through in-app purchases."
+    }
+  ]
+}

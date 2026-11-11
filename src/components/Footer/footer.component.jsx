@@ -1,3 +1,4 @@
+import { getHorologyLocale } from '../../Pages/AppIntroduction/HorologyStudio/locales';
 import { getGalaxyLocale } from '../../Pages/AppIntroduction/GalaxyGallery/locales';
 import { isOAnQuanPath } from '../../Pages/AppIntroduction/OAnQuan/locales';
 import { getVolaLocale } from '../../Pages/AppIntroduction/Vola/locales';
@@ -7,7 +8,7 @@ import './footer.styles.scss';
 
 const Footer = () => {
     const { pathname } = useLocation();
-    if (getGalaxyLocale(pathname) || isOAnQuanPath(pathname) || getVolaLocale(pathname) || ['/folio', '/galaxy-gallery'].includes(pathname.replace(/\/+$/, ''))) return null;
+    if (getHorologyLocale(pathname) || getGalaxyLocale(pathname) || isOAnQuanPath(pathname) || getVolaLocale(pathname) || ['/folio', '/galaxy-gallery'].includes(pathname.replace(/\/+$/, ''))) return null;
     const editorial = pathname === '/' || pathname === '/contact' || pathname.startsWith('/vi/') || ['/about', '/ios-consulting', '/swiftui-training', '/books'].includes(pathname) || pathname.startsWith('/case-studies/') || pathname.startsWith('/articles');
     return (
         <footer className={`footer${editorial ? ' editorial-footer' : ''}`}>

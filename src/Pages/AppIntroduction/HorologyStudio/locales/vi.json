@@ -1,0 +1,133 @@
+{
+  "download": "Tải trên App Store",
+  "get": "Tải ứng dụng",
+  "skip": "Đến nội dung",
+  "home": "James Thang",
+  "language": "Ngôn ngữ",
+  "choose": "Chọn ngôn ngữ",
+  "madeBy": "Phát triển bởi James Thang",
+  "privacy": "Quyền riêng tư",
+  "support": "Hỗ trợ",
+  "title": "Horology Studio: Đồng hồ 3D và tiện ích cho iPhone",
+  "description": "Tạo đồng hồ cơ 3D của riêng bạn trên iPhone. Tùy chỉnh, lưu thiết kế, thêm tiện ích đồng hồ kim và Giờ thế giới, sử dụng báo thức và hẹn giờ đếm ngược.",
+  "closer": "Khám phá bộ sưu tập",
+  "free": "Tải miễn phí · Mua đồng hồ một lần tùy chọn",
+  "pricingTitle": "Bắt đầu bộ sưu tập của bạn",
+  "pricingText": "Horology Studio được tải miễn phí. Bạn có thể mua một lần để mở các mẫu đồng hồ bổ sung hoặc toàn bộ bộ sưu tập.",
+  "pricingNote": "Xem giá và các mẫu được bao gồm trong ứng dụng và trên App Store.",
+  "faqTitle": "Câu hỏi về Horology Studio",
+  "heading": "Đồng hồ cơ dành riêng cho bạn",
+  "lede": "Biến iPhone thành bộ sưu tập đồng hồ của riêng bạn. Khám phá những mẫu đồng hồ cơ trong không gian 3D, tùy chỉnh từng chi tiết và đưa thiết kế yêu thích lên màn hình chính qua tiện ích.",
+  "alarmsNote": "Báo thức và hẹn giờ đếm ngược yêu cầu iOS 26 trở lên.",
+  "localNote": "Không cần tạo tài khoản. Thiết kế đã lưu và cài đặt báo thức được lưu trên thiết bị của bạn. Các mẫu đồng hồ bổ sung có thể được mở khóa bằng mua hàng trong ứng dụng.",
+  "closingText": "Chọn chiếc đồng hồ bạn thích, tùy chỉnh theo ý mình và sử dụng mỗi ngày.",
+  "qrHook": "Đồng hồ cơ dành riêng cho bạn",
+  "headlines": [
+    "Đồng hồ cơ dành riêng cho bạn",
+    "Tùy chỉnh từng chi tiết",
+    "Đồng hồ trên màn hình chính",
+    "Tìm chiếc đồng hồ hợp với bạn",
+    "Khám phá từ mọi góc nhìn",
+    "Khám phá bộ máy bên trong",
+    "Giờ khắp thế giới chỉ cần liếc nhìn",
+    "Báo thức theo phong cách riêng",
+    "Đếm ngược trên mặt đồng hồ",
+    "Chia sẻ thiết kế của bạn"
+  ],
+  "scenes": [
+    {
+      "title": "Tìm chiếc đồng hồ hợp với bạn",
+      "text": [
+        "Trải nghiệm các mẫu đồng hồ nguyên bản với hình dáng, chất liệu và chức năng riêng, từ đồng hồ lộ máy, chronograph đến đồng hồ lịch và hiển thị thiên văn.",
+        "Xoay đồng hồ trong không gian 3D để quan sát mặt số, vỏ và nắp lưng.",
+        "Ngắm trọn chiếc đồng hồ trong chế độ toàn màn hình."
+      ],
+      "shots": [
+        "04",
+        "05"
+      ]
+    },
+    {
+      "title": "Tùy chỉnh từng chi tiết",
+      "text": [
+        "Chọn mặt số, kim, vỏ, dây đeo, chất liệu và kiểu hoàn thiện.",
+        "Tùy chỉnh bố cục bộ máy, cách hiển thị ngày và chi tiết nắp lưng theo các lựa chọn của từng mẫu.",
+        "Lưu nhiều thiết kế cho mỗi mẫu đồng hồ và chuyển đổi giữa những thiết kế yêu thích.",
+        "Chia sẻ ảnh thiết kế kèm lời nhắn và chữ ký của bạn."
+      ],
+      "shots": [
+        "02",
+        "10"
+      ]
+    },
+    {
+      "title": "Đồng hồ trên màn hình chính",
+      "text": [
+        "Thêm tiện ích nhỏ mang đúng thiết kế đồng hồ bạn đã chọn.",
+        "Chọn một thiết kế đã lưu khác nhau cho từng tiện ích nhỏ."
+      ],
+      "shots": [
+        "03"
+      ]
+    },
+    {
+      "title": "Giờ khắp thế giới chỉ cần liếc nhìn",
+      "text": [
+        "Thiết lập tiện ích Giờ thế giới với bốn đồng hồ, mỗi chiếc có thành phố hoặc múi giờ riêng."
+      ],
+      "shots": [
+        "07"
+      ]
+    },
+    {
+      "title": "Khám phá bộ máy bên trong",
+      "text": [
+        "Lên dây cót, chỉnh giờ bằng núm vặn hoặc đồng bộ giờ với thiết bị."
+      ],
+      "shots": [
+        "06"
+      ]
+    },
+    {
+      "title": "Báo thức theo phong cách riêng",
+      "text": [
+        "Đặt báo thức một lần hoặc lặp lại hằng tuần, với tùy chọn báo lại.",
+        "Đếm ngược ngay trên mẫu đồng hồ yêu thích mà vẫn giữ nguyên thiết kế."
+      ],
+      "shots": [
+        "08",
+        "09"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Ứng dụng hỗ trợ thiết bị và phiên bản iOS nào?",
+      "answer": "iPhone · iOS 18+. Báo thức và hẹn giờ đếm ngược yêu cầu iOS 26 trở lên."
+    },
+    {
+      "question": "Có thể lưu nhiều thiết kế đồng hồ không?",
+      "answer": "Lưu nhiều thiết kế cho mỗi mẫu đồng hồ và chuyển đổi giữa những thiết kế yêu thích."
+    },
+    {
+      "question": "Mỗi tiện ích có thể dùng một thiết kế khác nhau không?",
+      "answer": "Thêm tiện ích nhỏ mang đúng thiết kế đồng hồ bạn đã chọn. Chọn một thiết kế đã lưu khác nhau cho từng tiện ích nhỏ."
+    },
+    {
+      "question": "Có thể xem nhiều múi giờ cùng lúc không?",
+      "answer": "Thiết lập tiện ích Giờ thế giới với bốn đồng hồ, mỗi chiếc có thành phố hoặc múi giờ riêng."
+    },
+    {
+      "question": "Khi nào có thể dùng báo thức và hẹn giờ đếm ngược?",
+      "answer": "Báo thức và hẹn giờ đếm ngược yêu cầu iOS 26 trở lên."
+    },
+    {
+      "question": "Horology Studio có miễn phí không?",
+      "answer": "Horology Studio được tải miễn phí. Bạn có thể mua một lần để mở các mẫu đồng hồ bổ sung hoặc toàn bộ bộ sưu tập."
+    },
+    {
+      "question": "Có cần tạo tài khoản không?",
+      "answer": "Không cần tạo tài khoản. Thiết kế đã lưu và cài đặt báo thức được lưu trên thiết bị của bạn. Các mẫu đồng hồ bổ sung có thể được mở khóa bằng mua hàng trong ứng dụng."
+    }
+  ]
+}

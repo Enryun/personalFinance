@@ -7,8 +7,8 @@ export const projects = [
         },
         {
             title: 'Horology Studio',
-            route: '/horology-studio',
-            story: 'Interactive mechanical watches made personal',
+            route: '/horology-studio/',
+            story: 'Create 3D mechanical watches and custom analog clock widgets for iPhone',
             icon: require('../../Image/Horology.webp')
         },
         { 

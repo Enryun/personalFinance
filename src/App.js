@@ -1,3 +1,4 @@
+import { horologyLocales } from './Pages/AppIntroduction/HorologyStudio/locales';
 import { galaxyLocales } from './Pages/AppIntroduction/GalaxyGallery/locales';
 import { volaLocales } from './Pages/AppIntroduction/Vola/locales';
 import React from 'react';
@@ -107,7 +108,7 @@ function App() {
       <Route exact path='/policy/vola-eula' component={VolaEULA} />
       <Route exact path='/pocket-bloom' component={PocketBloom} />
       <Route exact path='/policy/pocket-bloom' component={PolicyPocketBloom} />
-      <Route exact path='/horology-studio' component={HorologyStudio} />
+      {horologyLocales.map(locale => <Route exact path={locale.path.replace(/\/$/, '')} component={HorologyStudio} key={locale.code} />)}
       <Route exact path='/policy/horology-studio' component={PolicyHorologyStudio} />
       <Route exact path='/o-an-quan' component={OAnQuan} />
       <Route exact path='/en/o-an-quan' component={OAnQuan} />

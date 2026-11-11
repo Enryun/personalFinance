@@ -1,3 +1,5 @@
+import { HOROLOGY_STORE, horologyContent } from './Pages/AppIntroduction/HorologyStudio/content';
+import { horologyLocales, getHorologyLocale } from './Pages/AppIntroduction/HorologyStudio/locales';
 import { galaxyLocales, getGalaxyLocale } from './Pages/AppIntroduction/GalaxyGallery/locales';
 import { GALAXY_STORE, galaxyContent } from './Pages/AppIntroduction/GalaxyGallery/content';
 import { OANQUAN_STORE, getOAnQuanLanguage, getOAnQuanPath, isOAnQuanPath } from './Pages/AppIntroduction/OAnQuan/locales';
@@ -68,6 +70,27 @@ export function getMetadata(pathname, search = '') {
         downloadUrl: OANQUAN_STORE, sameAs: [OANQUAN_STORE],
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'VND', url: OANQUAN_STORE,
           description: content.note }
+      }] }
+    };
+  }
+  const horologyLocale = getHorologyLocale(pathname);
+  if (horologyLocale) {
+    const language = horologyLocale.code;
+    const copy = horologyContent[language];
+    const url = `${SITE_URL}${horologyLocale.path}`;
+    const image = `${SITE_URL}/horology-studio/${language}/social-card.png`;
+    return {
+      title: copy.title, description: copy.description, url, language, direction: 'ltr', image,
+      imageAlt: copy.heading,
+      alternates: [...horologyLocales.map(locale => ({ lang: locale.code, href: `${SITE_URL}${locale.path}` })), { lang: 'x-default', href: `${SITE_URL}/horology-studio/` }],
+      schema: { '@context': 'https://schema.org', '@graph': [person, {
+        '@type': 'SoftwareApplication', '@id': `${SITE_URL}/horology-studio/#app`,
+        name: 'Horology Studio: Watch & Alarm', url, description: copy.description, image,
+        inLanguage: horologyLocales.map(locale => locale.code), operatingSystem: 'iOS 18 or later',
+        applicationCategory: 'UtilitiesApplication', author: { '@id': person['@id'] },
+        downloadUrl: HOROLOGY_STORE, sameAs: [HOROLOGY_STORE],
+        featureList: copy.scenes.map(scene => scene.title),
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', url: HOROLOGY_STORE, description: copy.pricingText }
       }] }
     };
   }

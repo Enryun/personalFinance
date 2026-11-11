@@ -1,0 +1,44 @@
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import { MemoryRouter } from 'react-router-dom';
+import HorologyStudio from './horology';
+import { horologyContent, HOROLOGY_STORE } from './content';
+import { horologyLocales } from './locales';
+import { getMetadata, SITE_URL } from '../../../siteMetadata';
+
+it.each(horologyLocales)('renders $code with localized watch features, compatibility, and reciprocal metadata', locale => {
+  const copy = horologyContent[locale.code];
+  expect(Object.keys(copy).sort()).toEqual(Object.keys(horologyContent.en).sort());
+  const checkStrings = value => {
+    if (typeof value === 'string') expect(value.trim().length).toBeGreaterThan(0);
+    else if (Array.isArray(value)) value.forEach(checkStrings);
+    else Object.values(value).forEach(checkStrings);
+  };
+  checkStrings(copy);
+  const page = document.createElement('div');
+  page.innerHTML = renderToString(<MemoryRouter initialEntries={[locale.path]}><HorologyStudio /></MemoryRouter>);
+  expect(page.querySelector('.horology-page').lang).toBe(locale.code);
+  expect(page.querySelectorAll('h1')).toHaveLength(1);
+  expect(page.querySelector('h1').textContent).toBe(copy.heading);
+  expect(page.querySelectorAll('.horology-scene')).toHaveLength(6);
+  expect(page.querySelectorAll('.horology-screen')).toHaveLength(9);
+  expect(page.querySelectorAll('.horology-screen-widget')).toHaveLength(2);
+  expect(page.querySelector('.horology-screen img').src).toContain(`/horology-studio/${locale.code}/`);
+  expect(page.querySelectorAll('.horology-faq details')).toHaveLength(7);
+  expect(page.querySelector('.horology-requirement').textContent).toContain('26');
+  expect(page.querySelector('.horology-note').textContent).toContain('18+');
+  expect(page.querySelectorAll('.horology-language-picker a')).toHaveLength(13);
+  expect(page.querySelector('.horology-language-picker a[aria-current="page"]').getAttribute('href')).toBe(locale.path);
+  page.querySelectorAll('a[href*="apps.apple.com"]').forEach(link => expect(link.href).toBe(HOROLOGY_STORE));
+  const metadata = getMetadata(locale.path);
+  expect(metadata.title).toBe(copy.title);
+  expect(metadata.language).toBe(locale.code);
+  expect(metadata.url).toBe(SITE_URL + locale.path);
+  expect(metadata.alternates).toHaveLength(14);
+  horologyLocales.forEach(other => expect(metadata.alternates).toContainEqual({ lang: other.code, href: SITE_URL + other.path }));
+  const app = metadata.schema['@graph'].find(entity => entity['@type'] === 'SoftwareApplication');
+  expect(app['@id']).toBe(`${SITE_URL}/horology-studio/#app`);
+  expect(app.operatingSystem).toBe('iOS 18 or later');
+  expect(app.downloadUrl).toBe(HOROLOGY_STORE);
+  expect(app.offers.description).toBe(copy.pricingText);
+});
