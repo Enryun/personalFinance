@@ -1,0 +1,133 @@
+{
+  "download": "Descargar en el App Store",
+  "get": "Descargar",
+  "skip": "Ir al contenido",
+  "home": "James Thang",
+  "language": "Idioma",
+  "choose": "Elige un idioma",
+  "madeBy": "Creado por James Thang",
+  "privacy": "Privacidad",
+  "support": "Soporte",
+  "title": "Horology Studio: relojes 3D y widgets para iPhone",
+  "description": "Crea tu reloj mecánico 3D en el iPhone. Personaliza y guarda diseños, añade widgets de reloj y hora mundial, y utiliza alarmas y temporizadores.",
+  "closer": "Explora la colección",
+  "free": "Descarga gratuita · Compras únicas opcionales de relojes",
+  "pricingTitle": "Empieza tu colección",
+  "pricingText": "Horology Studio se descarga gratis. Los modelos adicionales y la colección completa están disponibles mediante compras únicas opcionales dentro de la app.",
+  "pricingNote": "Consulta los precios y los modelos incluidos en la app y en el App Store.",
+  "faqTitle": "Preguntas sobre Horology Studio",
+  "heading": "Tu propio reloj mecánico",
+  "lede": "Convierte tu iPhone en una colección de relojes a tu medida. Explora piezas mecánicas en 3D, personaliza sus detalles y muestra tus diseños favoritos en widgets de la pantalla de inicio.",
+  "alarmsNote": "Las alarmas y la cuenta atrás requieren iOS 26 o posterior.",
+  "localNote": "No necesitas una cuenta. Tus diseños guardados y los ajustes de las alarmas se almacenan en tu dispositivo. Hay modelos adicionales disponibles mediante compras dentro de la app.",
+  "closingText": "Elige un reloj, dale tu estilo y disfruta de él cada día.",
+  "qrHook": "Tu propio reloj mecánico",
+  "headlines": [
+    "Tu propio reloj mecánico",
+    "Cada detalle, a tu gusto",
+    "Tu reloj de un vistazo",
+    "Encuentra el reloj que va contigo",
+    "Desde todos los ángulos",
+    "Descubre su mecanismo",
+    "Hora mundial de un vistazo",
+    "Pon tus alarmas con estilo",
+    "Cuenta atrás en tu reloj",
+    "Comparte tu diseño"
+  ],
+  "scenes": [
+    {
+      "title": "Encuentra el reloj que va contigo",
+      "text": [
+        "Descubre relojes originales con distintas formas, materiales y complicaciones: modelos con el mecanismo a la vista, cronógrafos, calendarios e indicaciones astronómicas.",
+        "Gira el reloj en 3D para observar la esfera, la caja y el fondo.",
+        "Disfruta de una vista a pantalla completa que da todo el protagonismo a tu reloj."
+      ],
+      "shots": [
+        "04",
+        "05"
+      ]
+    },
+    {
+      "title": "Cada detalle, a tu gusto",
+      "text": [
+        "Elige esferas, agujas, cajas, correas, materiales y acabados.",
+        "Ajusta la distribución del mecanismo, la fecha y los detalles del fondo según las opciones de cada modelo.",
+        "Guarda varios diseños por reloj y cambia entre tus favoritos.",
+        "Comparte una imagen de tu creación con un mensaje y una firma personal."
+      ],
+      "shots": [
+        "02",
+        "10"
+      ]
+    },
+    {
+      "title": "Tu reloj de un vistazo",
+      "text": [
+        "Añade un widget pequeño con el diseño del reloj que elijas.",
+        "Asigna un diseño guardado diferente a cada widget pequeño."
+      ],
+      "shots": [
+        "03"
+      ]
+    },
+    {
+      "title": "Hora mundial de un vistazo",
+      "text": [
+        "Configura un widget de hora mundial con cuatro relojes y elige una ciudad o zona horaria independiente para cada uno."
+      ],
+      "shots": [
+        "07"
+      ]
+    },
+    {
+      "title": "Descubre su mecanismo",
+      "text": [
+        "Da cuerda al mecanismo, ajusta la hora con la corona o sincronízala con tu dispositivo."
+      ],
+      "shots": [
+        "06"
+      ]
+    },
+    {
+      "title": "Pon tus alarmas con estilo",
+      "text": [
+        "Programa alarmas de una sola vez o semanales, con opción de posponerlas.",
+        "Inicia una cuenta atrás que conserve el diseño de tu reloj."
+      ],
+      "shots": [
+        "08",
+        "09"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Qué dispositivos y versiones de iOS son compatibles?",
+      "answer": "iPhone · iOS 18+. Las alarmas y la cuenta atrás requieren iOS 26 o posterior."
+    },
+    {
+      "question": "¿Puedo guardar varios diseños de reloj?",
+      "answer": "Guarda varios diseños por reloj y cambia entre tus favoritos."
+    },
+    {
+      "question": "¿Cada widget puede mostrar un diseño diferente?",
+      "answer": "Añade un widget pequeño con el diseño del reloj que elijas. Asigna un diseño guardado diferente a cada widget pequeño."
+    },
+    {
+      "question": "¿Puedo ver varias zonas horarias a la vez?",
+      "answer": "Configura un widget de hora mundial con cuatro relojes y elige una ciudad o zona horaria independiente para cada uno."
+    },
+    {
+      "question": "¿Cuándo puedo usar alarmas y cuentas atrás?",
+      "answer": "Las alarmas y la cuenta atrás requieren iOS 26 o posterior."
+    },
+    {
+      "question": "¿Horology Studio es gratis?",
+      "answer": "Horology Studio se descarga gratis. Los modelos adicionales y la colección completa están disponibles mediante compras únicas opcionales dentro de la app."
+    },
+    {
+      "question": "¿Necesito una cuenta?",
+      "answer": "No necesitas una cuenta. Tus diseños guardados y los ajustes de las alarmas se almacenan en tu dispositivo. Hay modelos adicionales disponibles mediante compras dentro de la app."
+    }
+  ]
+}

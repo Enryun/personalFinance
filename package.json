@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && node scripts/prerender-home.cjs && node scripts/verify-vola-locales.cjs && node scripts/verify-oanquan.cjs && node scripts/verify-galaxy-locales.cjs",
+    "build": "react-scripts build && node scripts/prerender-home.cjs && node scripts/verify-vola-locales.cjs && node scripts/verify-oanquan.cjs && node scripts/verify-galaxy-locales.cjs && node scripts/verify-horology-locales.cjs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

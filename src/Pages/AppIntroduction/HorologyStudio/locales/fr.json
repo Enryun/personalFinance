@@ -1,0 +1,133 @@
+{
+  "download": "Télécharger sur l’App Store",
+  "get": "Télécharger",
+  "skip": "Aller au contenu",
+  "home": "James Thang",
+  "language": "Langue",
+  "choose": "Choisir une langue",
+  "madeBy": "Créé par James Thang",
+  "privacy": "Confidentialité",
+  "support": "Assistance",
+  "title": "Horology Studio : montres 3D et widgets pour iPhone",
+  "description": "Créez votre montre mécanique en 3D sur iPhone. Personnalisez et enregistrez vos créations, ajoutez des widgets et utilisez les alarmes et le compte à rebours.",
+  "closer": "Explorer la collection",
+  "free": "Téléchargement gratuit · Achats uniques facultatifs de montres",
+  "pricingTitle": "Commencez votre collection",
+  "pricingText": "Horology Studio se télécharge gratuitement. Des modèles supplémentaires et la collection complète sont disponibles par achats intégrés uniques et facultatifs.",
+  "pricingNote": "Consultez les prix et les modèles inclus dans l’app et sur l’App Store.",
+  "faqTitle": "Questions sur Horology Studio",
+  "heading": "Votre montre mécanique",
+  "lede": "Votre iPhone devient une collection de montres à votre image. Explorez des garde-temps mécaniques en 3D, personnalisez leurs détails et retrouvez vos créations dans des widgets sur l’écran d’accueil.",
+  "alarmsNote": "Les alarmes et le compte à rebours nécessitent iOS 26 ou version ultérieure.",
+  "localNote": "Aucun compte n’est nécessaire. Vos créations enregistrées et les réglages de vos alarmes restent sur votre appareil. Des modèles supplémentaires sont disponibles via des achats intégrés.",
+  "closingText": "Choisissez une montre, créez votre style et profitez-en chaque jour.",
+  "qrHook": "Votre montre mécanique",
+  "headlines": [
+    "Votre montre mécanique",
+    "Chaque détail à votre image",
+    "Votre montre en un coup d’œil",
+    "Trouvez la montre qui vous ressemble",
+    "Sous tous les angles",
+    "Découvrez son mécanisme",
+    "L’heure du monde en un coup d’œil",
+    "Réglez vos alarmes avec style",
+    "Le compte à rebours sur votre montre",
+    "Partagez votre création"
+  ],
+  "scenes": [
+    {
+      "title": "Trouvez la montre qui vous ressemble",
+      "text": [
+        "Découvrez des modèles originaux aux formes, matériaux et complications variés : montres à cœur ouvert, chronographes, calendriers et affichages astronomiques.",
+        "Faites pivoter votre montre en 3D pour observer le cadran, le boîtier et le fond.",
+        "Profitez d’un affichage plein écran pour admirer votre garde-temps."
+      ],
+      "shots": [
+        "04",
+        "05"
+      ]
+    },
+    {
+      "title": "Chaque détail à votre image",
+      "text": [
+        "Choisissez le cadran, les aiguilles, le boîtier, le bracelet, les matériaux et les finitions.",
+        "Personnalisez l’agencement du mouvement, l’affichage de la date et les détails du fond selon les options de chaque modèle.",
+        "Enregistrez plusieurs créations par montre et retrouvez vos préférées facilement.",
+        "Partagez une image de votre création avec un message et une signature."
+      ],
+      "shots": [
+        "02",
+        "10"
+      ]
+    },
+    {
+      "title": "Votre montre en un coup d’œil",
+      "text": [
+        "Ajoutez un petit widget reprenant le design de votre montre.",
+        "Attribuez une création enregistrée différente à chaque petit widget."
+      ],
+      "shots": [
+        "03"
+      ]
+    },
+    {
+      "title": "L’heure du monde en un coup d’œil",
+      "text": [
+        "Configurez un widget Heure mondiale avec quatre montres et des villes ou fuseaux horaires indépendants."
+      ],
+      "shots": [
+        "07"
+      ]
+    },
+    {
+      "title": "Découvrez son mécanisme",
+      "text": [
+        "Remontez le mouvement, réglez l’heure avec la couronne ou synchronisez votre montre avec votre appareil."
+      ],
+      "shots": [
+        "06"
+      ]
+    },
+    {
+      "title": "Réglez vos alarmes avec style",
+      "text": [
+        "Programmez des alarmes ponctuelles ou hebdomadaires, avec rappel en option.",
+        "Utilisez un compte à rebours qui conserve l’apparence de votre montre."
+      ],
+      "shots": [
+        "08",
+        "09"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Quels appareils et versions d’iOS sont compatibles ?",
+      "answer": "iPhone · iOS 18+. Les alarmes et le compte à rebours nécessitent iOS 26 ou version ultérieure."
+    },
+    {
+      "question": "Puis-je enregistrer plusieurs créations ?",
+      "answer": "Enregistrez plusieurs créations par montre et retrouvez vos préférées facilement."
+    },
+    {
+      "question": "Chaque widget peut-il afficher une création différente ?",
+      "answer": "Ajoutez un petit widget reprenant le design de votre montre. Attribuez une création enregistrée différente à chaque petit widget."
+    },
+    {
+      "question": "Puis-je afficher plusieurs fuseaux horaires ?",
+      "answer": "Configurez un widget Heure mondiale avec quatre montres et des villes ou fuseaux horaires indépendants."
+    },
+    {
+      "question": "Quand puis-je utiliser les alarmes et le compte à rebours ?",
+      "answer": "Les alarmes et le compte à rebours nécessitent iOS 26 ou version ultérieure."
+    },
+    {
+      "question": "Horology Studio est-elle gratuite ?",
+      "answer": "Horology Studio se télécharge gratuitement. Des modèles supplémentaires et la collection complète sont disponibles par achats intégrés uniques et facultatifs."
+    },
+    {
+      "question": "Faut-il créer un compte ?",
+      "answer": "Aucun compte n’est nécessaire. Vos créations enregistrées et les réglages de vos alarmes restent sur votre appareil. Des modèles supplémentaires sont disponibles via des achats intégrés."
+    }
+  ]
+}

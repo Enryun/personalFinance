@@ -4,7 +4,6 @@ import courseImage from '../../Image/SwiftUI_Udemy.webp';
 import swiftBook from '../../Image/SwiftUI.webp';
 import firebaseBook from '../../Image/Firebase.webp';
 import { homeProjects as projects } from './projects';
-import horologyShot from '../../Image/Horology1.webp';
 import folioShot from '../../Image/Folio1.webp';
 import oAnQuanShot from '../../Image/Oanquan1.webp';
 import tidoraShot from '../../Image/TidyMac1.webp';
@@ -15,7 +14,7 @@ const volaShot = '/vola/en/live-960.webp';
 const featured = [
   { route: '/vola/', title: 'Vola — AI Note Taker', category: '01 / FEATURED · iOS · AI productivity', detail: 'Stay in the conversation. Vola transcribes live speech on your device, with optional cloud AI summaries and questions about your notes.', image: volaShot, alt: 'Vola AI note taker with live transcription, AI summary, and questions about recorded notes', theme: 'vola' },
   { route: '/tidora', title: 'Tidora — Mac Cleaner', category: '02 / macOS · Cleaning & maintenance', detail: 'Make room for what matters. Tidora scans for unnecessary files, caches, and logs, helping you reclaim disk space and keep everyday Mac maintenance straightforward.', image: tidoraShot, alt: 'Tidora Mac cleaning utility showing a scan of application caches and system logs', theme: 'tidora' },
-  { route: '/horology-studio', category: '03 / iOS · Interactive experiences', detail: 'A mechanical timepiece made personal. Watch customization, widgets, and system alarms, built around the pleasure of the details.', image: horologyShot, alt: 'Horology Studio interactive watch on an iPhone', theme: 'watch' },
+  { route: '/horology-studio/', category: '03 / iOS · Interactive experiences', detail: 'Explore original mechanical watches in 3D. Customize and save your designs, then bring them to your iPhone Home Screen with matching widgets.', image: '/horology-studio/woodland-hero-1200.webp', alt: 'Woodland Cushion mechanical watch in Horology Studio’s 3D view', theme: 'watch' },
   { route: '/folio/', category: '04 / iPhone & macOS · Markdown notes', detail: 'Write and organize Markdown on iPhone and Mac. Connect notes with Link Map, import GitHub docs, and refine drafts with an on-device writing assistant.', image: folioShot, alt: 'Folio Markdown reader with source and rendered content on a Mac', theme: 'folio' },
   { route: '/o-an-quan', category: '05 / iPhone & iPad · Trò chơi dân gian', detail: 'Một vòng quê nhà qua sân nhà, đầu ngõ, sân đình và hội làng. Chơi với máy, chơi hai người offline hoặc rủ bạn qua Game Center.', image: oAnQuanShot, alt: 'Ô Ăn Quan game modes and traditional board on iPhone', theme: 'quan', status: 'Đã có trên App Store' },
 ];

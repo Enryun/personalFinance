@@ -29,7 +29,7 @@ const PolicyHorologyStudio = () => (
 
     <p><strong>Changes to This Privacy Policy</strong></p>
     <p>This Privacy Policy may be updated from time to time. Changes will be posted on this page with a new effective date.</p>
-    <p>This policy is effective as of {new Date().toLocaleDateString()}.</p>
+    <p>Last updated November 11, 2026.</p>
 
     <p><strong>Contact Us</strong></p>
     <p>If you have questions about this Privacy Policy, contact James Thang at <a href="mailto:jamesthang1996@gmail.com">jamesthang1996@gmail.com</a>.</p>

@@ -1,0 +1,133 @@
+{
+  "download": "Im App Store laden",
+  "get": "App laden",
+  "skip": "Zum Inhalt",
+  "home": "James Thang",
+  "language": "Sprache",
+  "choose": "Sprache auswählen",
+  "madeBy": "Von James Thang",
+  "privacy": "Datenschutz",
+  "support": "Support",
+  "title": "Horology Studio: 3D-Uhren und Uhr-Widgets fürs iPhone",
+  "description": "Gestalte deine mechanische 3D-Uhr auf dem iPhone. Speichere Designs, füge analoge Uhr- und Weltzeit-Widgets hinzu und nutze Wecker und Countdown-Timer.",
+  "closer": "Kollektion entdecken",
+  "free": "Kostenloser Download · Optionale einmalige Uhrenkäufe",
+  "pricingTitle": "Beginne deine Sammlung",
+  "pricingText": "Horology Studio ist kostenlos erhältlich. Weitere Uhrenmodelle und die komplette Kollektion sind als optionale einmalige In-App-Käufe verfügbar.",
+  "pricingNote": "Aktuelle Preise und enthaltene Modelle findest du in der App und im App Store.",
+  "faqTitle": "Fragen zu Horology Studio",
+  "heading": "Deine eigene mechanische Uhr",
+  "lede": "Mach dein iPhone zu deiner persönlichen Uhrenkollektion. Entdecke mechanische Zeitmesser in 3D, gestalte ihre Details und zeige deine Lieblingsdesigns als Widgets auf dem Home-Bildschirm.",
+  "alarmsNote": "Wecker und Countdown-Timer erfordern iOS 26 oder neuer.",
+  "localNote": "Du brauchst kein Konto. Gespeicherte Uhrendesigns und Weckereinstellungen bleiben auf deinem Gerät. Weitere Uhrenmodelle sind über In-App-Käufe erhältlich.",
+  "closingText": "Wähle eine Uhr, gestalte deinen Stil und genieße sie jeden Tag.",
+  "qrHook": "Deine eigene mechanische Uhr",
+  "headlines": [
+    "Deine eigene mechanische Uhr",
+    "Jedes Detail ganz nach Wunsch",
+    "Deine Uhr auf einen Blick",
+    "Finde die Uhr, die zu dir passt",
+    "Aus jedem Blickwinkel",
+    "Entdecke das Uhrwerk",
+    "Weltzeit auf einen Blick",
+    "Wecker stellen mit Stil",
+    "Deine Uhr zählt herunter",
+    "Teile dein eigenes Design"
+  ],
+  "scenes": [
+    {
+      "title": "Finde die Uhr, die zu dir passt",
+      "text": [
+        "Entdecke eigenständige Uhrendesigns mit unterschiedlichen Formen, Materialien und Komplikationen: von Open-Heart-Modellen über Chronographen bis zu Kalendern und astronomischen Anzeigen.",
+        "Drehe deine Uhr in 3D und betrachte Zifferblatt, Gehäuse und Gehäuseboden aus verschiedenen Blickwinkeln.",
+        "Genieße eine Vollbildansicht, die deine Uhr in den Mittelpunkt stellt."
+      ],
+      "shots": [
+        "04",
+        "05"
+      ]
+    },
+    {
+      "title": "Jedes Detail ganz nach Wunsch",
+      "text": [
+        "Wähle Zifferblatt, Zeiger, Gehäuse, Armband, Materialien und Oberflächen.",
+        "Passe je nach Modell die Anordnung des Uhrwerks, die Datumsanzeige und die Details des Gehäusebodens an.",
+        "Speichere mehrere Designs pro Modell und wechsle zwischen deinen Favoriten.",
+        "Teile ein Bild deiner Kreation mit einer persönlichen Nachricht und Signatur."
+      ],
+      "shots": [
+        "02",
+        "10"
+      ]
+    },
+    {
+      "title": "Deine Uhr auf einen Blick",
+      "text": [
+        "Füge ein kleines Widget im Design deiner ausgewählten Uhr hinzu.",
+        "Wähle für jedes kleine Widget ein anderes gespeichertes Design."
+      ],
+      "shots": [
+        "03"
+      ]
+    },
+    {
+      "title": "Weltzeit auf einen Blick",
+      "text": [
+        "Richte ein Weltzeit-Widget mit vier Uhren ein und lege für jede eine eigene Stadt oder Zeitzone fest."
+      ],
+      "shots": [
+        "07"
+      ]
+    },
+    {
+      "title": "Entdecke das Uhrwerk",
+      "text": [
+        "Ziehe das Uhrwerk auf, stelle die Zeit mit der Krone ein oder synchronisiere sie mit deinem Gerät."
+      ],
+      "shots": [
+        "06"
+      ]
+    },
+    {
+      "title": "Wecker stellen mit Stil",
+      "text": [
+        "Lege einmalige oder wöchentlich wiederkehrende Weckzeiten fest und nutze bei Bedarf die Schlummerfunktion.",
+        "Starte einen Countdown, der das Design deiner ausgewählten Uhr beibehält."
+      ],
+      "shots": [
+        "08",
+        "09"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Welche Geräte und iOS-Versionen werden unterstützt?",
+      "answer": "iPhone · iOS 18+. Wecker und Countdown-Timer erfordern iOS 26 oder neuer."
+    },
+    {
+      "question": "Kann ich mehrere Uhrendesigns speichern?",
+      "answer": "Speichere mehrere Designs pro Modell und wechsle zwischen deinen Favoriten."
+    },
+    {
+      "question": "Kann jedes Widget ein eigenes Design zeigen?",
+      "answer": "Füge ein kleines Widget im Design deiner ausgewählten Uhr hinzu. Wähle für jedes kleine Widget ein anderes gespeichertes Design."
+    },
+    {
+      "question": "Kann ich mehrere Zeitzonen gleichzeitig sehen?",
+      "answer": "Richte ein Weltzeit-Widget mit vier Uhren ein und lege für jede eine eigene Stadt oder Zeitzone fest."
+    },
+    {
+      "question": "Wann sind Wecker und Countdown-Timer verfügbar?",
+      "answer": "Wecker und Countdown-Timer erfordern iOS 26 oder neuer."
+    },
+    {
+      "question": "Ist Horology Studio kostenlos?",
+      "answer": "Horology Studio ist kostenlos erhältlich. Weitere Uhrenmodelle und die komplette Kollektion sind als optionale einmalige In-App-Käufe verfügbar."
+    },
+    {
+      "question": "Brauche ich ein Konto?",
+      "answer": "Du brauchst kein Konto. Gespeicherte Uhrendesigns und Weckereinstellungen bleiben auf deinem Gerät. Weitere Uhrenmodelle sind über In-App-Käufe erhältlich."
+    }
+  ]
+}
