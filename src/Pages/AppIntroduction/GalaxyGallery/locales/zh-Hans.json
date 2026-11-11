@@ -1,0 +1,98 @@
+{
+  "title": "Galaxy Gallery：探索宇宙与太阳系",
+  "description": "在 iPhone 和 iPad 上以互动 3D 探索行星与卫星，比较星球大小，学习宇宙知识，并通过 AR 把行星带到你的房间。",
+  "heading": "探索宇宙",
+  "lede": "以互动 3D 观察行星与卫星，探索太阳系，了解引人入胜的宇宙知识。",
+  "download": "在 App Store 下载",
+  "get": "获取应用",
+  "closer": "近距离探索",
+  "free": "免费下载，含广告及可选购项目",
+  "skip": "跳至内容",
+  "language": "语言",
+  "choose": "选择语言",
+  "worldsTitle": "触手可及的太阳系",
+  "worldsText": "走近行星与卫星。旋转星球、放大表面，观察地月系统以及行星沿轨道运行的景象。",
+  "details": [
+    [
+      "近距离观察",
+      "探索地球的昼夜变化，旋转行星，从不同角度观察。"
+    ],
+    [
+      "观察天体运动",
+      "跟随地球、月球以及围绕太阳运行的行星。"
+    ],
+    [
+      "跟随好奇心",
+      "打开行星资料，探索时也可以选择收听语音解说。"
+    ]
+  ],
+  "comparisonTitle": "我们的星球有多大？",
+  "comparisonText": "把地球与木星、土星及其他行星并排比较。相对大小的对比，让太阳系的尺度更加直观。",
+  "scaleNote": "行星大小按相对比例展示。间距经过调整，以便观察。",
+  "discoveryTitle": "一个发现，开启下一段探索",
+  "discoveryText": "沿着主题探索旅程，从地球和邻近星球出发，了解人类航天任务，走向遥远宇宙。学习行星、卫星与宇宙知识，随时重温感兴趣的发现。",
+  "discoveryMore": "完成可选的专注任务，解锁更多宇宙知识，丰富你的发现收藏。",
+  "arTitle": "把行星带进你的房间",
+  "arText": "使用 AR Quick Look 将星球放置在周围环境中。移动视角，熟悉的房间也能成为探索宇宙的地方。",
+  "arNote": "需要兼容设备和相机访问权限。",
+  "focusTitle": "为发现留出时间",
+  "focusText": "在动态星球旁进行 15、25 或 50 分钟的专注任务。设定目标、完成时段，然后发现一条新的宇宙知识。",
+  "focusMore": "回顾专注进度与探索成果。在支持的设备上授权“屏幕使用时间”后，Deep Focus 可在任务期间限制你选择的干扰。",
+  "pricingTitle": "开始探索",
+  "pricingText": "Galaxy Gallery 可免费下载，包含广告和可选购项目。Galaxy Plus 提供无广告体验和无限次 Deep Focus，可选择月度或终身方案。",
+  "pricingNote": "当前价格与使用条件请查看应用及 App Store。",
+  "faqTitle": "出发前的常见问题",
+  "faqs": [
+    {
+      "question": "Galaxy Gallery 是什么？",
+      "answer": "这是一款适用于 iPhone 和 iPad 的宇宙探索与学习应用，包含 3D 行星、轨道、大小比较、宇宙知识以及可选的专注任务。"
+    },
+    {
+      "question": "可以用 3D 探索太阳系吗？",
+      "answer": "可以。旋转和放大行星，观察地月系统，比较相对大小。间距经过调整，以便观看。"
+    },
+    {
+      "question": "如何学习宇宙知识？",
+      "answer": "阅读行星资料、选择收听语音解说，并跟随主题探索旅程。完成专注任务还可解锁更多知识。"
+    },
+    {
+      "question": "可以在房间里看到行星吗？",
+      "answer": "可以，通过 AR Quick Look 体验。需要兼容硬件和相机访问权限。"
+    },
+    {
+      "question": "探索时必须使用专注计时器吗？",
+      "answer": "行星、太阳系、比较和 AR 均可直接探索。Galaxy Focus 另外提供 15、25 或 50 分钟的任务。"
+    },
+    {
+      "question": "Galaxy Gallery 免费吗？",
+      "answer": "可免费下载，包含广告和可选购项目。Galaxy Plus 提供月度或终身方案，可去除广告并无限使用 Deep Focus。价格请查看应用。"
+    },
+    {
+      "question": "Deep Focus 有什么作用？",
+      "answer": "获得 Apple“屏幕使用时间”授权后，可限制所选应用，或仅允许必要应用。是否可用取决于设备支持与权限。"
+    },
+    {
+      "question": "支持哪些设备？",
+      "answer": "支持运行 iOS 17 或更新版本的 iPhone，以及运行 iPadOS 17 或更新版本的 iPad。AR 和 Deep Focus 还取决于设备功能与权限。"
+    }
+  ],
+  "closingTitle": "下一个发现正在等你",
+  "closingText": "选择一颗行星，跟随好奇心出发。",
+  "qrHook": "探索无尽宇宙",
+  "qrAlt": "在 App Store 打开 Galaxy Gallery 的二维码",
+  "madeBy": "由 James Thang 开发",
+  "privacy": "隐私政策",
+  "support": "支持",
+  "alts": {
+    "tablet": "iPad 上的太阳系与行星轨道",
+    "phone": "iPhone 上带有效果的互动 3D 地球",
+    "orbits": "Galaxy Gallery 中的太阳、行星和轨道",
+    "comparison": "地球、木星、土星、天王星与海王星的大小比较",
+    "journeys": "iPad 上的主题宇宙探索旅程",
+    "facts": "完成任务后解锁的地球海洋知识",
+    "ar": "iPhone 上将地球放置在房间中的真实 AR 画面",
+    "focus": "iPhone 上地球旁的 Galaxy Focus 倒计时"
+  },
+  "home": "James Thang",
+  "requirements": "iPhone · iPad · iOS / iPadOS 17+"
+}

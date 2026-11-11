@@ -31,6 +31,7 @@ const flags = Object.freeze({
   cn: svg(`<path fill="#de2910" d="M0 0h30v20H0z"/><g fill="#ffde00"><polygon points="${star(5,5,3)}"/>${[[10,2],[12,4],[12,7],[10,9]].map(([x,y]) => `<polygon points="${star(x,y,1)}" transform="rotate(${(Math.atan2(5-y,5-x)+Math.PI/2)*180/Math.PI} ${x} ${y})"/>`).join('')}</g>`),
   kr: svg(`<path fill="#fff" d="M0 0h30v20H0z"/><g transform="translate(15 10) rotate(33.69)"><circle r="5" fill="#003478"/><path fill="#c60c30" d="M-5 0a5 5 0 0 1 10 0 2.5 2.5 0 0 0-5 0 2.5 2.5 0 0 1-5 0z"/></g>${trigram(7.5,5,-56.31,[])}${trigram(22.5,5,56.31,[0,2])}${trigram(7.5,15,56.31,[1])}${trigram(22.5,15,-56.31,[0,1,2])}`),
   jp: svg('<path fill="#fff" d="M0 0h30v20H0z"/><circle cx="15" cy="10" r="6" fill="#bc002d"/>'),
+  id: svg('<path fill="#fff" d="M0 0h30v20H0z"/><path fill="#ce1126" d="M0 0h30v10H0z"/>'),
   th: svg('<path fill="#a51931" d="M0 0h30v20H0z"/><path fill="#fff" d="M0 3.333h30v13.334H0z"/><path fill="#2d2a4a" d="M0 6.667h30v6.666H0z"/>'),
   tw: svg(`<path fill="#fe0000" d="M0 0h30v20H0z"/><path fill="#000095" d="M0 0h15v10H0z"/><polygon fill="#fff" points="${sun}"/><circle cx="7.5" cy="5" r="2.2" fill="#000095"/><circle cx="7.5" cy="5" r="1.8" fill="#fff"/>`),
   vn: svg(`<path fill="#da251d" d="M0 0h30v20H0z"/><polygon fill="#ff0" points="${star(15, 10, 6)}"/>`),

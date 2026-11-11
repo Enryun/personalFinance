@@ -1,3 +1,4 @@
+import { galaxyLocales } from './Pages/AppIntroduction/GalaxyGallery/locales';
 import { volaLocales } from './Pages/AppIntroduction/Vola/locales';
 import React from 'react';
 import './App.css';
@@ -84,7 +85,7 @@ function App() {
       <Route exact path='/dark-horse' component={DarkHorse} />
       <Route exact path='/policy/neon-cloud' component={PolicyNeonCloud} />
       <Route exact path='/neon-cloud' component={NeonCloud} />
-      <Route exact path='/galaxy-gallery' component={GalaxyGallery} />
+      {galaxyLocales.map(locale => <Route exact path={locale.path.replace(/\/$/, '')} component={GalaxyGallery} key={locale.code} />)}
       <Route exact path='/policy/galaxy-gallery' component={GalaxyGalleryPolicy} />
       <Route exact path='/random-rover' component={RandomRover} />
       <Route exact path='/policy/random-rover' component={RandomRoverPolicy} />
