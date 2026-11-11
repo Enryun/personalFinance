@@ -225,3 +225,28 @@ it.each(['/o-an-quan/', '/en/o-an-quan/'])('hydrates the prerendered game page a
     expect(errors).not.toHaveBeenCalled();
   } finally { errors.mockRestore(); }
 });
+
+it('identifies Galaxy Gallery consistently across its metadata, download links, and exploration content', () => {
+  const history = createMemoryHistory({ initialEntries: ['/ar/vola/'] });
+  act(() => { ReactDOM.render(<Router history={history}><App /></Router>, container); });
+  act(() => history.push('/galaxy-gallery/'));
+  expect(document.documentElement.lang).toBe('en');
+  expect(document.documentElement.dir).toBe('ltr');
+  expect(document.querySelector('link[rel="canonical"]').href).toBe(`${SITE_URL}/galaxy-gallery/`);
+  expect(document.querySelector('meta[property="og:image"]').content).toBe(`${SITE_URL}/galaxy-gallery/social-card.png`);
+  expect(document.querySelector('link[hreflang]')).toBeNull();
+  const graph = JSON.parse(document.getElementById('page-schema').textContent)['@graph'];
+  const app = graph.find(entity => entity['@type'] === 'SoftwareApplication');
+  expect(app.name).toBe('Galaxy Gallery: Space & Focus');
+  expect(app.downloadUrl).toBe('https://apps.apple.com/app/id1662263674');
+  const storeLinks = container.querySelectorAll('a[href*="apps.apple.com"]');
+  expect(storeLinks.length).toBeGreaterThan(2);
+  storeLinks.forEach(link => expect(link.href).toBe(app.downloadUrl));
+  expect(container.querySelectorAll('h1')).toHaveLength(1);
+  expect(container.querySelector('h1').textContent).toBe('Explore the universe');
+  expect(container.querySelectorAll('footer')).toHaveLength(1);
+  expect(container.querySelectorAll('.galaxy-hero-art img')).toHaveLength(2);
+  expect(container.querySelector('#explore').compareDocumentPosition(container.querySelector('.galaxy-focus')) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  act(() => history.push('/'));
+  expect(document.querySelector('meta[property="og:image"]').content).not.toContain('/galaxy-gallery/');
+});

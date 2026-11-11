@@ -90,8 +90,8 @@ export const projects = [
         },
         { 
             title: 'Galaxy Gallery', 
-            route: '/galaxy-gallery', 
-            story: 'Pushing boundaries with immersive galleries',
+            route: '/galaxy-gallery/',
+            story: 'Explore the Solar System in 3D, compare planets, and discover space facts on iPhone and iPad',
             icon: require('../../Image/Gallaxy.webp')
         },
         { 

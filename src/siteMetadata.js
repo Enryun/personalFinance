@@ -1,3 +1,4 @@
+import { GALAXY_STORE, GALAXY_TITLE, GALAXY_DESCRIPTION } from './Pages/AppIntroduction/GalaxyGallery/content';
 import { OANQUAN_STORE, getOAnQuanLanguage, getOAnQuanPath, isOAnQuanPath } from './Pages/AppIntroduction/OAnQuan/locales';
 import { FOLIO_STORE, FOLIO_TITLE, FOLIO_DESCRIPTION } from './Pages/AppIntroduction/Folio/content';
 import { volaLocales, getVolaLocale } from './Pages/AppIntroduction/Vola/locales';
@@ -66,6 +67,25 @@ export function getMetadata(pathname, search = '') {
         downloadUrl: OANQUAN_STORE, sameAs: [OANQUAN_STORE],
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'VND', url: OANQUAN_STORE,
           description: content.note }
+      }] }
+    };
+  }
+  if (pathname === '/galaxy-gallery') {
+    const url = `${SITE_URL}/galaxy-gallery/`;
+    const image = `${SITE_URL}/galaxy-gallery/social-card.png`;
+    return {
+      title: GALAXY_TITLE, description: GALAXY_DESCRIPTION, url, language: 'en', direction: 'ltr',
+      image, imageAlt: 'Galaxy Gallery — explore space and the Solar System on iPhone and iPad', alternates: [],
+      schema: { '@context': 'https://schema.org', '@graph': [person, {
+        '@type': 'SoftwareApplication', '@id': `${url}#app`, name: 'Galaxy Gallery: Space & Focus',
+        url, description: GALAXY_DESCRIPTION, image,
+        inLanguage: ['en', 'vi', 'ja', 'zh-Hant', 'zh-Hans', 'ko', 'th', 'id', 'de', 'fr', 'es', 'pt-BR', 'it', 'pt-PT'],
+        operatingSystem: 'iOS 17 or later, iPadOS 17 or later', applicationCategory: 'ProductivityApplication',
+        applicationSubCategory: 'Space exploration and astronomy education',
+        author: { '@id': person['@id'] }, downloadUrl: GALAXY_STORE, sameAs: [GALAXY_STORE],
+        featureList: ['Interactive 3D planets and moons', 'Solar System and Earth–Moon orbits', 'Relative planet-size comparisons', 'AR Quick Look', 'Space facts and Wonder Journeys', 'Optional Galaxy Focus missions'],
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', url: GALAXY_STORE,
+          description: 'Free download with ads and optional in-app purchases. Galaxy Plus offers monthly and lifetime options.' }
       }] }
     };
   }
